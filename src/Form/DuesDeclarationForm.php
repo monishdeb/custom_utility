@@ -131,7 +131,11 @@ class DuesDeclarationForm extends FormBase {
       '#value' => $this->t('Submit Declaration and Continue to Payment'),
     ];
 
-    // Inline JS for real-time dues preview (no external library dependency).
+    // Inline JS for real-time dues preview.
+    // NOTE: The CiviCRM extension (custom_utility_civicrm/js/ra_dues.js) contains
+    // equivalent logic for the payment form. Drupal cannot load assets from the
+    // CiviCRM extension directory via its library system, so the calculator
+    // snippet is inlined here. If the calculation rates change, update both files.
     $form['#attached']['html_head'][] = [
       [
         '#tag'        => 'style',
@@ -233,12 +237,7 @@ class DuesDeclarationForm extends FormBase {
 
       $this->messenger()->addStatus($this->t('Your salary declaration has been saved.'));
 
-      $form_state->setRedirect(
-        '<front>',
-        [],
-        ['query' => ['redirect' => '/civicrm/contribute/transact?reset=1&id=11']]
-      );
-      // Direct redirect to CiviCRM payment page.
+      // Redirect to the CiviCRM dues payment page.
       $paymentUrl = Url::fromUri('internal:/civicrm/contribute/transact', [
         'query' => ['reset' => '1', 'id' => '11'],
       ]);
