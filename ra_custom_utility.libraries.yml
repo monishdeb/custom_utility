@@ -1,0 +1,12 @@
+utility_common:
+  version: 1.x
+  css:
+    theme:
+      css/ra_common.css: {}
+      css/crm_menubar.css: {}
+  js:
+    js/ra_custom_utility.js: {}
+    js/jquery.doubleScroll.js: {}
+    js/jquery.mousewheel.min.js: {}
+  dependencies:
+    - core/jquery

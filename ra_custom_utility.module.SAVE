@@ -1,0 +1,1282 @@
+<?php
+
+/**
+ * @file
+ * Code for the Chad module.
+ */
+
+
+/**
+ * Implements hook_preprocess_HOOK() for block.html.twig.
+ */
+use Drupal\Component\Serialization\Json;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Url;
+
+use Drupal\Core\Database\Query\AlterableInterface;
+
+/**
+ * Implements hook_query_TAG_alter(): tag search_$type with $type node_search.
+ */
+function ra_custom_utility_query_search_node_search_alter(AlterableInterface $query) {
+  // For testing purposes, restrict the query to node type 'article' only.
+  $query->condition('n.type', array('article','story','event','page','audio','video'), 'IN');
+}
+
+
+/*
+ * Used to get the full name of the user
+ */
+
+function ra_custom_utility_preprocess_menu(&$vars) {
+   
+  if ($vars['menu_name'] == 'menu-top-menu-user') {
+  	$currentAccount = \Drupal::currentUser();
+  	$uid = $currentAccount->id()?$currentAccount->id():0;
+  	#$vars['#cache']['max-age'] = 0; 
+  	foreach ($vars['items'] as $idx => $item) {
+		if($item['title']=='Welcome') {
+    	  $randcheck = '';            
+		  //$currentAccount->id(); //To get User ID
+		  if($uid == 1){
+		  	//$randcheck = " - ".rand();
+		  }
+		  $currentAccount->getUsername();//To get User Name
+		  $vars['items'][$idx]['title'] = "Welcome " .$currentAccount->getUsername() .$randcheck;
+		}
+      if($item['title']=='Login') {
+				$dialog_options = Json::encode([ 'dialogClass' => 'login-popup-modal user-modal-popup' ]);
+        $link_options = array(
+                'attributes' => array(
+	                'class' => array(
+	                  'use-ajax ajax-login',
+	                ),
+	                'data-dialog-type' => array(
+	                  'modal',
+	                ),
+	                'data-dialog-options' => $dialog_options,
+                ),
+              );
+        $vars['items'][$idx]['url']->setOptions($link_options);
+        //$vars['items'][$idx]['attributes']['class'] = "login-ajax-link__list-item";
+        //$vars['items'][$idx]['attributes']['data-dialog-type'] = "logout-manoj";
+        //ksm($item['attributes']);
+        $vars['#attached']['library'][] = 'core/drupal.dialog.ajax';
+		  }
+      if($uid && $item['title']=='Login'){
+      	unset($vars['items'][$idx]);
+      }
+    }
+  }
+}
+function ra_custom_utility_link_alter(&$variables) {
+   $url = $variables['url'];
+  //   kint($variables['text']); 
+   
+}
+
+function ra_custom_utility_preprocess_views_view(&$variables) {
+	$view = $variables['view'];
+	  if ($view->id() == 'taxonomy_term' && $view->current_display == "page_1") {
+		if (count($view->result) == 1) {
+		  // Change view mode to teaser when there is only 1 item.
+		  $variables['rows'][0]['#rows'][0]['#view_mode'] = 'full';
+		}
+	  }
+//	   if ($view->id() == 'user_search' && $view->current_display == "page_1") {
+//		if (count($view->result) == 1) {
+//		 $view->current_display  = "page_2";
+//		}
+//	  }
+}
+ 
+
+function ra_custom_utility_preprocess(&$variables, $hook) { 	
+    static $hooks;
+    global $base_url;
+    if(arg(0)=='node' && arg(1)=='0'){
+      $url = '/';
+			$response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+			$response->send();
+			return;
+    }
+    // Load Current user
+		$current_user = \Drupal::currentUser();
+		// Load Current user roles
+		$roles = $current_user->getRoles();
+		// Load Current user id
+		$uid = $current_user->id();
+    if(arg(0)=='civicrm' && arg(1)=='event'){
+			if(in_array('suspended', $roles)){
+			//dump($roles);
+			$msg = "You are not allowed to access this page.";
+			\Drupal::messenger()->addMessage(t($msg), 'error');
+			$url = '/';
+			$response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+			$response->send();
+			return;
+		}
+		}
+    if($hook=='node'){
+	
+	  }
+    \Drupal::service('civicrm')->initialize();
+    if($hook=='page'){
+		$aliasManager = \Drupal::service('path.alias_manager');
+		// To get url
+		$current_uri = \Drupal::request()->getRequestUri();
+		// To get system path
+		$system_current_path = \Drupal::service('path.current')->getPath();
+		$system_current_path  = ltrim($system_current_path ,'/');
+		if(arg(0)=='node'){
+			$system_current_path  = $aliasManager->getAliasByPath('/node/'.arg(1));
+		}elseif(arg(0)=='taxonomy'){
+			$system_current_path  = $aliasManager->getAliasByPath('/taxonomy/term/'.arg(2));
+		}
+		
+		// Get User friendly url
+		//$result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+		//
+		$var = '';
+		$var = arg($var);
+		$database_obj = \Drupal::database();
+
+		// Get the current page route. If it is 403, it will return system.403, if it is 404, it will return system.404
+		$route_name = \Drupal::request()->attributes->get('_route');
+         
+         // Redirecting all users to front page except administrator and superadmin for delete
+		$condition_role = array('administrator'=>'administrator','superadmin'=>'superadmin','store_manager'=>'store_manager','placement_rabbi'=>'placement_rabbi');
+		$superuser = array_intersect($roles, $condition_role);
+		if(arg(2)=='delete' && !$superuser){
+			      $node_id = arg(1);
+			      $node = \Drupal::entityTypeManager()->getStorage('node')->load($node_id);
+			      $node_type = $node->getType();
+			      if(!$superuser && $node_type != 'position_institution' && !in_array('placement_institution', $roles)){        
+						$msg = "You are not allowed to access this page.";
+						\Drupal::messenger()->addMessage(t($msg), 'error');
+						$url = '/';
+						$response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+						$response->send();
+			      return;
+			      }
+			}
+
+		// Allowing store manager to access only civicrm contacts who made the order in drupal
+	  if(arg(0) == 'civicrm' && arg(1) == 'contact' && in_array('store_manager', $roles) && !in_array('civi_admin', $roles)){
+		$contact_id = $_GET["cid"];
+		// Disabling the document upload if cart_user already uploaded the document
+		$drupal_userid = $database_obj->select('{civicrm_uf_match}','cc')
+								 ->fields('cc',['uf_id'])
+								 ->condition('contact_id', $contact_id, '=')
+								 ->execute()->fetchField();
+		if($drupal_userid == 0){
+			\Drupal::messenger()->addMessage(t('The page you are trying to access is for Rabbinical Assembly members only.'));
+			$url = '/';
+			$target = $system_current_path; // a parameter you want to add
+			$url = Url::fromUri('internal:/user/login'); // choose a path
+			$link_options = array(
+			  'attributes' => array(
+				 'class' => array(
+					'btn',
+				 ),
+			   ),
+			   'query' => array(
+				 'target' => $target
+			   )
+			);
+			$url->setOptions($link_options);
+			$destination = $url->toString();
+			$response = new Symfony\Component\HttpFoundation\RedirectResponse($destination);
+			$response->send();
+			return;
+		} elseif($drupal_userid != $uid){
+			$user_temp = \Drupal\user\Entity\User::load($drupal_userid);
+			$user_temp_roles = $user_temp->getRoles();
+			if(!in_array('cart_user', $user_temp_roles)){
+			  check_user_orders($drupal_userid);
+			}
+		}
+	  }
+	 /*  TODO: Riswana
+	// Redirecting user to profile edit page after deleting the tax exempt document
+	  if(arg(0) == 'civicrm' && arg(1) == 'dashboard' && $uid != 0 && strpos(serialize($variables['user']->session), 'The attached file has been deleted') !== false){
+		$nodearray = unserializesession($variables['user']->session);
+		$contact_id = $nodearray['civi_id'];
+		$params = array(
+		 'contact_id' => $contact_id,
+		 'version' => 3,
+		);
+		$UFMatch = civicrm_api('UFMatch', 'Get', $params);
+		$uf_match = $UFMatch['id'];
+		$drupal_id = $UFMatch['values'][$uf_match]['uf_id'];
+		db_query("UPDATE civicrm_value_constituent_information_1 SET tax_exempt_approved_by_ra__63 = 'No' WHERE entity_id = " . $contact_id);
+		drupal_set_message('Tax exemption document has been deleted successfully.');
+		header('Location: /user/' . $drupal_id . '/edit/Membership Registration');
+		exit();
+	  }
+	  */  
+	  /*
+	   * Riswan needs to implent : && $status == '403 Forbidden'
+	   */
+	  // Redirecting the anonymous user to login page if he/she is viewing the member content and roles other than ra member is viewing the member content displaying the error messaage 
+	  if(!(in_array('superadmin', ($roles))) && $route_name == 'system.403' && (arg(0) != 'gittin-profile-list' && arg(2) != 'gittin-forms')){ 
+			//  echo $uid; print_r($roles);exit();
+			if(!$uid){
+			  if(substr($_SERVER['REQUEST_URI'], 1) == 'user/logout'){
+					\Drupal::messenger()->addMessage(t('The page you are trying to access is for Rabbinical Assembly members only.'));
+					$url = Url::fromUri('internal:/'); // choose a path
+					$link_options = array(
+					  'attributes' => array(
+						 'class' => array(
+							'btn',
+						 ),
+					   ),
+					   'query' => array(
+						 'target' => $target
+					   )
+					);
+					$url->setOptions($link_options);
+					$destination = $url->toString();
+					$response = new Symfony\Component\HttpFoundation\RedirectResponse($destination);
+					return;
+			  } else{
+				/* Need to fix later
+				 * \Drupal::messenger()->addMessage(t('Please log in to continue to this page.'), 'error');
+				$url = '/user/login?destination=' . substr($_SERVER['REQUEST_URI'], 1);
+				$response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+				$response->send();
+				return;*/
+			  }
+			} else{
+		   	\Drupal::messenger()->addMessage(t('The page you are trying to access is for Rabbinical Assembly members only.'));
+				$url = '/';
+				$response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+				$response->send();
+				return;
+			}
+	  }
+	  
+	// Allowing store manager to access only users who made the order
+	if(arg(0) == 'user' && is_numeric(arg(1)) && in_array('store_manager', $roles) && arg(1) != $uid && isset($drupal_userid)){
+		$user_temp = \Drupal\user\Entity\User::load($drupal_userid);
+		$user_temp_roles = $user_temp->getRoles();
+		if(!in_array('cart_user', $user_temp_roles)){
+			check_user_orders(arg(1));
+		}
+	} 
+		// Redirecting the member to corresponding member URL if he/she is accessing the public URL and viceversa
+		if(arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))){ 
+		
+			// Load taxonomy 
+			$taxonomy_query = taxonomy_term_load(arg(2));
+			// Get vocab name
+			$vocabulary_id = $taxonomy_query->bundle();
+			
+			if(!in_array('administrator', $roles) && !in_array('superadmin', $roles)){
+				$current_tid = arg(2);
+				// Load taxonomy 
+				$taxonomy_query = taxonomy_term_load($current_tid);
+				// Get vocab name
+				$current_vid = $taxonomy_query->bundle();
+				// Get all the nodes for the taxonomy
+				$term_nodes = taxonomy_select_nodes($current_tid); // Need to remove this call after data migration if passible
+				
+				if($uid && $current_vid == 'public_menu' && in_array('ra_member', $roles)){
+					foreach($term_nodes as $value){
+						$vocab_id = "";
+						$node = \Drupal\node\Entity\Node::load($value);
+						if ($node != false) {
+						$node_type = strtolower($node->type->entity->label());
+						
+						if ($node_type == "site_pages") {
+							$node_type = "page";
+						}else{
+							$node_type = $node_type;
+						}
+						$type = "field_" . $node_type . "_member_menu";
+						if ($node_type == 'webform') {
+							$type = "field_" . $node_type . "_membermenu";
+						}
+						
+						// Get the term id of the node
+						if (isset($node->{$type})) {
+							foreach ($node->{$type} as $item) {
+								$member_term_id = $item->target_id;
+								break;
+							}
+						}
+						if(isset($member_term_id) && $member_term_id != ""){
+							//$url = '/taxonomy/term/' . $member_term_id;
+							$url = $aliasManager->getAliasByPath('/taxonomy/term/'.$member_term_id);
+							$response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+							$response->send();
+							return;
+						}
+						}
+					}
+				}
+				
+				// Code for Annonymus User
+				if(!$uid && $current_vid == 'member_menu'){	
+					\Drupal::service('page_cache_kill_switch')->trigger();
+					// EXCEPTION: 
+					if(arg(2) == 2246){ 
+					
+					$url1 = $aliasManager->getAliasByPath('/taxonomy/term/2246');
+					\Drupal::messenger()->addMessage(t('The page you are trying to access is for Rabbinical Assembly members only.'));
+						$url = '/user/login?destination='.$url1;
+						$response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+						$response->send();
+						return;
+					}
+					foreach($term_nodes as $value){
+						$vocab_id = "";
+						$node = \Drupal\node\Entity\Node::load($value);
+						if ($node != false) {
+							$node_type = strtolower($node->type->entity->label());
+							if ($node_type == "site_pages") {
+								$node_type = "page";
+							}else{
+								$node_type = $node_type;
+							}
+							$type = "field_" . $node_type . "_public_menu";
+							if ($node_type == 'webform') {
+								$type = "field_" . $node_type . "_publicmenu";
+							}
+							// Get the term id of the node
+							if (isset($node->{$type})) {
+								foreach ($node->{$type} as $item) {
+									$public_term_id = $item->target_id;
+									break;
+								}
+							}
+							if(isset($public_term_id) && $public_term_id != ""){
+								$url = $aliasManager->getAliasByPath('/taxonomy/term/'.$public_term_id);
+								$response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+								$response->send();
+								return;
+							}
+						}
+					}
+					$taxonomyStorage = \Drupal::service('entity.manager')->getStorage('taxonomy_term');
+					// Set name properties.
+					$properties['name'] = $taxonomy_query->getName();
+					// Set vocabulary - not important.
+
+					$properties['vid'] = 'public_menu';
+							
+					// Load taxonomy term by properties.
+					$terms1 = array_keys($taxonomyStorage->loadByProperties($properties));
+					$public_term_id = isset($terms1[0])?$terms1[0]:0;
+						
+					if($public_term_id){
+						$destination = $aliasManager->getAliasByPath('/taxonomy/term/'.$public_term_id);
+				    }else{
+						\Drupal::messenger()->addMessage(t('The page you are trying to access is for Rabbinical Assembly members only.'));
+						$url = Url::fromUri('internal:/user/login'); // choose a path
+						$link_options = array(
+						  'attributes' => array(
+							 'class' => array(
+								'btn',
+							 ),
+						   ),
+						   'query' => array(
+							 'destination' => $system_current_path
+						   )
+						);
+						
+						$url->setOptions($link_options);
+						$destination = $url->toString();
+					}
+					
+					$response = new Symfony\Component\HttpFoundation\RedirectResponse($destination);
+					$response->send();
+					return;
+					//exit();
+				}                      
+			}
+			
+		}
+		// Refirect user with role not in good standing
+		if(in_array('not_in_good_standing', ($roles))){
+			not_in_good_standing_redirect();
+		}
+		
+		
+		// Redirecting all users to front page except administrator and superadmin for dues
+		$condition_role = array('administrator'=>'administrator','superadmin'=>'superadmin','ra_member'=>'ra_member');
+		$coman = array_intersect($roles, $condition_role);
+		$contrib_allowed_id_for_annonymus=[11,39];
+		#if(arg(0) == 'civicrm' && arg(1) == 'contribute' && arg(2) == 'transact' && isset($_GET['id']) && in_array($_GET['id'],$contrib_allowed_id_for_annonymus) && !$coman){
+		if(arg(0) == 'civicrm' && arg(1) == 'contribute' && arg(2) == 'transact' && isset($_GET['id']) && $_GET['id'] == 11 && !$coman){
+			$msg = "You are not allowed to access this page.";
+			\Drupal::messenger()->addMessage(t($msg), 'error');
+			$url = '/';
+			$response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+			$response->send();
+			//return;
+		}
+		if(arg(0) == 'node' && arg(1) == 'add' && arg(2) == 'gittin_forms' && in_array('cart_user', ($roles))){
+			$msg = "You are not allowed to access this page.";
+			\Drupal::messenger()->addMessage(t($msg), 'error');
+			$url = '/';
+			$response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+			$response->send();
+			//return;
+		}
+  }
+}
+
+/*
+ * Redirect all the pages of not in good standing user to home page except profile edit
+ */
+function not_in_good_standing_redirect(){  
+    if((arg(0) != 'user' && arg(2) != 'edit' && arg(0) != 'node') || (arg(0) == 'user' && (arg(2) == 'orders' || arg(2) == 'petition' || arg(2) == 'downloads'))){ 
+      $msg = "The page you are trying to access is restricted to RA members in good standing. There may be an issue with your account. Please contact our Business Manager, Gina Morales, (212.280.6062 or <a href='mailto:accounting@rabbinicalassembly.org'>accounting@rabbinicalassembly.org</a>) to resolve the issue and to restore your access. Thank you.";
+      \Drupal::messenger()->addMessage(t($msg), 'error');
+      $url = '/';
+      $response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+      $response->send();
+      return;
+    }
+}
+function arg($part){
+    // To get system path
+    $system_current_path = \Drupal::service('path.current')->getPath();
+    $system_current_path  = ltrim($system_current_path ,'/');
+    $chunks = explode('/',$system_current_path);
+    if(!is_numeric($part)){ 
+        return $chunks;
+    }
+    if(isset($chunks[$part])){
+        return $chunks[$part];
+    }else{
+        return '';
+    }
+}
+/*
+ * Used to check whether the user made any order or not
+ */
+
+function check_user_orders($userId){
+    $database_obj = \Drupal::database();
+    $orderQuery = $database_obj->select('{commerce_order}','uco')
+                             //$orderQuery->addExpression('COUNT(uco.uid)');
+                             ->fields('uco',[uid])
+                             ->condition('uid', $userId, '=')
+                             ->execute()->fetchField();
+    if(!$orderQuery && $userId > 0){
+        \Drupal::messenger()->addMessage(t('The page you are trying to access is for Rabbinical Assembly members only.'),'error');
+        $url = '/';
+        $response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+        $response->send();
+        return;
+        
+    }  
+}
+
+/**
+ * Attaching common css file for all the pages.
+ */
+function ra_custom_utility_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'ra_custom_utility/utility_common';
+ 
+
+  if(arg(1)=='usersearch'){
+  // Load Current user
+	$current_user = \Drupal::currentUser();
+	// Load Current user roles
+	$roles = $current_user->getRoles();
+	// Load Current user id
+	$uid = $current_user->id();
+	$attachments['#attached']['drupalSettings']['utility_common']['usertype'] = "Admin";
+	if((in_array('superadmin',$roles) || in_array('administrator', $roles))){
+	
+	}else{
+	$attachments['#attached']['drupalSettings']['utility_common']['usertype'] = "member";
+	}
+}
+  if(arg(1)=='contribute' && (isset($_GET['id']) && $_GET['id']==6)){
+  $title = [
+	'#tag' => 'meta',
+	'#attributes' => [
+	'property' => 'og:title',
+	'content' => 'Donate Now to Support Our Work!',
+	],
+];
+$attachments['#attached']['html_head'][] = [$title, 'og:title'];
+$url = [
+	'#tag' => 'meta',
+	'#attributes' => [
+	'property' => 'og:url',
+	'content' => 'https://www.rabbinicalassembly.org/civicrm/contribute/transact?reset=1&id=6',
+	],
+];
+$attachments['#attached']['html_head'][] = [$url, 'og:url'];
+$site_name = [
+	'#tag' => 'meta',
+	'#attributes' => [
+	'property' => 'og:site_name',
+	'content' => 'The Rabbinical Assembly',
+	],
+];
+$attachments['#attached']['html_head'][] = [$site_name, 'og:site_name'];
+$img = [
+	'#tag' => 'meta',
+	'#attributes' => [
+	'property' => 'og:image',
+	'content' => 'https://www.rabbinicalassembly.org/sites/default/files/public/civicrm/1.jpg',
+	],
+];
+$attachments['#attached']['html_head'][] = [$img, 'og:image'];
+
+
+}
+}
+
+/* Get all the nodes related to the taxonomy
+   */
+
+  function taxonomy_select_nodes($termIds) {
+    $nodeIds = array();
+    $termIds = (array) $termIds;
+    if (empty($termIds)) {
+      return $nodeIds;
+    }
+    $query = \Drupal::database()->select('taxonomy_index', 'ti');
+    $query->fields('ti', array('nid'));
+    $query->condition('ti.tid', $termIds, 'IN');
+    $query->distinct(TRUE);
+    $result = $query->execute();
+    if ($nodeIds = $result->fetchCol()) {
+      return $nodeIds;
+    }
+
+    return $nodeIds;
+  }
+
+/*
+ * Rearranging the donation fields while displaying
+ */
+
+function ra_custom_utility_civicrm_buildForm($formName, &$form){ 
+   // Load Current user
+	$current_user = \Drupal::currentUser();
+	// Load Current user roles
+	$roles = $current_user->getRoles();
+	// Load Current user id
+	$uid = $current_user->id();
+	//ksm($form->_id);
+  if($formName == "CRM_Contribute_Form_Contribution_Main" && $form->_id == 6 ){
+    // Making $ 36.00 as $36.00 etc in amount section
+    if($form->elementExists('price_80')){
+      $amounts = & $form->getElement('price_80');
+      $elements = & $amounts->getElements();
+      foreach($elements as $key => $val){
+        $text = $elements[$key]->getText();
+        if($text != 'Other Amount'){
+          $text = str_replace(' ', '', $text);
+        } else{ 
+          $elements[$key]->setValue(1);
+        }
+        $elements[$key]->setText($text);
+      }
+    }
+  }
+  if($formName == "CRM_Contribute_Form_Contribution_Main" && $form->_id == 11){  
+    $dues_balance_calculated = ''; 
+    $current_year = date('Y');
+    $next_year = $current_year+1;
+    // Change the label of submit button
+    if($form->elementExists('buttons')){
+    $buttons =& $form->getElement('buttons'); 
+      foreach ($buttons->_elements as $e) { 
+        if ($e->_attributes['type']=='submit') { 
+          $e->setValue('Confirm Payment');
+        }
+      }
+    }
+    $current_dues_duration = $current_year.'- '.$next_year;
+	  $civicrm_id = get_civiid($uid);        
+    if(isset($form->_membershipContactID) && !empty($form->_membershipContactID) && !is_null($civicrm_id)){ 
+      $dues_year = array();
+      $all_contributions = civicrm_api3('Contribution', 'get', array( 
+                                    'sequential' => 1,
+                                    'contact_id' => $civicrm_id,                                       
+                            ));  
+                            $form->_membershipContactID; 
+       if(count($all_contributions['values']) > 0){
+        foreach($all_contributions['values'] as $ind_contribution){ 
+          if($ind_contribution['contribution_source'] == 'Online Contribution: Member Dues'){
+            $dues_year[$ind_contribution['custom_371']]['salary'] = $ind_contribution['custom_406']; 
+            $dues_year[$ind_contribution['custom_371']]['calculated_dues'] = $ind_contribution['custom_411'];
+            $dues_year[$ind_contribution['custom_371']]['calculated_ra_dues'] = $ind_contribution['custom_376'];
+            $dues_year[$ind_contribution['custom_371']]['deduction'] = $ind_contribution['custom_381'];
+            $dues_year[$ind_contribution['custom_371']]['professional_org'] = $ind_contribution['custom_416'];
+            $dues_year[$ind_contribution['custom_371']]['register_me'] = isset($ind_contribution['custom_386'][0]) ? $ind_contribution['custom_386'][0] : '';
+            $dues_year[$ind_contribution['custom_371']]['dues_declared'] = intval($ind_contribution['custom_376'])-intval($ind_contribution['custom_381'])+intval($dues_year[$ind_contribution['custom_371']]['register_me']);
+            // If payment status is completed then only add to dues paid
+            $dues_year[$ind_contribution['custom_371']]['dues_paid'] = 0;
+            if($ind_contribution['contribution_status_id'] == 1){
+			  $dues_year[$ind_contribution['custom_371']]['dues_paid'] = isset($dues_year[$ind_contribution['custom_371']]['dues_paid'])?$dues_year[$ind_contribution['custom_371']]['dues_paid']:0;
+              $dues_year[$ind_contribution['custom_371']]['dues_paid'] += $ind_contribution['total_amount'];   
+            }                     
+          }
+        }
+      }
+    }
+    // Check the user already paid the current dues. If so prepopulate the values     
+    if(isset($dues_year[$current_dues_duration])){ 
+      // Yearly Salary
+      $salary =& $form->getElement('custom_406');
+      $salary->setValue($dues_year[$current_dues_duration]['salary']);
+      // Calculated Dues
+      $calculated_dues =& $form->getElement('custom_411');
+      $calculated_dues->setValue($dues_year[$current_dues_duration]['calculated_dues']);
+      // Calculated RA Dues for this Year 
+      $calculated_ra_dues =& $form->getElement('custom_376');
+      $calculated_ra_dues->setValue($dues_year[$current_dues_duration]['calculated_ra_dues']);
+      // Deduction to Dues Paid
+      $deduction =& $form->getElement('custom_381');
+      $deduction->setValue($dues_year[$current_dues_duration]['deduction']);
+      // Name of Primary Professional Organization
+      $professional_org =& $form->getElement('custom_416');
+      $professional_org->setValue($dues_year[$current_dues_duration]['professional_org']);
+      // Register me in MERCAZ
+     /* $register_me =& $form->getElement('custom_386');
+      $register_me->setValue($dues_year[$current_dues_duration]['register_me']); */
+      // Dues Declared
+      $dues_declared =& $form->getElement('custom_396');
+      $dues_declared->setValue($dues_year[$current_dues_duration]['dues_declared']);
+      // Dues Paid      
+      //kint($dues_year[$current_dues_duration]['dues_paid']);
+      $dues_paid =&$form->getElement('custom_401');
+      $dues_paid->setValue($dues_year[$current_dues_duration]['dues_paid']);
+      // Dues balance
+      $dues_balance_calculated = $dues_year[$current_dues_duration]['dues_declared'] - $dues_year[$current_dues_duration]['dues_paid'];   
+      $dues_balance =& $form->getElement('custom_271');
+      $dues_balance->setValue($dues_balance_calculated);
+    } else{ 
+      if(isset($_POST['custom_386']['36']) && $_POST['custom_386']['36']==1){
+        $mercaz = 36;
+      } elseif(isset($_POST['custom_386']['54']) && $_POST['custom_386']['54']==1){
+        $mercaz = 54;
+      } else{
+        $mercaz = 0;
+      }
+      $dues_balance_calculated = isset($_POST['custom_376'])?$_POST['custom_376']:0 - isset($_POST['custom_381'])?$_POST['custom_381']:0 + $mercaz;
+      $dues_balance_calculated = ($dues_balance_calculated == 0) ? '' : $dues_balance_calculated;
+    }
+    // First time if user is coming to pay dues hide Dues declared
+    if(empty($dues_year[$current_dues_duration]['calculated_dues'])){
+      $form->removeElement('custom_396');
+    }
+    // Set the default value for contribution as sues balance if its there
+    if($form->elementExists('price_275')){
+      $contribution_amount =& $form->getElement('price_275');
+      if(!empty($dues_balance_calculated)){        
+        if($dues_balance_calculated < 0){
+          $dues_balance_calculated = '';
+        } 
+        $contribution_amount->setValue($dues_balance_calculated);
+      } else{
+        $contribution_amount->setValue(11);
+      }
+    }
+    $custom_recur_options = array(1 => ts("I'd like to make payment of $dues_balance_calculated"), 2 => 'please divide my payments into', 3 => 'other');
+    foreach ($custom_recur_options as $key => $var) {
+      $recurOptions[$key] = $form->createElement('radio', null, ts('Gender'), $var, $key);
+    }  
+    $form->addGroup($recurOptions, 'recurrence_options', ts('Payment Options'));    
+    $form->setDefaults(array('recurrence_options' => 1));
+    $form->add( 'text', 'recur_installment', ts( '' ) );
+    $form->add( 'text', 'recur_other', ts( '' ) );
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ *
+ * FORM_ID = views_exposed_form
+ */
+function ra_custom_utility_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  #print_R($view['view']->id());
+  $view_ids = ['cj_downloads_admin_view'];
+  $view = $form_state->getStorage('view');
+  #$form['#attributes']['novalidate'] = 'novalidate';
+  if ($form_id == 'views_exposed_form' && ($view['view']->id() == 'teshuvot')){
+			// Load Current user id
+			$query = \Drupal::database()->query("SELECT node_field_data.title AS node_field_data_title, node_field_data.nid AS nid
+																					FROM
+																					{node_field_data} node_field_data
+																					INNER JOIN {node__field_author_type} node__field_author_type ON node_field_data.nid = node__field_author_type.entity_id AND node__field_author_type.deleted = '0'
+																					WHERE ((node__field_author_type.field_author_type_value = 'Teshuvot Author')) AND ((node_field_data.status = '1') AND (node_field_data.type IN ('cj_author')))
+																					ORDER BY node_field_data_title ASC");      
+      $data = $query->fetchAll();
+      $options=['' => ' - Any - '];
+      foreach($data as $row){
+				$options[$row->nid] = $row->node_field_data_title;
+			}   
+			
+			$form['field_teshu_author'] = array (
+				'#type' => 'select2',
+				'#value' => isset($_GET['field_teshu_author']) && !empty($_GET['field_teshu_author']) ? $_GET['field_teshu_author'] : '',
+				'#options' => $options);
+	}
+  if ($form_id == 'views_exposed_form' && ($view['view']->id() == 'user_search' || $view['view']->id() == 'membersearch')) {
+   
+   // Load Current user
+	$current_user = \Drupal::currentUser();
+	// Load Current user roles
+	$roles = $current_user->getRoles();
+	
+	if((in_array('superadmin',$roles) || in_array('administrator', $roles))){
+		//ksm(fome)
+	}else{
+		$form['custom_20']['#options']=array('member' =>'Member','widow' =>'Widow/Widower');
+		$form['custom_20']['#default_value']="member";
+	}
+	// Load Current user id
+    $form['country_id'] = array (
+      '#type' => 'select',
+      '#value' => isset($_GET['country_id']) && !empty($_GET['country_id']) ? $_GET['country_id'] : 0,
+      '#options' => get_country_list(),
+      '#ajax' => array(
+        'callback' => 'custom_dropdown_ajax_callback',
+        'wrapper' => 'states-wrapper',
+        'url' => \Drupal\Core\Url::fromRoute('ra_utility.getstates'),
+      )
+    );
+
+    $form['state_province_id'] = array (
+      '#type' => 'select',
+      '#value' => isset($_GET['state_province_id']) && !empty($_GET['state_province_id']) ? $_GET['state_province_id'] : 0,
+      '#options' => get_province_list($form['country_id']['#value']),
+      '#prefix' => '<div id="states-wrapper">',
+      '#suffix' => '</div>',
+    );
+    
+    // Load Current user id
+    $form['address_type'] = array (
+      '#title' => t('Address Type'),
+      '#type' => 'select',
+      '#value' => isset($_GET['address_type']) && !empty($_GET['address_type']) ? $_GET['address_type'] : 'home',
+      '#options' => array('home'=>'Home','work'=>'Work'),
+    );
+  }
+}
+
+/*
+ * Getting civicrm countries list
+ */
+function get_country_list() {
+  // Initialize CiviCRM.
+  \Drupal::service('civicrm')->initialize();
+  $top_country=array(''=>'- Any -','1228'=>'United States','1039'=>'Canada','1010'=>'Argentina','1165'=>'Palestine, State of');   
+  $country_list = [];
+  try{
+    $result = civicrm_api3('Country', 'get', array('version' => 3, 'options' => array('limit' => 0, 'sort' => "name ASC")));
+    if(!empty($result['values'])) {
+      foreach($result['values'] as $country) {
+		  if(!in_array($country['name'],$top_country)){
+			$country_list[$country['id']] = $country['name'];
+		  }
+      }
+      unset($top_country[1165]);
+      $country_list = $top_country+$country_list;
+    }
+  } catch (CiviCRM_API3_Exception $e) {
+    $error_message = array(
+                        'error_message' => $e->getMessage(),
+                        'error_code' => $e->getErrorCode(),
+                        'error_data' => $e->getExtraParams(),
+                      );
+    \Drupal::logger('ra_custom_utility')->error(print_r($error_message, true));
+  }
+  return $country_list;
+}
+
+/*
+ * Getting civicrm state/province list from a country
+ */
+function get_province_list($country_id = 0) {
+  $state_list = array('- Any -');
+
+  if(!$country_id) {
+    return $state_list;
+  }
+
+  // Initialize CiviCRM.
+  \Drupal::service('civicrm')->initialize();
+    
+  try{
+    $result = civicrm_api3('StateProvince', 'get', array('country_id' => $country_id, 'version' => 3, 'options' => array('limit' => 0, 'sort' => "name ASC")));
+    if(!empty($result['values'])) {
+      foreach($result['values'] as $state) {
+        $state_list[$state['id']] = $state['name'];
+      }
+    }
+  } catch (CiviCRM_API3_Exception $e) {
+    $error_message = array(
+                        'error_message' => $e->getMessage(),
+                        'error_code' => $e->getErrorCode(),
+                        'error_data' => $e->getExtraParams(),
+                      );
+    \Drupal::logger('ra_custom_utility')->error(print_r($error_message, true));
+  }
+  return $state_list;
+}
+/**
+ * Implements hook_views_post_execute().
+ */
+function ra_custom_utility_views_post_execute(ViewExecutable $view) {
+  if ($view->id() == 'membersearch') {
+    // To print query with placeholder.
+    //dpm($view->query->query()->__toString());
+    // To print query with dynamic argument values
+    //dpq($view->query->query());
+  }
+
+}
+
+/*
+ * hook_views_query_alter implementation
+ */
+function ra_custom_utility_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+    $uid = \Drupal::currentUser()->id();
+    $roles = \Drupal::currentUser()->getRoles(); 
+       $database = \Drupal::database();
+	  $view_id = $view->id();
+	  $current_page = $view->current_display;
+      if ($view->id() == 'cj_downloads_user') {
+		$particle = array(0);
+		$account1 = \Drupal::entityTypeManager()->getStorage('user')->load(arg(1));
+		foreach($account1->get('field_cj_purchased_article')->getValue() as $value){
+			$particle[] = $value['value'];
+		}
+		foreach($account1->get('field_cj_purchased_issue')->getValue() as $value){
+			$particle[] = $value['value'];
+		}
+		
+		$counter = count($query->where);
+		$counter = $counter + 1;
+		
+		$query->where[$counter]['type'] = 'AND';
+		$query->where[$counter]['conditions'][] = array(
+		'field' => 'commerce_product_field_data.product_id',
+		'value' => $particle,
+		'operator' => "in"
+		);
+	}
+	if($view_id =='placement_referrals' && $current_page == "page_2") {
+       foreach($query->where[1]['conditions'] as $key=>$condi){
+			if($condi['field']=='field_placement_position_field_collection_item.uid'){
+				//$query->where[1]['conditions'][$key]['field']='field_placement_position_field_collection_item.uid';
+				$query->where[1]['conditions'][$key]['value'] = $uid;
+				}
+				
+			if($condi['field']=='field_placement_position_field_collection_item.type' && in_array('placement_congregation', $roles)){
+			$query->where[1]['conditions'][$key]['value'] = array('position_congregation');
+			}
+			if($condi['field']=='field_placement_position_field_collection_item.type' && in_array('placement_freelance', $roles)){
+			$query->where[1]['conditions'][$key]['value'] = array('position_freelance');
+			}
+			if($condi['field']=='field_placement_position_field_collection_item.type'  && in_array('placement_institution', $roles)){
+			$query->where[1]['conditions'][$key]['value'] = array('position_institution');
+			}
+		}
+}
+  if(($view_id == 'user_search' && $current_page == "page_1") || $view_id == 'membersearch' ) {
+  	//dpm($view_id);
+  	if(isset($_GET['address_type']) && $_GET['address_type']=='work') {
+  	
+  	foreach($query->where[1]['conditions'] as $key=>$condi){
+    //dpm($condi['field']."=$key==".count($query->where[1]['conditions']));
+		if($condi['field']=='contact_id_civicrm_contact.country_id'){
+			$query->where[1]['conditions'][$key]['field']='contact_id_civicrm_contact_1.country_id';
+		}
+		if($condi['field']=='contact_id_civicrm_contact.state_province_id'){
+			$query->where[1]['conditions'][$key]['field']='contact_id_civicrm_contact_1.state_province_id';
+		}
+		if($condi['field']=='contact_id_civicrm_contact.city'){
+			$query->where[1]['conditions'][$key]['field']='contact_id_civicrm_contact_1.city';
+		}
+		if($condi['field']=='contact_id_civicrm_contact.postal_code'){
+			$query->where[1]['conditions'][$key]['field']='contact_id_civicrm_contact_1.postal_code';
+		}
+		
+	}
+  foreach($query->where[0]['conditions'] as $key=>$condi){
+        if($condi['field']=='contact_id_civicrm_contact.state_province_id = :civicrm_address_state_province_id'){
+          $query->where[0]['conditions'][$key]['field']='contact_id_civicrm_contact_1.state_province_id = :civicrm_address_state_province_id';
+        }
+    }
+  }
+  
+  }
+  //dpm($query->where);
+	if($view_id == 'notes' && $current_page =='data_export_2') {
+	$current_user_id = \Drupal::currentUser()->id();
+	$user = \Drupal\user\Entity\User::load($current_user_id);
+	$field_notes_group = $user->get('field_notes_group')->getValue();
+	if(!empty($field_notes_group)){ 
+		foreach($field_notes_group as $group){ 
+		$current_user_notes_group[] = $group['target_id'];
+		}
+	} 
+	if($current_user_id == 1){
+		//$current_user_notes_group[] = 5701;
+	}
+	$nids = taxonomy_select_nodes($current_user_notes_group);
+	if(sizeof($nids)==0){
+		$nids[]=0;
+	}
+	$counter = count($query->where);
+  		$counter = $counter + 1;
+	    $query->where[$counter]['type'] = 'AND';
+	    $query->where[$counter]['conditions'][] = array(
+	      'field' => 'node_field_data.nid',
+	      'value' => $nids,
+	      'operator' => "IN"
+	    );
+	}
+  	
+	
+  
+   	if($view_id == 'notes' && $current_page =='data_export_2') {
+	$current_user_id = \Drupal::currentUser()->id();
+	$user = \Drupal\user\Entity\User::load($current_user_id);
+	$field_notes_group = $user->get('field_notes_group')->getValue();
+	if(!empty($field_notes_group)){ 
+		foreach($field_notes_group as $group){ 
+		$current_user_notes_group[] = $group['target_id'];
+		}
+	} 
+	if($current_user_id == 1){
+		//$current_user_notes_group[] = 5701;
+	}
+	$nids = taxonomy_select_nodes($current_user_notes_group);
+	if(sizeof($nids)==0){
+		$nids[]=0;
+	}
+	$counter = count($query->where);
+  		$counter = $counter + 1;
+	    $query->where[$counter]['type'] = 'AND';
+	    $query->where[$counter]['conditions'][] = array(
+	      'field' => 'node_field_data.nid',
+	      'value' => $nids,
+	      'operator' => "IN"
+	    );
+	}   
+  
+}
+
+function ra_custom_utility_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+	global $base_url;
+	if ($view->id() == 'cj_downloads_user') {
+		$account = \Drupal::currentUser();
+		// Load Current user roles
+		$roles = $account->getRoles();
+		// Load Current user id
+		$uid = $account->id();
+		if(in_array('superadmin', $roles) || ($uid == arg(1) && !in_array('ra_member', $roles)) || in_array('administrator', $roles)){
+		} else {
+		  $response = new Symfony\Component\HttpFoundation\RedirectResponse($base_url . '/user/login', 302);
+		  $response->send();
+		}
+	}
+}
+
+function insertpdf_article_content(){
+	$db = mysqli_connect('localhost', 'debian-sys-maint', 'byGeWa9b?WhBy3wZbMuV') or die(mysqli_error($db));
+	mysqli_select_db($db,'radrupal7'); 
+	mysqli_set_charset($db,"utf8");
+		
+    $orderQuery = $database_obj->select('{commerce_product}','cp')
+				 //$orderQuery->addExpression('COUNT(uco.uid)');
+				 ->fields('cp',['product_id'])
+				 ->condition('type', 'cj_article', '=')
+				 ->execute();
+                   
+	 foreach($orderQuery as $pid){
+		 		$product = \Drupal\commerce_product\Entity\Product::load($pid->product_id);
+				$field_cj_art_display_order = $product->get('field_cj_art_display_order')->getValue()[0]['value'];
+				if($field_cj_art_display_order){
+					$query1 = "SELECT a.field_cj_art_display_order_value,a.entity_id,b.field_cj_art_pdf_extract_value FROM `field_data_field_cj_art_display_order` a, field_data_field_cj_art_pdf_extract b WHERE a.entity_id=b.entity_id and a.field_cj_art_display_order_value='".$field_cj_art_display_order."'";
+					$result1 = mysqli_query($db,$query1) or die(mysqli_error($db));
+					while ($row1 = mysqli_fetch_object($result1)) {
+						//break;
+						$product->set('field_cj_art_pdf_extract',$row1->field_cj_art_pdf_extract_value);
+					}
+					$product_variation = \Drupal\commerce_product\Entity\ProductVariation::load($product->get('variations')->getValue()[0]['target_id']);
+					$product_variation->setTitle($product->getTitle()); 
+					$product_variation->save();
+					$product->save();
+					//break;
+				}
+	 }	
+}
+function insertpdf_issue_content(){
+	$db = mysqli_connect('localhost', 'debian-sys-maint', 'byGeWa9b?WhBy3wZbMuV') or die(mysqli_error($db));
+	mysqli_select_db($db,'radrupal7'); 
+	mysqli_set_charset($db,"utf8");
+	$database_obj = \Drupal::database();
+    $orderQuery = $database_obj->select('{commerce_product}','cp')
+				 //$orderQuery->addExpression('COUNT(uco.uid)');
+				 ->fields('cp',['product_id'])
+				 ->condition('type', 'cj_issues', '=')
+				 ->execute();
+                   
+	 foreach($orderQuery as $pid){
+		 		$product = \Drupal\commerce_product\Entity\Product::load($pid->product_id);
+				$field_cj_art_display_order = $product->get('field_cj_issue_display_order')->getValue()[0]['value'];
+				if($field_cj_art_display_order){
+					$query1 = "SELECT a.field_cj_issue_display_order_value,a.entity_id,b.field_cj_issue_pdf_extract_value FROM `field_data_field_cj_issue_display_order` a, field_data_field_cj_issue_pdf_extract b WHERE a.entity_id=b.entity_id and a.field_cj_issue_display_order_value='".$field_cj_art_display_order."'";
+					$result1 = mysqli_query($db,$query1) or die(mysqli_error($db));
+					while ($row1 = mysqli_fetch_object($result1)) {
+						//break;
+						$product->set('field_cj_issue_pdf_extract',$row1->field_cj_issue_pdf_extract_value);
+					}
+					$product_variation = \Drupal\commerce_product\Entity\ProductVariation::load($product->get('variations')->getValue()[0]['target_id']);
+					$product_variation->setTitle($product->getTitle()); 
+					$product_variation->save();
+					$product->save();
+					//break;
+				}
+	 }	
+}
+
+/**
+ * Helper function to Update  a new node.
+ */
+function update_nodefields($nid){
+	$product = \Drupal\commerce_product\Entity\Product::load(6040);
+	$product->set('field_cj_art_pdf_extract',"PDF- Extracta - sadasdasdad");
+	$product->save();
+	return;
+	$nid = array();
+	$db = mysqli_connect('localhost', 'debian-sys-maint', 'byGeWa9b?WhBy3wZbMuV') or die(mysqli_error($db));
+	mysqli_select_db($db,'radrupal7'); 
+	$query1 = "SELECT fl.entity_id, l.city,l.country,l.province FROM `field_data_field_gittin_wifes_location` fl,location l WHERE fl.field_gittin_wifes_location_lid = l.lid";
+	$result1 = mysqli_query($db,$query1) or die(mysqli_error($db));
+	while ($row1 = mysqli_fetch_object($result1)) {
+		$id = $row1->entity_id;
+		unset($row1->entity_id);
+		$nid[$id]=$row1;
+		//$node = Node::Load($row1->entity_id);
+		if($node){
+		  //$node->set('field_gittin_wife_country',$row1->country);
+		  //$node->set('field_gittin_wife_state',$row1->province);
+		  //$node->set('field_gittin_wife_city',$row1->city);
+		  //$node->save();
+		}
+	}
+	$query1 = "SELECT fl.entity_id, l.city,l.country,l.province FROM `field_data_field_gittin_husbands_location` fl,location l WHERE fl.field_gittin_husbands_location_lid =  l.lid";
+	$result1 = mysqli_query($db,$query1) or die(mysqli_error($db));
+	while ($row1 = mysqli_fetch_object($result1)) {
+		$id = $row1->entity_id;
+		unset($row1->entity_id);
+		$nid[$id]=$row1;
+		//$node = Node::Load($row1->entity_id);
+		if($node){
+		  //$node->set('field_gittin_husband_country',$row1->country);
+		  //$node->set('field_gittin_husband_state',$row1->province);
+		  //$node->set('field_gittin_husband_city',$row1->city);
+		  //$node->save();
+		  //drupal_set_message("Node with nid " . $node->id() . " saved!\n");
+		}
+  }
+ }
+
+/**
+ * Prepares variables for views field templates.
+ * 
+ */
+ 
+function ra_custom_utility_preprocess_views_view_field(&$variables) {
+	
+	if (isset($variables['view']) && ($variables['view']->storage->id() == 'commerce_cart_form')) {
+    
+		if ($variables['field']->field_alias == 'views_php_1' || $variables['field']->field_alias == 'views_php_6') {
+		  $variables['field']->last_render = \Drupal\Core\Render\Markup::create($variables['field']->last_render);
+		}
+    }
+    if (isset($variables['view']) && ($variables['view']->storage->id() == 'commerce_products' )) {
+        if ($variables['field']->field_alias == 'views_php_6') {
+		  $variables['field']->last_render = \Drupal\Core\Render\Markup::create($variables['field']->last_render);
+		}
+    }
+    
+    if (isset($variables['view']) && ($variables['view']->storage->id() == 'custom_order_report' )) {
+		if ($variables['field']->field_alias == 'views_php_2') {
+		  $variables['field']->last_render = \Drupal\Core\Render\Markup::create($variables['field']->last_render);
+		}
+    }
+}
+
+function _get_product_stock($product) {
+    $vid = $product->variations[0];
+    $pid = $product->product_id;
+    $path = '';
+    if($product->type=='default'){
+        global $base_url;
+        //$query = \Drupal::database()->query('SELECT sum(qty) as ava_qty FROM `commerce_stock_transaction` WHERE entity_id ='.$vid);
+        //$data = $query->fetchField();
+        $data = _get_stock_level($vid);
+    	if(isset($data)){
+			if($data>900000){
+				$path = 'Always in stock.';
+			}else{
+				$path = "<a href='".$base_url."/admin/commerce/config/stock/transactions2?commerce_product_v_id=" . $vid . "' class='use-ajax'  data-dialog-type='modal'>$data</a>";
+			}
+		}else{
+		$path = "<a href='".$base_url."/admin/commerce/config/stock/transactions2?commerce_product_v_id=" . $vid . "' class='use-ajax'  data-dialog-type='modal'> + Add Stock </a>";
+        }
+    
+    }else{
+        return "N/A";
+    }
+    return $path;
+}
+function ra_custom_utility_preprocess_block(&$variables) {
+	$temp_array = array('product_list_page-block_3','product_list_page-block_1');	
+	if (in_array($variables['derivative_plugin_id'], $temp_array)) {
+		#$variables['#cache']['max-age'] = 0;
+	}
+
+}
+
+/*
+ * hook_node_view implementation for displaying posted on date
+ */
+
+function ra_custom_utility_node_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode){ 
+  $created_date = $entity->getCreatedTime(); 
+  $node_type = $entity->getType(); 
+  $style = '';
+  if($view_mode != 'teaser'){
+        if($entity->hasField('field_'.$node_type.'_hide_date')){
+           if($entity->get('field_'.$node_type.'_hide_date')->getValue()[0]['value'] == '1' ) $style = '; display:none !important;';
+        }
+    if($node_type == 'site_pages'){
+      $node_type = 'page';
+    }if($node_type == 'notes'){ 
+		 //print_r($build['field_notes_group']); exit(); 
+		 $civi_id = $entity->get('field_civi_id')->getValue()[0]['value'];
+		 $name =  get_fullname($civi_id);
+		 $build['body'][0]['#text'] = '<div>'.$name.'</div><div class="field__label">Body</div>'.$build['body'][0]['#text'];
+    } else if($node_type == 'event' || $node_type == 'page'){ 
+      if($entity->get('field_'.$node_type.'_enable_posted_date')->getValue()[0]['value'] == '1' && $entity->get('field_'.$node_type.'_posted_on')->getValue()[0]['value'] != ''){
+        $build['field_'.$node_type.'_posted_on'] = array();
+       // $build['body'][0]['#text'] = '<div style="margin-bottom:10px '.$style.'"><b>Posted on: </b>'.date("l F j, Y", strtotime($entity->get('field_'.$node_type.'_posted_on')->getValue()[0]['value'])).'</div>'.$build['body'][0]['#text'];
+      }
+    } else if($entity->hasField('field_'.$node_type.'_enable_posted_date') && $entity->get('field_'.$node_type.'_enable_posted_date')->getValue()[0]['value'] == '' && $entity->get('field_'.$node_type.'_enable_posted_date')->getValue()[0]['value'] == '1' && $node_type !== 'product'){ 
+        $build['field_'.$node_type.'_posted_on'] = array();
+        $build['body'][0]['#text'] = '<div style="margin-bottom:10px '.$style.'"><b>Posted on: </b>'.date("l F j, Y", strtotime($entity->get('field_'.$node_type.'_posted_on')->getValue()[0]['value'])).'</div>'.$build['body'][0]['#text'];
+    }else{ 
+      if($entity->hasField('field_'.$node_type.'_posted_on')){  
+        $build['field_'.$node_type.'_posted_on'] = array();
+      } 
+      $node_allowed = ['freelance','institution','congregation','position_congregation','position_institution','position_freelance','header_image','product'];   
+      if(!in_array($node_type,$node_allowed)){   
+        if($entity->hasField('body')){
+		// comment out "posted on" from content types listed above
+//          $build['body'][0]['#text'] = '<div style="margin-bottom:10px '.$style.'"><b>Posted on: </b>'.date("l F j, Y", $created_date).'</div>'.$build['body'][0]['#text'];
+
+        } 
+
+      }  
+    }
+  } 
+}
+
+/*
+ * to change the text "add new comment" to "comments(3)"
+ * and
+ * to change the link of comment "node/[nodeid]#comment-form" to "node/[nodeid]#comments"
+ */
+
+function ra_custom_utility_preprocess_links(&$variables) {  
+  if ( isset($variables['links']['comment-add']['link']['#title']) && isset($variables['links']['comment-add']['link']['#url']) && method_exists($variables['links']['comment-add']['link']['#url'], 'getRouteParameters')) {  
+    $comment_count = 0;
+    $node_id_params = $variables['links']['comment-add']['link']['#url']->getRouteParameters();
+    $node_id = $node_id_params['node'];
+    $comment_count_array = \Drupal::service('comment.statistics')->read(array_fill_keys([$node_id], ''), 'node');
+    $comment_count = $comment_count_array[0]->comment_count;
+    $variables['links']['comment-add']['link']['#title'] = "Comments (" .$comment_count.")";
+    $variables['links']['comment-add']['link']['#options']['fragment'] = "comments";
+  }
+}
+
+function check_notes_item_access($row=array()){
+
+	if( \Drupal::currentUser()->id()==1){
+		//return FALSE;
+	}
+	$current_user_id = \Drupal::currentUser()->id();
+	$user = \Drupal\user\Entity\User::load($current_user_id);
+	$field_notes_group = $user->get('field_notes_group')->getValue();
+	if(!empty($field_notes_group)){ 
+		foreach($field_notes_group as $group){ 
+		$current_user_notes_group[] = $group['target_id'];
+		}
+	} 
+	if($current_user_id == 1){
+		$current_user_notes_group[] = 5701;
+	}
+	$loggedin_user_notes_group = $exp = $common_group = $current_row_group = array();
+	$loggedin_user_notes_group =$current_user_notes_group;
+	if(!empty($row->field_access_group_1)){
+		$current_row_group = $row->field_access_group_1->__toString();
+		$exp = explode(', ', $current_row_group);
+		$common_group = array_intersect($exp, $loggedin_user_notes_group);
+		//drupal_set_message('<pre>'. print_r($common_group, TRUE) .'</pre>');
+		if(count($common_group) > 0){
+			return FALSE;
+		}else{
+			return TRUE;
+		}
+	} else{
+		return TRUE;
+	}
+}
+/*
+function get_civi_discount_details($cid=28157){
+	$database_obj = \Drupal::database();
+	$discount = $database_obj->query("SELECT b.code FROM `cividiscount_track` a, `cividiscount_item` b WHERE a.item_id = b.id AND a.contribution_id=".$cid)->execute()->fetchField();     
+	$source = $database_obj->query("SELECT `source` from `civicrm_contribution` WHERE id=".$cid)->execute()->fetchField();;      
+	$data['source'] = $source;
+	$data['discount_code'] = $discount;
+    return $data;
+}*/
+
+function get_civi_discount_details($cid=28157,$event_id=''){
+	$database_obj = \Drupal::database();
+	$data['code']='';
+	$data['id']=0;
+	$data['source']='';
+	$query = $database_obj->query("SELECT source FROM `civicrm_participant` WHERE event_id = ".$event_id." ORDER BY `civicrm_participant`.`discount_id` DESC limit 0,1");      
+	$data1 = $query->fetchAll();
+    foreach($data1 as $temp){
+		$data['source']=$temp->source;
+		}
+	$query = $database_obj->query("SELECT `id` from `civicrm_contribution` WHERE contact_id=".$cid." and source like '%".$data['source']."%'");      
+	$data1 = $query->fetchAll();
+    foreach($data1 as $temp){
+		$data['id']=$temp->id;
+		}
+	$query = $database_obj->query("SELECT b.code FROM `cividiscount_track` a, `cividiscount_item` b WHERE a.item_id = b.id AND a.contribution_id=".$data['id']);      
+	$data0 = $query->fetchAll();
+	 foreach($data0 as $temp){
+		$data['code']=$temp->code;
+		}
+	
+	return $data;
+}
+function ra_custom_utility_query_alter(AlterableInterface $query){
+	if ($query->hasTag('calendar_page')) {
+		//$query->groupBy('node_field_data.nid');
+	}
+}

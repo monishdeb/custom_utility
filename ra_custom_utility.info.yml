@@ -1,0 +1,9 @@
+name: Ra Custom Utility
+description: Add Custom hacks.
+core: 8.x
+package: Custom
+version: 8.x
+dependencies:
+- node
+- block
+type: module

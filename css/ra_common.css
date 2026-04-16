@@ -1,0 +1,2596 @@
+.crm-container .crm-profile-name-Convention_2021_Contact_Information_212 .form-layout-compressed td,  .crm-container .crm-profile-name-Convention_2021_Contact_Information_212 .form-layout-compressed th{
+padding: 5px;
+}
+
+.crm-i-button>.crm-i{    top: 0.9em;}
+.comments .comment {
+    border-bottom: 1px solid #d8d8d2;
+    margin-bottom: 20px;
+}
+.already_uploaded { margin:10px; }
+/* Gtranslate styles starts here */
+.block.block--gtranslate.block--gtranslate-gtranslate {
+    position: absolute;margin-top: 10px;
+}
+#block-gtranslate-gtranslate .block__title {
+    display: none;
+}
+.goog-te-menu-value > span {
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 0.75rem;
+}
+/* Ends here */
+.home-read-more {
+    clear: both;
+    width: auto;
+}
+.banner_left,.banner_right{display:inline-block !important;}
+.page-home-member #block-racustombanner-2 img{width:100%;}
+.home-read-more a { display:inline-block; }
+#content_div .article_tilte a{ color:#24488E;text-decoration:underline;font-size:13px;	}
+.sort-text{ display:inline-block; }
+#sort-main{ width:100%;font-size: 14px;text-align: right; }
+#sort-by-1 { width: 8%;background-color: #E6EEEE;border-radius: 3px;padding: 2px 6px;color: #FFFFFF;text-align: center; }
+#sort-by-1 a { font-size: 13px; color:#24488E; }
+#sort-by-1 a img {margin-left: 7px;}
+#sort-by-2 { width: 10%;background-color: #E6EEEE;border-radius: 3px;padding: 2px 6px;color: #FFFFFF; text-align: center; }
+#sort-by-2 a { font-size: 13px; color: #24488E; }
+#sort-by-2 a img {margin-left: 7px;}
+.view-cj-article .odd,.view-cj-article .even{ border-bottom:1px solid #C1C1C1;margin-top:20px; }
+.cj_content { margin-top:2px; margin-bottom:10px;}
+/* Increasing the height of product list while creating order from admin */
+#edit-product-controls-nid { height: 100px; }
+.last_update{ float:right }
+/* Quick view styles start from here */
+.quick-first { float:left;margin-right:10px; }
+.quick-view-title { background-color: #d4e7f3;color: #24488e;font: 16px Verdana,Arial,Helvetica,sans-serif;margin-bottom: 15px;padding: 6px;}
+/* Return policy styles start from here */
+.checkout-return-policy, .order-complete-message, .checkout-complete-return-policy  { color: #4b4b4b;font-size: 12px;margin-top: 20px; text-align: left; }
+.checkout-complete-return-policy { float:left }
+.order-complete-message { margin-bottom:10px; }
+/* Superadmin edit issue fixes */
+#edit-account.form-wrapper label { padding: 0 0 0.4em 0}
+#edit-account.form-wrapper .password-suggestions.description ul{ margin:10px 0 5px 0}
+#edit-account.form-wrapper .password-suggestions.description ul li {list-style: disc}
+#edit-account.form-wrapper .form-type-radio div.radio, #edit-account.form-wrapper .form-type-checkbox div.checker{ display: inline-block; float: none; vertical-align: middle; margin-right: 5px}
+
+#edit-field-cj-purchased-issue .tabledrag-handle .handle, #edit-field-cj-purchased-article .tabledrag-handle .handle {height: 20px;}
+#edit-field-allowed-downloads label, #edit-field-total-downloaded label, #edit-field-remaining-download label { padding: 0 0 0.4em 0}
+
+#edit-uc-roles.collapsible.form-wrapper.collapse-processed .expiration { float: left; margin-top: 10px;}
+#edit-uc-roles.collapsible.form-wrapper.collapse-processed .expiration div.checker{ display: inline-block; float: none; vertical-align: middle; margin-right: 5px}
+#edit-uc-roles.collapsible.form-wrapper.collapse-processed .expiration .form-type-select select {height: 38px; padding: 10px;}
+/** Event Register **/
+#crm-container div.checker { display: inline-block; vertical-align: middle; float: none;}
+#crm-container.crm-container form .crm-profile .content label, #crm-container.crm-container form .crm-section .content div.radio {vertical-align: middle;}
+
+#crm-container.crm-container form .crm-section .content div.radio {
+    display: block !important;
+    float: none !important;
+    margin: 5px 3px 0 0 !important;
+    vertical-align: top !important;
+    height: auto !important;
+}
+
+/**Publications **/
+div.vertical-tabs {margin: 1em 0 1em 0}
+
+/**User Profile **/
+.user-profile span#user-page-contact, .user-profile span#user-page-profile-Mem {margin: 1.2em 0 0.5em 1em}
+
+/* Checkout page radio button issue for shipping quote */
+.uc-cart-checkout-form #quotes-pane #quote .form-item div.radio { margin-top: 0; }
+
+/** Donation page **/
+
+.crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content,
+.crm-contribution-page-id-6 #billing-payment-block .crm-section .content {
+    width: 29%;
+}
+
+.crm-contribution-page-id-6 .custom_pre_profile-group .crm-section.form-item label {
+    font-size: 13px
+}
+
+#crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section {
+    margin-bottom: 1em
+}
+
+#crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input [type="text"],
+#crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input[type="password"],
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input,
+#crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input[type="email"],
+#crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content select,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content select,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input {
+    width: 96.6%!important
+}
+
+.crm-contribution-page-id-6 #billing-payment-block fieldset legend {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.crm-contribution-page-id-6 #billing-payment-block #payment_information input#_qf_Main_upload_express {
+    width: auto;
+}
+
+.crm-contribution-page-id-6 #billing-payment-block #payment_information .crm-section.cvv2-section .content input {
+    width: 14%!important;
+}
+
+.crm-contribution-page-id-6 #billing-payment-block #payment_information .credit_card_info-section .credit_card_exp_date-section .content select {
+    width: 48.9%
+}
+
+.crm-contribution-page-id-6 .payment_options-group .payment_processor-section > .content {
+    padding-top: 6px;
+}
+
+.crm-contribution-page-id-6 .payment_options-group div.radio {
+    vertical-align: middle;
+    display: inline-block;
+    float: none;
+    margin-right: 5px;
+}
+
+.crm-contribution-page-id-6 .payment_options-group label {
+    vertical-align: middle;
+}
+
+
+/* FrontEnd with section-civicrm body class*/
+
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input,
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input [type="text"],
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input,
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input[type="password"],
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input,
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input[type="email"],
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content select,
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content select,
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input {
+    width: 100%!important;
+}
+
+body.section-civicrm  #crm-container.crm-public form .crm-section.billing_mode-section .crm-section.cvv2-section .cvv2-icon {
+    left: 6.5em;
+}
+
+body.section-civicrm  #crm-container.crm-public form .crm-section.billing_mode-section .crm-section.credit_card_exp_date-section select {
+    margin: 0;
+    width: 48.6%!important;
+}
+
+body.section-civicrm  #crm-container.crm-public form .crm-section.billing_mode-section .crm-section.credit_card_exp_date-section select#credit_card_exp_date_M {
+    margin-right: 10px;
+}
+
+body.section-civicrm  #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block #payment_information .crm-section.cvv2-section .content input {
+    width: 14%!important;
+}
+
+/** DD DT for superadmin with RA Member role **/
+dd {
+    margin-bottom: 20px;
+}
+dt {
+    margin-bottom: 2px;
+}
+
+/* FrontEnd with section-civicrm body class*/
+
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input [type="text"],
+#crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input[type="password"],
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input,
+#crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input[type="email"],
+#crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content select,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content select,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input {
+    width: 100%;
+}
+
+body.section-civicrm #crm-container.crm-container form .crm-section.billing_mode-section .crm-section.cvv2-section .cvv2-icon {
+    left: 6.5em;
+}
+
+body.section-civicrm #crm-container.crm-container form .crm-section.billing_mode-section .crm-section.credit_card_exp_date-section select {
+    margin: 0;
+    width: 48.6%;
+}
+
+body.section-civicrm #crm-container.crm-container form .crm-section.billing_mode-section .crm-section.credit_card_exp_date-section select#credit_card_exp_date_M {
+    margin-right: 10px;
+}
+
+/** Checkout page **/
+#uc-cart-checkout-form.uc-cart-checkout-form fieldset .form-type-select select {
+    width: 19.5em
+}
+
+#uc-cart-checkout-form .ajax-progress {
+    vertical-align: middle;
+    margin-top: 6px;
+}
+
+#uc-cart-checkout-form.uc-cart-checkout-form fieldset .payment-details-credit label,
+#uc-cart-checkout-form.uc-cart-checkout-form fieldset .form-type-select label {
+    width: 12em;
+    padding: 5px 0 0 0;
+    text-align: left
+}
+
+#uc-cart-checkout-form.uc-cart-checkout-form fieldset .form-type-select label {
+    padding-right: 2px
+}
+
+#uc-cart-checkout-form.uc-cart-checkout-form fieldset .payment-details-credit .form-type-select select {
+    width: inherit;
+}
+
+#uc-cart-checkout-form.uc-cart-checkout-form fieldset .payment-details-credit .form-type-select select#edit-panes-payment-details-cc-exp-month {
+    width: 199px;
+}
+
+#uc-cart-checkout-form.uc-cart-checkout-form fieldset .payment-details-credit .form-type-select select#edit-panes-payment-details-cc-exp-year {
+    margin-left: 10px;width: 70px;
+}
+
+#uc-cart-checkout-form.uc-cart-checkout-form fieldset div.payment-details-credit input {
+    width: 280px!important;
+}
+
+#uc-cart-checkout-form.uc-cart-checkout-form fieldset .payment-details-credit .form-item-panes-payment-details-cc-cvv input {
+    width: 62px!important;
+}
+
+#uc-cart-checkout-form.uc-cart-checkout-form .payment-details-credit .form-item-panes-payment-details-cc-number,
+#uc-cart-checkout-form.uc-cart-checkout-form .payment-details-credit .form-item-panes-payment-details-cc-cvv {
+    clear: both;
+    display: block;
+    float: left;
+    margin-bottom: 1em;
+    vertical-align: top;
+    width: 100%;
+}
+
+#uc-cart-checkout-form.uc-cart-checkout-form .payment-details-credit .form-item-panes-payment-details-cc-cvv {
+    margin-top: 1em;
+}
+
+.user-login .form-item-remember-me div.checker { display: inline-block}
+.user-login .form-item-remember-me  #edit-remember-me {opacity: 1}
+
+/*normal checkbox style*/
+#crm-container.crm-container form .crm-profile.crm-profile-id-136 .crm-section .content{
+    width: 100%;
+    margin-left: 0%;
+}
+
+#crm-container.crm-container form .crm-profile.crm-profile-id-136 .crm-section .label{
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+#crm-container.crm-container form .crm-profile.crm-profile-id-136 .crm-section .label label{
+    margin-bottom: 5px;
+}
+
+#crm-container.crm-container form .crm-profile.crm-profile-id-136 div.checker{
+    padding-bottom: 5px;
+}
+
+#crm-container.crm-container form .crm-profile.crm-profile-id-136 .content label{
+    width: 95%;
+    margin-top: 4px;
+}
+/*superuser checkbox style*/
+body.navbar-administration #crm-container.crm-container form .crm-profile.crm-profile-id-136 .content label{
+    width: 95%;
+    margin-top: 3px;
+}
+body.navbar-administration #crm-container.crm-container form .crm-profile.crm-profile-id-136 .crm-section .content{
+    padding-left: 19%;
+    box-sizing: border-box;
+}
+body.navbar-administration #crm-container.crm-container form .crm-profile.crm-profile-id-136 .crm-section .label{
+    box-sizing: border-box;
+    padding-left: 8%;
+}
+
+/*superadminonly global style*/
+body.navbar-administration #payment_information .content{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+body.navbar-administration fieldset legend{
+    width: 100%;
+}
+
+
+/* New Css */
+
+.l-region--header nav ul.menu li:first-child  {width: 20%;}
+.not-front .l-main .l-region--sidebar-first .block--civicrm {padding: 0 0 0 14px;}
+.not-front .l-main .l-region--sidebar-first .block--civicrm:first-child { padding-top:14px;}
+.crm-contribution-main-form-block .crm-submit-buttons .crm-i-button>.crm-i {top: 0.8em;}
+#crm-container.crm-container form #crm-submit-buttons span.crm-button input { padding:7px 15px 7px 18px !important}
+.crm-container input.crm-form-text, .crm-container .crm-icon-picker-button, .crm-container input.dateplugin, .crm-container input.crm-form-password { height:2.4em; border-radius:4px;}
+.crm-container .crm-accordion-body { padding:4px;}
+.page-civicrm div.radio { float:none; display:inline-block; margin:0 2px 0 0; vertical-align:middle;}
+.page-civicrm div.checker, #crm-container div.checker {float:none; display:inline-block; margin:0 2px 0 0; vertical-align:middle;}
+.crm-accordion-wrapper span.crm-address-element { display:block;}
+.page-civicrm div.crm-container label, div.crm-container label { display:inline!important; vertical-align:middle; margin:0 5px 0 0;}
+.page-civicrm .crm-container #demographics div.form-item span.fields, .crm-container #demographics div.crm-form-block span.fields { display:inline; margin-left:0}
+.crm-container .helpIcon  { margin-bottom:4px!important;}
+input[type="checkbox"], input[type="radio"] { vertical-align: middle; margin:0 2px 0 0}
+.crm-container div.select2-container ul.select2-choices { border-radius:4px;}
+
+.page-civicrm .map-field h3 { padding:5px 10px}
+
+.page-civicrm .crm-container div.select2-container > ul > li{ margin-bottom:0;}
+.page-civicrm .crm-container .btn-slide .panel li a:hover { border-radius:0;}
+.page-civicrm .crm-container .btn-slide .panel li { margin:0; padding:0}
+.page-civicrm .crm-container .select2-container-multi .select2-choices .select2-search-field input { height:2.4em;}
+.not-front .l-main .l-region--sidebar-first { max-width:246px!important;}
+
+.page-civicrm-contribute .custom_pre_profile-group #editrow-custom_221 { max-width:500px; position:relative;}
+.page-civicrm-contribute .custom_pre_profile-group #editrow-custom_221 .other_amount-section {position: absolute; right: 0; bottom: 17px;}
+
+/** New CSS */
+form.node-form input[type="text"], form.node-form input[type="password"], form.node-form input[type="email"], form.node-form input[type="date"], input[type="time"], form.node-form select {max-width:457px; height:40px!important; width: 100%; box-sizing: border-box; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eee), color-stop(15%, #fff));
+background-image: -webkit-linear-gradient(top, #eee 1%, #fff 15%); background-image: -moz-linear-gradient(top, #eee 1%, #fff 15%); background-image: linear-gradient(top, #eee 1%, #fff 15%); border-radius: 4px !important; border: 1px solid #dfe5ed;
+padding: 12px 5px !important;}
+form.node-form input[type="text"].error, form.node-form input[type="password"].error, form.node-form input[type="email"].error, form.node-form input[type="date"].error, input[type="time"].error, form.node-form select.error {border: 1px solid red;}
+form.node-form select, form select {padding: 11px 5px 11px 5px!important}
+
+.page-node-type-institution .layout--onecol .layout__region {display: table; border-top: 1px solid #ddd;}
+.page-node-type-institution .layout--onecol .layout__region .field--label-above {display: table-row;}
+.page-node-type-institution .layout--onecol .layout__region .field--label-above .field__label {display: table-cell;
+	padding: 8px; width: 130px; border: 1px solid #ddd; border-top: 0 none;}
+.page-node-type-institution .layout--onecol .layout__region .field--label-above .field__item {display: table-cell;  border: 1px solid #ddd; border-top: 0 none; border-left: 0 none; padding: 8px;}
+
+.page-node-add-institution fieldset {margin-bottom: 30px;}
+.page-node-add-institution fieldset:last-child {margin-bottom: 10px;}
+.page-node-add-institution fieldset legend {text-transform: uppercase; font-size: 12px; font-weight: bold; margin-bottom: 5px;}
+.page-node-add-institution  details {margin: 0!important; border: 0 none!important;}
+.page-node-add-institution  details .details-wrapper {padding:0;}
+.page-node-add-institution details summary {padding:0; font-weight: bold;}
+.page-node-add-institution div.address-container-inline .form-item input {max-width: 457px;}
+.page-node-add-institution div.address-container-inline .form-item {display: block;}
+
+.page-node-add-congregation fieldset {margin-bottom: 30px;}
+.page-node-add-congregation fieldset:last-child {margin-bottom: 10px;}
+.page-node-add-congregation fieldset legend {text-transform: uppercase; font-size: 12px; font-weight: bold; margin-bottom: 5px;}
+.page-node-add-congregation  details {margin: 0!important; border: 0 none!important;}
+.page-node-add-congregation  details .details-wrapper {padding:0;}
+.page-node-add-congregation details summary {padding:0; font-weight: bold;}
+.page-node-add-congregation div.address-container-inline .form-item input {max-width: 457px;}
+.page-node-add-congregation div.address-container-inline .form-item {display: block;}
+
+.page-node-type-institution fieldset {margin-bottom: 30px;}
+.page-node-type-institution fieldset:last-child {margin-bottom: 10px;}
+.page-node-type-institution fieldset legend {text-transform: uppercase; font-size: 12px; font-weight: bold; margin-bottom: 5px;}
+.page-node-type-institution  details {margin: 0!important; border: 0 none!important;}
+.page-node-type-institution  details .details-wrapper {padding:0;}
+.page-node-type-institution details summary {padding:0; font-weight: bold;}
+.page-node-type-institution div.address-container-inline .form-item input {max-width: 457px;}
+.page-node-type-institution div.address-container-inline .form-item {display: block;}
+
+.node-congregation-edit-form fieldset {margin-bottom: 30px;}
+.node-congregation-edit-form fieldset:last-child {margin-bottom: 10px;}
+.node-congregation-edit-form fieldset legend {text-transform: uppercase; font-size: 12px; font-weight: bold; margin-bottom: 5px;}
+.node-congregation-edit-form  details {margin: 0!important; border: 0 none!important;}
+.node-congregation-edit-form  details .details-wrapper {padding:0;}
+.node-congregation-edit-form details summary {padding:0; font-weight: bold;}
+.node-congregation-edit-form div.address-container-inline .form-item input {max-width: 457px;}
+.node-congregation-edit-form div.address-container-inline .form-item {display: block;}
+
+
+.field-multiple-table td .form-wrapper {margin-bottom:15px; width: 49%; margin-right: 10px; float: left;}
+.field-multiple-table td .form-wrapper fieldset {border: 0 none; padding: 0; width: 100%;}
+.field-multiple-table td .form-wrapper fieldset legend {display: block; font-weight: bold; padding: 0 0 4px;}
+.field-multiple-table td .form-wrapper:nth-child(2n) {float:right; margin-right: 0;}
+.field-multiple-table td .form-wrapper.field--name-field-subject {width:100%;}
+.field-multiple-table td .form-wrapper.field--name-field-subject input {max-width: inherit;}
+.field-multiple-table td .form-wrapper details {border: 0 none; width: 100%;}
+
+.field-multiple-table .field--name-field-description, .field-multiple-table .js-filter-wrapper {width:100%!important; box-sizing: border-box;}
+.field-multiple-table .js-filter-wrapper label {display: block;}
+.field-multiple-table .js-filter-wrapper .js-form-type-select {width: 49%;}
+.field-multiple-table td .form-wrapper.form-actions {float:left; margin-top: 0;}
+.field-multiple-table .js-filter-wrapper .filter-help {float: right; text-align: right;}
+.field-multiple-table .js-form-type-date input {width: 100%; }
+.field-multiple-table .container-inline {display: flex; justify-content: space-between; flex-wrap: wrap;}
+.field-multiple-table .container-inline .js-form-type-date {width: 49%;}
+.field-multiple-table .field-multiple-drag {padding-top: 1.35em;}
+
+.field--type-datetime .js-form-type-date {margin-top: 4px; width:100%;}
+.field--name-field-instit-document label {text-transform: capitalize;}
+
+
+.l-main .menu--menu-store-manager, .l-main .menu--placement {margin:2em 0 2em;}
+.l-main .menu--menu-store-manager h2, .l-main .menu--placement h2 {padding:0 14px 6px;}
+.l-main .menu--menu-store-manager ul, .l-main .menu--placement ul {margin:0; padding:0;}
+.l-main .menu--menu-store-manager ul li a, .l-main .menu--placement ul li a {display:block; padding:6px 14px; color:#24488e; text-decoration:none; position:relative; margin:0 0 1px;}
+.l-main .menu--menu-store-manager ul li ul, .l-main .menu--placement ul li ul {padding:0 0 0 14px; display:block; margin:0;}
+.l-main .menu--menu-store-manager ul li:hover > a, .l-main .menu--menu-store-manager ul li.active > a, .l-main .menu--menu-store-manager ul li.menu-item--active-trail > a,
+.l-main .menu--placement ul li:hover > a, .l-main .menu--placement ul li.active > a, .l-main .menu--placement ul li.menu-item--active-trail > a {color:#C22602; background:#DEE5F5;}
+
+.l-main .l-region .block-menu.navigation {margin:2em 0 2em;}
+.l-main .l-region .block-menu.navigation h2 {padding:0 14px 6px;}
+.l-main .l-region .block-menu.navigation ul {margin:0; padding:0;}
+.l-main .l-region .block-menu.navigation ul li a {display:block; padding:6px 14px; color:#24488e; text-decoration:none; position:relative; margin:0 0 1px; font-size: 12px;}
+.l-main .l-region .block-menu.navigation ul li ul {padding:0 0 0 14px; display:block; margin:0;}
+.l-main .l-region .block-menu.navigation ul li:hover > a, .l-main .l-region .block-menu.navigation ul li.active > a, .l-main .l-region .block-menu.navigation ul li.menu-item--active-trail > a, .l-main .l-region .block-menu.navigation ul li > a.is-active {color:#C22602; background:#DEE5F5;}
+
+
+.details-wrapper .details-wrapper {padding:0;}
+.details-wrapper details {margin: 0!important; border: 0 none!important;}
+.details-wrapper summary {padding:0; font-weight: bold;}
+.details-wrapper  div.address-container-inline .form-item input {max-width: 457px;}
+
+/*View Page */
+
+.page-node-type-position-congregation .block-system-main-block article div:nth-child(2) .field {display: table;
+width: 100%; margin: 0; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.page-node-type-position-congregation .block-system-main-block article div:nth-child(2) .field:nth-child(2n+1) {background: #f1f1f1;}
+.page-node-type-position-congregation .block-system-main-block article div:nth-child(2) .field:nth-child(2n) {background: #eaeaea;}
+.page-node-type-position-congregation .block-system-main-block article div:nth-child(2) .field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.page-node-type-position-congregation .block-system-main-block article div:nth-child(2) .field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.page-node-type-position-congregation .block-system-main-block article div:nth-child(2) .field div.field__item p {margin-bottom: 0;}
+.page-node-type-position-congregation .block-system-main-block article div:nth-child(2) .field div {display:table-cell; padding:12px 15px; font-weight:normal;}
+.page-node-type-position-congregation .block-system-main-block article div:nth-child(2) .field div.field__items .field__item {width: 100%; max-width: inherit; display: block; padding: 0;}
+
+
+.block-system-main-block article.contextual-region.node--type-rabbi-resume {margin: 15px auto!important;}
+.block-system-main-block article.contextual-region.node--type-rabbi-resume footer.node__meta {margin-bottom: 10px;}
+.block-system-main-block article.contextual-region.node--type-rabbi-resume  .node__content {border: 1px solid #e7e7e7; padding: 3px 3px 2px; -webkit-box-shadow: 0px 1px 3px #e2e2e2; -moz-box-shadow: 0px 1px 3px #e2e2e2; -ms-box-shadow: 0px 1px 3px #e2e2e2; -o-box-shadow: 0px 1px 3px #e2e2e2; box-shadow: 0px 1px 3px #e2e2e2; margin: 15px auto!important; box-sizing: border-box;}
+.block-system-main-block article.contextual-region.node--type-rabbi-resume  .node__content .field {display: table;
+width: 100%; margin: 0; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.block-system-main-block article.contextual-region.node--type-rabbi-resume  .node__content .field:nth-child(2n+1) {background: #f1f1f1;}
+.block-system-main-block article.contextual-region.node--type-rabbi-resume  .node__content .field:nth-child(2n) {background: #eaeaea;}
+.block-system-main-block article.contextual-region.node--type-rabbi-resume  .node__content .field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.block-system-main-block article.contextual-region.node--type-rabbi-resume  .node__content .field div.field__item {margin:0; max-width:28vw; word-wrap:break-word;width: 50%;}
+.block-system-main-block article.contextual-region.node--type-rabbi-resume  .node__content .field div.field__item p {margin-bottom: 0;}
+.block-system-main-block article.contextual-region.node--type-rabbi-resume  .node__content .field div {display:table-cell; padding:12px 15px; font-weight:normal;}
+
+
+.block-system-main-block article.contextual-region.node--type-institution {margin: 0 auto!important;}
+.block-system-main-block article.contextual-region.node--type-institution footer.node__meta {margin-bottom: 10px;}
+.block-system-main-block article.contextual-region.node--type-institution  .node__content {border: 1px solid #e7e7e7; padding: 3px 3px 2px; -webkit-box-shadow: 0px 1px 3px #e2e2e2; -moz-box-shadow: 0px 1px 3px #e2e2e2; -ms-box-shadow: 0px 1px 3px #e2e2e2; -o-box-shadow: 0px 1px 3px #e2e2e2; box-shadow: 0px 1px 3px #e2e2e2; margin: 0 auto!important; box-sizing: border-box;}
+.block-system-main-block article.contextual-region.node--type-institution  .node__content .field {display: table;
+width: 100%; margin: 0; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.block-system-main-block article.contextual-region.node--type-institution  .node__content .field:nth-child(2n+1) {background: #f1f1f1;}
+.block-system-main-block article.contextual-region.node--type-institution  .node__content .field:nth-child(2n) {background: #eaeaea;}
+.block-system-main-block article.contextual-region.node--type-institution  .node__content .field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.block-system-main-block article.contextual-region.node--type-institution  .node__content .field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.block-system-main-block article.contextual-region.node--type-institution  .node__content .field div.field__item p {margin-bottom: 0;}
+.block-system-main-block article.contextual-region.node--type-institution .node__content .field div {display:table-cell; padding:12px 15px; font-weight:normal;}
+
+
+.block-system-main-block article.contextual-region.node--type-congregation {margin: 15px auto!important;}
+.block-system-main-block article.contextual-region.node--type-congregation footer.node__meta {margin-bottom: 10px;}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content {border: 1px solid #e7e7e7; padding: 3px 3px 2px; -webkit-box-shadow: 0px 1px 3px #e2e2e2; -moz-box-shadow: 0px 1px 3px #e2e2e2; -ms-box-shadow: 0px 1px 3px #e2e2e2; -o-box-shadow: 0px 1px 3px #e2e2e2; box-shadow: 0px 1px 3px #e2e2e2; margin: 15px auto!important; box-sizing: border-box;}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content .field {display: table;
+width: 100%; margin: 0; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content .field:nth-child(2n+1) {background: #f1f1f1;}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content .field:nth-child(2n) {background: #eaeaea;}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content .field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content .field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content .field div.field__item p {margin-bottom: 0;}
+.block-system-main-block article.contextual-region.node--type-congregation .node__content .field div {display:table-cell; padding:12px 15px; font-weight:normal;}
+
+.block-system-main-block article.contextual-region.node--type-congregation {margin: 0 auto!important;}
+.block-system-main-block article.contextual-region.node--type-congregation footer.node__meta {margin-bottom: 10px;}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content {border: 1px solid #e7e7e7; padding: 3px 3px 2px; -webkit-box-shadow: 0px 1px 3px #e2e2e2; -moz-box-shadow: 0px 1px 3px #e2e2e2; -ms-box-shadow: 0px 1px 3px #e2e2e2; -o-box-shadow: 0px 1px 3px #e2e2e2; box-shadow: 0px 1px 3px #e2e2e2; margin: 0 auto!important; box-sizing: border-box;}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content .field {display: table;
+width: 100%; margin: 0; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content .field:nth-child(2n+1) {background: #f1f1f1;}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content .field:nth-child(2n) {background: #eaeaea;}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content .field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content .field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.block-system-main-block article.contextual-region.node--type-congregation  .node__content .field div.field__item p {margin-bottom: 0;}
+.block-system-main-block article.contextual-region.node--type-congregation .node__content .field div {display:table-cell; padding:12px 15px; font-weight:normal;}
+
+
+.page-node-type-position-freelance .block-system-main-block article.contextual-region  > div:nth-child(2) {margin: 15px auto!important;}
+.page-node-type-position-freelance .block-system-main-block article.contextual-region  > div:nth-child(2) footer.node__meta {margin-bottom: 10px;}
+.page-node-type-position-freelance .block-system-main-block article.contextual-region  > div:nth-child(2) {border: 1px solid #e7e7e7; padding: 3px 3px 2px; -webkit-box-shadow: 0px 1px 3px #e2e2e2; -moz-box-shadow: 0px 1px 3px #e2e2e2; -ms-box-shadow: 0px 1px 3px #e2e2e2; -o-box-shadow: 0px 1px 3px #e2e2e2; box-shadow: 0px 1px 3px #e2e2e2; margin: 15px auto!important; box-sizing: border-box;}
+.page-node-type-position-freelance .block-system-main-block article.contextual-region  > div:nth-child(2) .field {display: table;
+width: 100%; margin: 0; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.page-node-type-position-freelance .block-system-main-block article.contextual-region  > div:nth-child(2) .field:nth-child(2n+1) {background: #f1f1f1;}
+.page-node-type-position-freelance .block-system-main-block article.contextual-region  > div:nth-child(2) .field:nth-child(2n) {background: #eaeaea;}
+.page-node-type-position-freelance .block-system-main-block article.contextual-region  > div:nth-child(2) .field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.page-node-type-position-freelance .block-system-main-block article.contextual-region  > div:nth-child(2) .field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.page-node-type-position-freelance .block-system-main-block article.contextual-region  > div:nth-child(2) .field div.field__item p {margin-bottom: 0;}
+.page-node-type-position-freelance .block-system-main-block article.contextual-region  > div:nth-child(2) .field div.field__items  div.field__item {padding: 0;}
+.page-node-type-position-freelance .block-system-main-block article.contextual-region  > div:nth-child(2) .field div {display:table-cell; padding:12px 15px; font-weight:normal; width: 50%;}
+.print__wrapper {padding: 12px 15px; clear: both;}
+
+.page-node-type-position-freelance .block-system-main-block article.contextual-region  > div:nth-child(2) .field.field--name-field-free-other-benefits div.field__items div.field__item {width:100%!important; display: block; box-sizing: border-box; padding-left: 0; padding-right: 0;}
+.page-node-type-position-freelance .block-system-main-block article.contextual-region > div:nth-child(2) .field--name-field-free-length-position-day  .field__label {font-size: 0;}
+
+.page-node-type-position-freelance .block-system-main-block article.contextual-region > div:nth-child(2) .field--name-field-free-compensation {border: 0 none;}
+
+
+.page-node-type-position-freelance .node-position-freelance-edit-form .field-group-html-element {display: flex; justify-content: space-between; max-width: 457px;}
+.page-node-type-position-freelance .node-position-freelance-edit-form .field-group-html-element .field--name-field-free-length-of-position {width: 50%;}
+.page-node-type-position-freelance .node-position-freelance-edit-form .field-group-html-element .field--name-field-free-length-position-day {width:45%;}
+.page-node-type-position-freelance .node-position-freelance-edit-form .field-group-html-element .field--name-field-free-length-position-day label {font-size: 0; margin-top: 27px;}
+
+.page-node-add-position-freelance .node-position-freelance-form .field-group-html-element {display: flex; justify-content: space-between; max-width: 457px;}
+.page-node-add-position-freelance .node-position-freelance-form .field-group-html-element .field--name-field-free-length-of-position {width: 50%;}
+.page-node-add-position-freelance .node-position-freelance-form .field-group-html-element .field--name-field-free-length-position-day {width:45%;}
+.page-node-add-position-freelance .node-position-freelance-form .field-group-html-element .field--name-field-free-length-position-day label {font-size: 0!important; margin-top:20px!important;}
+.admin-user.page-node-add-position-freelance .node-position-freelance-form .field-group-html-element .field--name-field-free-length-position-day label {font-size: 0!important; margin-top:15px!important;}
+
+.page-node-type-position-institution .block-system-main-block article.contextual-region > div:nth-child(2) {border: 1px solid #e7e7e7; padding: 3px 3px 2px; -webkit-box-shadow: 0px 1px 3px #e2e2e2; -moz-box-shadow: 0px 1px 3px #e2e2e2; -ms-box-shadow: 0px 1px 3px #e2e2e2; -o-box-shadow: 0px 1px 3px #e2e2e2; box-shadow: 0px 1px 3px #e2e2e2; margin: 15px auto;}
+.page-node-type-position-institution .block-system-main-block article.contextual-region div:nth-child(2) .field {display: table;
+width: 100%; margin: 0; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.page-node-type-position-institution .block-system-main-block article.contextual-region div:nth-child(2) .field:nth-child(2n+1) {background: #f1f1f1;}
+.page-node-type-position-institution .block-system-main-block article.contextual-region div:nth-child(2) .field:nth-child(2n) {background: #eaeaea;}
+.page-node-type-position-institution .block-system-main-block article.contextual-region div:nth-child(2) .field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.page-node-type-position-institution .block-system-main-block article.contextual-region div:nth-child(2) .field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.page-node-type-position-institution .block-system-main-block article.contextual-region div:nth-child(2) .field div.field__item p {margin-bottom: 0;}
+.page-node-type-position-institution .block-system-main-block article.contextual-region div:nth-child(2) .field div {display:table-cell; padding:12px 15px; font-weight:normal; width: 50%;}
+.page-node-type-position-institution .block-system-main-block article.contextual-region div:nth-child(2) .field div.field__items  .field__item {width: 100%; display: block; padding: 5px 0;}
+.inst_position ul {list-style: disc!important; margin-bottom: 22px !important;}
+
+#edit-status.form-checkboxes .form-item, #edit-status.form-radios .form-item {padding-bottom:10px;}
+
+form .field-multiple-table .field--name-field-message {width:100%;}
+
+/*
+.node--view-mode-full .node__content {margin: 15px auto!important;}
+.node--view-mode-full .node__content footer.node__meta {margin-bottom: 10px;}
+.node--view-mode-full .node__content {border: 1px solid #e7e7e7; padding: 3px 3px 2px; -webkit-box-shadow: 0px 1px 3px #e2e2e2; -moz-box-shadow: 0px 1px 3px #e2e2e2; -ms-box-shadow: 0px 1px 3px #e2e2e2; -o-box-shadow: 0px 1px 3px #e2e2e2; box-shadow: 0px 1px 3px #e2e2e2; margin: 15px auto!important; box-sizing: border-box;}
+.node--view-mode-full .node__content .field {display: table; width: 100%; margin: 0; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.node--view-mode-full .node__content  .field:nth-child(2n+1) {background: #f1f1f1;}
+.node--view-mode-full .node__content  .field:nth-child(2n) {background: #eaeaea;}
+.node--view-mode-full .node__content  .field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff;}
+.node--view-mode-full .node__content  .field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.node--view-mode-full .node__content  .field div.field__item p {margin-bottom: 0;}
+.node--view-mode-full .node__content  .field div.field__items  div.field__item {padding: 0;}
+.node--view-mode-full .node__content  .field div {display:table-cell; padding:12px 15px; font-weight:normal; width: 50%;}
+*/
+.edit-freelance, .edit-institution {padding: 12px 15px;}
+
+
+.node-congregation-edit-form fieldset {margin-bottom: 30px; border:0 none; padding: 0;}
+.node-congregation-edit-form fieldset:last-child {margin-bottom: 10px;}
+.node-congregation-edit-form fieldset legend {text-transform: uppercase; font-size: 12px; font-weight: bold; margin-bottom: 5px;}
+.node-congregation-edit-form details {margin: 0!important; border: 0 none!important;}
+.node-congregation-edit-form details .details-wrapper {padding:0;}
+.node-congregation-edit-form details summary {padding:0; font-weight: bold;}
+.node-congregation-edit-form div.address-container-inline .form-item input {max-width: 457px;}
+.node-congregation-edit-form div.address-container-inline .form-item {display: block;}
+.l-main .l-content .node-congregation-edit-form .form-type-checkbox label {display: inline-block!important; width: auto!important; padding: 0 !important;}
+
+
+.page-node-type-position-freelance .block-system-main-block article  > div {margin: 15px auto!important;}
+.page-node-type-position-freelance .block-system-main-block article > div footer.node__meta {margin-bottom: 10px;}
+.page-node-type-position-freelance .block-system-main-block article > div {border: 1px solid #e7e7e7; padding: 3px 3px 2px; -webkit-box-shadow: 0px 1px 3px #e2e2e2; -moz-box-shadow: 0px 1px 3px #e2e2e2; -ms-box-shadow: 0px 1px 3px #e2e2e2; -o-box-shadow: 0px 1px 3px #e2e2e2; box-shadow: 0px 1px 3px #e2e2e2; margin: 15px auto!important; box-sizing: border-box;}
+.page-node-type-position-freelance .block-system-main-block article  > div .field {display: table;
+width: 100%; margin: 0; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.page-node-type-position-freelance .block-system-main-block article  > div .field:nth-child(2n+1) {background: #f1f1f1;}
+.page-node-type-position-freelance .block-system-main-block article > div .field:nth-child(2n) {background: #eaeaea;}
+.page-node-type-position-freelance .block-system-main-block article  > div .field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.page-node-type-position-freelance .block-system-main-block article  > div .field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.page-node-type-position-freelance .block-system-main-block article  > div .field div.field__item p {margin-bottom: 0;}
+.page-node-type-position-freelance .block-system-main-block article > div .field div.field__items  div.field__item {padding: 0;}
+.page-node-type-position-freelance .block-system-main-block article > div .field div {display:table-cell; padding:12px 15px; font-weight:normal; width: 50%;}
+.page-node-type-position-freelance .block-system-main-block article > div .field div.field__items  div.field__item {width:100%; display: block;}
+
+.page-node-type-freelance .block-system-main-block article  > div {margin: 15px auto!important;}
+.page-node-type-freelance .block-system-main-block article > div footer.node__meta {margin-bottom: 10px;}
+.page-node-type-freelance .block-system-main-block article > div {border: 1px solid #e7e7e7; padding: 3px 3px 2px; -webkit-box-shadow: 0px 1px 3px #e2e2e2; -moz-box-shadow: 0px 1px 3px #e2e2e2; -ms-box-shadow: 0px 1px 3px #e2e2e2; -o-box-shadow: 0px 1px 3px #e2e2e2; box-shadow: 0px 1px 3px #e2e2e2; margin: 0 auto!important; box-sizing: border-box;}
+.page-node-type-freelance .block-system-main-block article  > div .field {display: table;
+width: 100%; margin: 0; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.page-node-type-freelance .block-system-main-block article  > div .field:nth-child(2n+1) {background: #f1f1f1;}
+.page-node-type-freelance .block-system-main-block article > div .field:nth-child(2n) {background: #eaeaea;}
+.page-node-type-freelance .block-system-main-block article  > div .field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.page-node-type-freelance .block-system-main-block article  > div .field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.page-node-type-freelance .block-system-main-block article  > div .field div.field__item p {margin-bottom: 0;}
+.page-node-type-freelance .block-system-main-block article > div .field div.field__items  div.field__item {padding: 0;}
+.page-node-type-freelance .block-system-main-block article > div .field div {display:table-cell; padding:12px 15px; font-weight:normal; width: 50%;}
+.page-node-type-freelance .block-system-main-block article > div .field div.field__items  div.field__item {width:100%; display: block;}
+
+.view-placement-positions-admin .button.add-to-cart {margin: 10px 0 20px 0;}
+.view-placement-positions-admin .view-filters .views-exposed-form .form--inline clearfix {display: flex; align-items: end; margin: 0 0 20px 0;}
+.view-placement-positions-admin .view-filters .views-exposed-form .form--inline clearfix #edit-actions {margin: 0 0 9px 0;}
+
+details.controlled-fields-field-group > .details-wrapper .field {margin-top: 1em; margin-bottom: 1.5em;}
+details.controlled-fields-field-group > .details-wrapper .field .field__label {margin:0 0 5px 0;}
+
+.node-position-congregation-form .address-container-inline, .page-node-type-position-congregation .address-container-inline {display: flex; justify-content: space-between;}
+.node-position-congregation-form .address-container-inline > .form-item, .page-node-type-position-congregation .address-container-inline > .form-item {width:33%; margin-right: 1em;}
+.node-position-congregation-form .address-container-inline > .form-item:nth-child(3), .page-node-type-position-congregation .address-container-inline > .form-item:nth-child(3) {margin-right: 0;}
+
+.vertical-tabs .vertical-tabs__panes .container-inline .form-type-date {margin: 0 !important;}
+.vertical-tabs .vertical-tabs__panes .container-inline .form-type-date input {border: 1px  solid #ccc; -webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+-ms-border-radius: 2px;
+-o-border-radius: 2px;
+border-radius: 2px;
+box-sizing: border-box;
+font-size: 12px;
+font-size: 0.75rem;
+height: 39px;
+width: 100%;
+color: #4b4b4b;
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eee), color-stop(15%, #fff));
+background-image: -webkit-linear-gradient(top, #eee 1%, #fff 15%);
+background-image: -moz-linear-gradient(top, #eee 1%, #fff 15%);
+background-image: linear-gradient(to bottom, #eeeeee 1%, #ffffff 15%);
+height: auto;
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(-28px, #eee), color-stop(15%, #fff));
+background-image: -webkit-linear-gradient(top, #eee -28px, #fff 15%);
+background-image: -moz-linear-gradient(top, #eee -28px, #fff 15%);
+background-image: linear-gradient(to bottom, #eeeeee -28px, #ffffff 15%);
+	padding: 10px;}
+
+.page-node-add-position-congregation .field--name-field-cong-position-start-date {width: 49%; float: left; margin: 0 0 1.5em 0 !important; padding: 3px 0 4px 0;}
+.page-node-add-position-congregation .field--name-field-submitted-at {width: 49%; float: right; margin: 0 0 1.5em 0 !important; padding: 3px 0 4px 0;}
+.page-node-add-position-congregation .field--name-field-submitted-at .form-item {margin: 0!important;}
+.page-node-add-position-congregation .node-position-congregation-form .field--name-field-eligibility {margin: 0 0 1.5em 0 !important; padding: 3px 0 4px 0; float: right; width: 49%;}
+.page-node-add-position-congregation .node-position-congregation-form .field--name-field-eligibility .form-item {margin: 0;}
+
+.page-node-add-position-congregation .field--name-field-cong-position-start-date input, .page-node-add-position-congregation .field--name-field-submitted-at input {border: 1px  solid #ccc; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; box-sizing: border-box; font-size: 12px; font-size: 0.75rem;height: 39px;
+width: 100%; color: #4b4b4b; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eee), color-stop(15%, #fff)); background-image: -webkit-linear-gradient(top, #eee 1%, #fff 15%); background-image: -moz-linear-gradient(top, #eee 1%, #fff 15%); background-image: linear-gradient(to bottom, #eeeeee 1%, #ffffff 15%); height: auto; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(-28px, #eee), color-stop(15%, #fff)); background-image: -webkit-linear-gradient(top, #eee -28px, #fff 15%); background-image: -moz-linear-gradient(top, #eee -28px, #fff 15%); background-image: linear-gradient(to bottom, #eeeeee -28px, #ffffff 15%); padding: 10px;}
+
+
+.page-node-add-position-congregation .js-form-type-vertical-tabs {clear: both; float: left; width: 100%;}
+.layout--onecol .layout__region {float: left; width: 100%; }
+
+.page-node-add-position-congregation.admin-user .node-position-congregation-form .field--name-field-position-status {width: 49%; float: right; margin:0 0  1.5em 0!important; padding: 3px 0 4px 0;}
+.page-node-add-position-congregation.admin-user .node-position-congregation-form .field--name-field-position-status .form-item {margin: 0!important;}
+.page-node-add-position-congregation.admin-user .node-position-congregation-form .field--name-field-submitted-at {width: 49%; float: left; margin:0 0  1.5em 0!important; padding: 3px 0 4px 0;}
+.page-node-add-position-congregation.admin-user .node-position-congregation-form .field--name-field-submitted-at h4 {font-size: 12px; padding: 0 0 4px 0; display: block; font-family: Verdana, Arial, Helvetica, sans-serif;}
+.page-node-add-position-congregation.admin-user .node-position-congregation-form .field--name-field-submitted-at .form-item {margin: 0!important;}
+.page-node-add-position-congregation.admin-user .node-position-congregation-form .field--name-field-eligibility {width: 49%; clear: none; float:left;}
+.page-node-add-position-congregation.admin-user .node-position-congregation-form .field--name-field-eligibility .form-item {margin: 0!important;}
+.red-star {color: #F02020; font-weight: bold;}
+
+
+.page-node-type-position-congregation .layout--onecol .layout__region {float: none; display: flex; justify-content: space-between; flex-wrap: wrap;}
+.page-node-type-position-congregation .field--name-field-cong-position-start-date {width: 49%; padding: 3px 0 4px 0;}
+.page-node-type-position-congregation .field--name-field-submitted-at {width: 49%;  margin:0 0  1.5em 0!important; padding: 3px 0 4px 0;}
+.page-node-type-position-congregation .field--name-field-submitted-at .form-item {margin: 0!important;}
+.page-node-type-position-congregation .field--name-field-position-status .form-item {margin: 0!important;}
+.page-node-type-position-congregation .node-position-congregation-form .field--name-field-submitted-at {width: 49%;  margin:0 0  1.5em 0!important; padding: 3px 0 4px 0;}
+.page-node-type-position-congregation .field--name-field-submitted-at .form-item {margin: 0!important;}
+.page-node-type-position-congregation .field--name-field-eligibility {width: 49%; margin:0 0  1.5em 0!important; padding: 3px 0 4px 0;}
+.page-node-type-position-congregation .field--name-field-eligibility .form-item {margin: 0!important;}
+
+
+.page-node-type-position-congregation .node-position-congregation-edit-form .field--name-field-cong-position-start-date {margin:0 0  1.5em 0!important; padding: 3px 0 4px 0;}
+.page-node-type-position-congregation .node-position-congregation-edit-form .field--name-field-cong-position-start-date h4 {font-size: 12px; display: block; font-family: Verdana, Arial, Helvetica, sans-serif;}
+.page-node-type-position-congregation .node-position-congregation-edit-form .field--name-field-position-status {width: 49%; margin:0 0  1.5em 0!important; padding: 3px 0 4px 0;}
+.page-node-type-position-congregation .node-position-congregation-edit-form .field--name-field-submitted-at {width: 49%;  margin:0 0  1.5em 0!important; padding: 3px 0 4px 0;}
+.page-node-type-position-congregation .node-position-congregation-edit-form .field--name-field-submitted-at h4 {font-size: 12px; display: block; font-family: Verdana, Arial, Helvetica, sans-serif; padding: 0 0 4px 0;}
+.page-node-type-position-congregation .node-position-congregation-edit-form .field--name-field-eligibility {clear:both; margin:0 0  1.5em 0!important; padding: 3px 0 4px 0;}
+
+.page-node-type-position-congregation.admin-user .node-position-congregation-edit-form .field--name-field-cong-position-start-date .form-item {margin-bottom: 0;}
+
+
+.node-position-congregation-edit-form .js-form-type-vertical-tabs {clear:both;}
+.page-node-add-position-congregation .node-position-congregation-form  .field--name-field-cong-position-start-date {margin:0 0  1.5em 0!important; padding: 3px 0 4px 0;}
+.page-node-add-position-congregation .node-position-congregation-form  .field--name-field-eligibility select {max-width: 100%;}
+.page-node-add-position-congregation.admin-user .node-position-congregation-form  .field--name-field-eligibility select {max-width: 456px;}
+.page-node-add-position-congregation.admin-user .node-position-congregation-form .field--name-field-cong-position-start-date .form-item {margin-bottom: 0;}
+
+.node-position-congregation-edit-form #edit-actions .button, .node-position-congregation-form #edit-actions .button {margin: 0 10px 0 0 !important;}
+.node-position-congregation-edit-form #edit-actions fieldset {width: auto!important;}
+
+.page-node-add-position-freelance .l-main .l-content form.node-position-freelance-form .form-radios .js-form-type-radio label {display: inline-block!important; width: auto!important; padding: 0!important; font-weight: normal;}
+.page-node-add-position-freelance .l-main .l-content form.node-position-freelance-form input[type="date"] {display: block;
+    box-sizing: border-box; border: 1px solid #dfe5ed; padding: 12px 5px !important; background: #fff; background-image: none;
+    height: auto !important; font-size: 12px !important; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eee), color-stop(15%, #fff)); background-image: -webkit-linear-gradient(top, #eee 1%, #fff 15%);
+    background-image: -moz-linear-gradient(top, #eee 1%, #fff 15%); background-image: linear-gradient(top, #eee 1%, #fff 15%);
+    border-radius: 4px !important;}
+.page-node-add-position-freelance .l-main .l-content form.node-position-freelance-form .form-item label {font-weight: bold;}
+
+
+.page-node-add-position-freelance .node-position-freelance-form div.form-wrapper {margin-bottom: 1.5em !important;
+    padding: 3px 0 4px 0;}
+.page-node-add-position-freelance .node-position-freelance-form div.form-wrapper .form-item {margin: 0;}
+.page-node-add-position-freelance .node-position-freelance-form div.form-wrapper .form-checkboxes .form-item, 
+.page-node-add-position-freelance .node-position-freelance-form div.form-wrapper .form-radios .form-item {margin-top: 0.4em;
+margin-bottom: 0.4em;}
+.page-node-add-position-freelance .node-position-freelance-form legend {font-size: 12px !important; font-family: verdana, Arial, Helvetica, sans-serif;}
+
+.page-node-add-position-freelance .node-position-freelance-form div.form-wrapper h4 {font-weight: bold; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; padding: 0 0 3px 0; display: block;}
+.not-front.page-node-add-position-freelance .node-position-freelance-form .layout--onecol .layout__region {display: flex; justify-content: space-between; flex-wrap: wrap; float: none;}
+.not-front.page-node-add-position-freelance .node-position-freelance-form div.form-wrapper {width:49%;}
+.not-front.page-node-add-position-freelance .node-position-freelance-form .field-group-html-element {max-width: 457px; width: 49%;}
+.not-front.page-node-add-position-freelance .node-position-freelance-form .field-group-html-element .field--name-field-free-length-of-position {width: 50% !important;}
+.not-front.page-node-add-position-freelance .node-position-freelance-form .field-group-html-element .field--name-field-free-length-position-day {width: 45% !important}
+.not-front.page-node-add-position-freelance .node-position-freelance-form div.form-wrapper.field--widget-string-textarea {width: 100%;} 
+.not-front.page-node-add-position-freelance .node-position-freelance-form .field--name-field-free-job-description, .not-front.page-node-add-position-freelance .node-position-freelance-form  .field--name-field-free-other-benefits {width:100%!important;}
+.not-front.page-node-add-position-freelance .node-position-freelance-form  .field--name-field-free-other-benefits .tabledrag-toggle-weight-wrapper {display: none;}
+.not-front.page-node-add-position-freelance .node-position-freelance-form select[multiple] {width: 100%; max-width: 100%;}
+
+.admin-user.page-node-add-position-freelance .field--name-path.field--widget-path {display: none;}
+
+form.node-form select[multiple] {height:95px!important;}
+
+.view-career-new-rabbi-search .form--inline {display: flex; flex-wrap: wrap; margin: 0 0 20px 0;}
+.view-career-new-rabbi-search .form--inline .form-item {width:32.03%; float: none; display: flex; flex-direction: column;
+margin-right: 1em;}
+.view-career-new-rabbi-search .form--inline .form-item:nth-child(3n) {margin-right: 0;}
+.view-career-new-rabbi-search .form--inline .form-item input, .view-career-new-rabbi-search .form--inline .form-item select {width: 100%!important; margin-top: auto;}
+.view-career-new-rabbi-search .form--inline .form-item input.form-checkbox {width: auto!important; margin-top: inherit; margin-right: 5px;}
+.page-careers .views-exposed-form .form--inline .form-checkboxes .form-item {display: inherit; flex-direction: inherit;
+align-items: flex-start;}
+.page-careers .views-exposed-form .form--inline .form-checkboxes {margin: 0;}
+.page-careers .views-exposed-form .form--inline .form-wrapper.fieldgroup {width:100%!important; margin-bottom: 40px;} 
+.page-careers .views-exposed-form .form--inline .form-wrapper.fieldgroup .form-item {float:none!important; width:31%; margin:0 1em 1.5em 0 !important;}
+
+.page-careers .views-exposed-form .form--inline .search-filter-cong .form-wrapper.fieldgroup legend {padding: 0 0 5px;}
+
+.view-career-new-rabbi-search .form--inline .form-actions {display: flex; margin-top: auto; margin-right: auto;}
+.view-career-new-rabbi-search .form--inline .form-actions input[type="submit"] {padding:11px 24px}
+
+.view-rabbi-resume .button.add-to-cart,.print__link--pdf {border:1px solid #a5c5fe; background:#23488e; display:inline-block; padding:4px 14px; color:#d8d0b1!important; cursor:pointer; -webkit-box-shadow:1px 1px 1px 1px #d6d6d6; -moz-box-shadow:1px 1px 1px 1px #d6d6d6; -ms-box-shadow:1px 1px 1px 1px #d6d6d6; -o-box-shadow:1px 1px 1px 1px #d6d6d6; box-shadow:1px 1px 1px 1px #d6d6d6; font-size:12px; font-size:0.75rem; margin:0.8em 0 1em;}
+.view-rabbi-resume .button.add-to-cart:hover,.print__link--pdf:hover {background:#8e988b; border-color:#707a6c; color:#000000!important; text-decoration: none !important;}
+.view-rabbi-resume .button.add-to-cart:active,.print__link--pdf:active {background:#707a6c; border-color:#484e46; color:#ffffff!important; text-decoration: none !important;}
+
+
+
+
+.page-node-type-position-congregation .block-system-main-block article div.field {display: table;
+width: 100%; margin: 0!important; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.page-node-type-position-congregation .block-system-main-block article div.field:nth-child(2n+1) {background: #f1f1f1;}
+.page-node-type-position-congregation .block-system-main-block article div.field:nth-child(2n) {background: #eaeaea;}
+.page-node-type-position-congregation .block-system-main-block article  div.field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.page-node-type-position-congregation .block-system-main-block article div.field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.page-node-type-position-congregation .block-system-main-block article div.field div.field__item p {margin-bottom: 0;}
+.page-node-type-position-congregation .block-system-main-block article  .field div {display:table-cell; padding:12px 15px; font-weight:normal;width: 50%;}
+
+.page-node-type-congregation .block-system-main-block article div.field {display: table;
+width: 100%; margin: 0!important; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.page-node-type-congregation .block-system-main-block article div.field:nth-child(2n+1) {background: #f1f1f1;}
+.page-node-type-congregation .block-system-main-block article div.field:nth-child(2n) {background: #eaeaea;}
+.page-node-type-congregation .block-system-main-block article  div.field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.page-node-type-congregation .block-system-main-block article div.field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.page-node-type-congregation .block-system-main-block article div.field div.field__item p {margin-bottom: 0;}
+.page-node-type-congregation .block-system-main-block article  .field div {display:table-cell; padding:12px 15px; font-weight:normal;width: 50%;}
+.not-front .block-system.block-system-main-block .node--type-freelance .node__content h3,
+.not-front .block-system.block-system-main-block .node--type-congregation .node__content h3 {padding-left:15px; padding-right: 15px;}
+
+.position-apply-form {float:left; width:100%; margin: 20px 0;}
+.position-apply-form ul {padding: 0 0 0 11px; list-style: disc!important;}
+.position-apply-form .js-form-type-checkbox {margin-top: 1em!important;}
+.position-apply-form .form-item {margin-bottom: 2em;}
+
+.page-node-type-position-institution .block-system-main-block article > div {border: 1px solid #e7e7e7; padding: 3px 3px 2px; -webkit-box-shadow: 0px 1px 3px #e2e2e2; -moz-box-shadow: 0px 1px 3px #e2e2e2; -ms-box-shadow: 0px 1px 3px #e2e2e2; -o-box-shadow: 0px 1px 3px #e2e2e2; box-shadow: 0px 1px 3px #e2e2e2; margin: 15px auto!important; box-sizing: border-box;}
+.page-node-type-position-institution .block-system-main-block article div.field {display: table;
+width: 100%; margin: 0; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.page-node-type-position-institution .block-system-main-block article div.field:nth-child(2n+1) {background: #f1f1f1;}
+.page-node-type-position-institution .block-system-main-block article div.field:nth-child(2n) {background: #eaeaea;}
+.page-node-type-position-institution .block-system-main-block article div.field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.page-node-type-position-institution .block-system-main-block article div.field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.page-node-type-position-institution .block-system-main-block article div.field div.field__item p {margin-bottom: 0;}
+.page-node-type-position-institution .block-system-main-block article  .field div {display:table-cell; padding:12px 15px; font-weight:normal;width: 50%; vertical-align: top;}
+.page-node-type-position-institution .block-system-main-block article  .field div.field__items .field__item {padding: 5px 0; width:100%; display: inherit; float:left;}
+
+
+.page-node-type-institution .block-system-main-block article > div {border: 1px solid #e7e7e7; padding: 3px 3px 2px; -webkit-box-shadow: 0px 1px 3px #e2e2e2; -moz-box-shadow: 0px 1px 3px #e2e2e2; -ms-box-shadow: 0px 1px 3px #e2e2e2; -o-box-shadow: 0px 1px 3px #e2e2e2; box-shadow: 0px 1px 3px #e2e2e2; margin: 0 auto!important; box-sizing: border-box;}
+.page-node-type-institution .block-system-main-block article div.field {display: table;
+width: 100%; margin: 0; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.page-node-type-institution .block-system-main-block article div.field:nth-child(2n+1) {background: #f1f1f1;}
+.page-node-type-institution .block-system-main-block article div.field:nth-child(2n) {background: #eaeaea;}
+.page-node-type-institution .block-system-main-block article div.field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.page-node-type-institution .block-system-main-block article div.field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.page-node-type-institution .block-system-main-block article div.field div.field__item p {margin-bottom: 0;}
+.page-node-type-institution .block-system-main-block article  .field div {display:table-cell; padding:12px 15px; font-weight:normal;width: 50%; vertical-align: top;}
+.page-node-type-institution .block-system-main-block article  .field div.field__items .field__item {padding: 5px 0; width:100%; display: inherit; float:left;}
+
+
+/* Detail Tab Design starts here */
+.vertical-tabs .vertical-tabs__panes .container-inline div, .container-inline label {margin-top: 4px!important;}
+.vertical-tabs .vertical-tabs__panes .container-inline {display: flex; flex-wrap: wrap; justify-content: space-between;}
+.vertical-tabs .vertical-tabs__panes .container-inline div {width: 49%!important;}
+
+.vertical-tabs .vertical-tabs__panes .details-wrapper details {margin: 0!important; border: 0 none!important; padding: 0;}
+.vertical-tabs .vertical-tabs__panes .details-wrapper .details-wrapper {padding:0;}
+.vertical-tabs .vertical-tabs__panes .details-wrapper summary {	text-transform: capitalize; color: #4b4b4b;
+    font-weight: bold; clear: both; display: inline-block; width: 100%; margin: 0 0 1em 0;}
+.vertical-tabs .vertical-tabs__panes .details-wrapper  div.address-container-inline .form-item input {max-width: inherit;}
+.vertical-tabs .vertical-tabs__panes .details-wrapper input,
+.vertical-tabs .vertical-tabs__panes .details-wrapper select,
+.vertical-tabs .vertical-tabs__panes .details-wrapper textarea {width:100%; max-width: 100%;}
+.vertical-tabs .vertical-tabs__panes .details-wrapper input[type="checkbox"],
+.vertical-tabs .vertical-tabs__panes .details-wrapper input[type="radio"] {width: inherit;}
+.vertical-tabs .vertical-tabs__menu .vertical-tabs__menu-item {margin-bottom: 0 !important; border-left: 0 none;}
+.vertical-tabs .vertical-tabs__menu details > .details-wrapper {padding: 0;}
+input[type=submit], input[type=button], .vertical-tabs .vertical-tabs__panes .details-wrapper input[type=submit] {width: auto;} 
+
+.vertical-tabs__panes .details-wrapper {padding: 3px 3px 2px;}
+.vertical-tabs__panes .details-wrapper .field {display: table;
+width: 100%; margin: 0; font-size: 12px; font-size: 0.75rem; border-bottom: 2px solid #fff; table-layout: fixed;}
+.vertical-tabs__panes .details-wrapper .field:nth-child(2n+1) {background: #f1f1f1; margin: 0;}
+.vertical-tabs__panes .details-wrapper .field:nth-child(2n) {background: #eaeaea; margin: 0;}
+.vertical-tabs__panes .details-wrapper .field div.field__label {float:none; text-align:left; width:50%; border-right:2px solid #fff; /*min-width:32vw; max-width:32vw; */}
+.vertical-tabs__panes .details-wrapper .field div.field__item {margin:0; max-width:28vw; word-wrap:break-word; width: 50%;}
+.vertical-tabs__panes .details-wrapper .field div.field__item p {margin-bottom: 0;}
+.vertical-tabs__panes .details-wrapper .field div {display:table-cell; padding:12px 15px; font-weight:normal;}
+.vertical-tabs__panes .details-wrapper .form-wrapper .form-item {margin-bottom: 1.5em !important; padding: 3px 0 4px 0; margin-top: 0;}
+.vertical-tabs__panes .details-wrapper .form-wrapper .form-item.js-form-type-checkbox {margin-bottom: .5em !important;}
+.tabs.primary {margin-bottom: 1em!important;}
+
+.vertical-tabs {display: table; border-radius: 0; border: 0 none; margin:2em 0 2em 0!important;}
+.vertical-tabs .vertical-tabs__menu{margin:0 0 0 0!important; border-top:0 none; display:table-cell; width:25%; min-width:25%; padding: 20px 0; border: none; float: none; vertical-align: top;}
+.vertical-tabs .vertical-tabs__menu li { float: none; }
+.vertical-tabs .vertical-tabs__menu li a {color: #2e5295; background-color: #dee5f5; text-transform: capitalize; padding:15px 30px 15px 20px; margin: 0 0 1px 0; border-radius: 0; border: none; position: relative; z-index: 1;transition: all 0.3s ease 0s;}
+
+
+.vertical-tabs .vertical-tabs__menu li a:hover,
+.vertical-tabs .vertical-tabs__menu li.is-selected a,
+.vertical-tabs .vertical-tabs__menu li.is-selected a:hover {color: #fff!important; background-color: #333; border: none;
+    text-shadow: 0 0 6px rgba(0,0,0,0.3); outline: none; text-decoration: none!important;}
+
+.vertical-tabs .vertical-tabs__menu .vertical-tabs__menu-item {border:0 none;}
+.vertical-tabs .vertical-tabs__menu li a:before {content: ''; background-color: #2E5295; height: 100%; width: 10px; border-radius: 0 10px 10px 0; box-shadow: 5px 0 5px rgba(138,181,23,0.2); position: absolute; left: 0; bottom: 0; z-index: -1;    transition: all 0.3s ease 0s;}
+
+.vertical-tabs .vertical-tabs__menu li a:hover:before,
+.vertical-tabs .vertical-tabs__menu li.is-selected a:before {width: 110%;}
+.vertical-tabs .vertical-tabs__panes {padding:25px 25px 10px 35px; display: table-cell; border: 2px solid #dee5f5;border-radius: 0 15px 15px 0;}
+
+.vertical-tabs .vertical-tabs__menu .is-selected .vertical-tabs__menu-item-title,
+.vertical-tabs .vertical-tabs__menu a:hover .vertical-tabs__menu-item-title {color: #fff; text-decoration: none!important;}
+
+details {clear: both;}
+
+/* Detail Tab Design ends here */
+
+
+/* page-node-add-congregation, page-node-add-institution, page-node-add-freelance & edit */
+.page-node-add-congregation .node-congregation-form,
+.page-node-add-freelance .node-freelance-form,
+.page-node-type-institution .node-institution-edit-form,
+.page-node-type-freelance .node-freelance-edit-form,
+.page-node-add-institution .node-institution-form,
+.page-node-type-congregation .node-congregation-edit-form {background: none repeat scroll 0 0 #fff; border: 1px solid #e7e7e7; box-shadow: 0 0 2px #dbdbdb; box-sizing: border-box; margin-bottom: 8em; padding: 4em 2.4em 0; position: relative; display: inline-block; width: 100%;}
+
+.page-node-type-congregation .node-congregation-edit-form, .page-node-type-freelance .node-freelance-edit-form, .page-node-add-freelance .node-freelance-form, .page-node-add-congregation .node-congregation-form {padding:1em 2.4em 0;}
+.page-node-type-institution .node-institution-edit-form, .page-node-add-institution .node-institution-form {padding:2em 2.4em 0;}
+
+.page-node-add-congregation .node-congregation-form .form-item label,
+.page-node-add-institution .node-institution-form .form-item label,
+.page-node-add-freelance .node-freelance-form .form-item label,
+.page-node-type-freelance .node-freelance-edit-form .form-item label,
+.page-node-type-institution .node-institution-edit-form .form-item label,
+.page-node-type-congregation .node-congregation-edit-form .form-item label
+{text-transform: capitalize;}
+
+/* .page-node-add-congregation .node-congregation-form #edit-group-congregation-president .form-required::after {display: none;} */
+.not-logged-in.page-node-add-congregation aside,
+.not-logged-in.page-node-add-institution aside,
+.not-logged-in.page-node-add-freelance aside {display: none;}
+
+.page-node-add-congregation .node-congregation-form .form-item.form-type-checkbox label,
+.page-node-add-institution .node-institution-form .form-item.form-type-checkbox label,
+.page-node-add-freelance .node-freelance-form .form-item.form-type-checkbox label,
+.page-node-type-freelance .node-freelance-edit-form .form-item.form-type-checkbox label,
+.page-node-type-institution .node-institution-edit-form .form-item.form-type-checkbox label,
+.page-node-type-congregation .node-congregation-edit-form .form-item.form-type-checkbox label {display: inline-block; width: auto; margin: 0 !important; padding: 0 !important;}
+
+.page-node-add-congregation .node-congregation-form fieldset,
+.page-node-add-institution .node-institution-form fieldset,
+.page-node-add-freelance .node-freelance-form fieldset,
+.page-node-type-freelance .node-freelance-edit-form fieldset,
+.page-node-type-institution .node-institution-edit-form fieldset,
+.page-node-type-congregation .node-congregation-edit-form fieldset {margin: 1em 0 0; padding: 0; border:0 none;}
+
+.page-node-add-congregation .node-congregation-form fieldset legend,
+.page-node-add-institution .node-institution-form fieldset legend,
+.page-node-add-freelance .node-freelance-form fieldset legend,
+.page-node-type-freelance .node-freelance-edit-form fieldset legend,
+.page-node-type-institution .node-institution-edit-form fieldset legend,
+.page-node-type-congregation .node-congregation-edit-form fieldset legend
+{text-transform: capitalize; border-top: 2px dotted #e7e7e7; color: #4b4b4b; font-family: 'Trebuchet MS'; font-size: 16px; font-weight: bold; margin: 0; padding: 1.5em 0 1em; clear: both; display: inline-block; width: 100%;}
+
+.page-node-add-congregation .node-congregation-form fieldset .fieldset-wrapper,
+.page-node-add-institution .node-institution-form fieldset .fieldset-wrapper,
+.page-node-add-freelance .node-freelance-form fieldset .fieldset-wrapper,
+.page-node-type-freelance .node-freelance-edit-form fieldset .fieldset-wrapper,
+.page-node-type-institution .node-institution-edit-form fieldset .fieldset-wrapper,
+.page-node-type-congregation .node-congregation-edit-form fieldset .fieldset-wrapper {display: flex; justify-content: space-between; flex-wrap: wrap; clear: both;}
+
+.page-node-add-congregation .node-congregation-form fieldset .fieldset-wrapper > .form-wrapper,
+.page-node-add-institution .node-institution-form fieldset .fieldset-wrapper > .form-wrapper,
+.page-node-add-freelance .node-freelance-form fieldset .fieldset-wrapper > .form-wrapper,
+.page-node-type-freelance .node-freelance-edit-form fieldset .fieldset-wrapper > .form-wrapper,
+.page-node-type-institution .node-institution-edit-form fieldset .fieldset-wrapper > .form-wrapper,
+.page-node-type-congregation .node-congregation-edit-form fieldset .fieldset-wrapper > .form-wrapper {width: 48%; margin-bottom: 1.5em !important; padding: 3px 0 4px 0;}
+
+.page-node-add-congregation .node-congregation-form fieldset .fieldset-wrapper > .form-wrapper .form-item,
+.page-node-add-institution .node-institution-form fieldset .fieldset-wrapper > .form-wrapper .form-item,
+.page-node-add-freelance .node-freelance-form fieldset .fieldset-wrapper > .form-wrapper .form-item,
+.page-node-type-freelance .node-freelance-edit-form fieldset .fieldset-wrapper > .form-wrapper .form-item,
+.page-node-type-institution .node-institution-edit-form fieldset .fieldset-wrapper > .form-wrapper .form-item,
+.page-node-type-congregation .node-congregation-edit-form fieldset .fieldset-wrapper > .form-wrapper .form-item
+{margin: 0;}
+
+.page-node-add-congregation .node-congregation-form .form-item input,
+.page-node-add-congregation .node-congregation-form .form-item select,
+.page-node-add-institution .node-institution-form .form-item input,
+.page-node-add-institution .node-institution-form .form-item select,
+.page-node-add-freelance .node-freelance-form .form-item input,
+.page-node-add-freelance .node-freelance-form .form-item select,
+.page-node-type-freelance .node-freelance-edit-form .form-item input,
+.page-node-type-freelance .node-freelance-edit-form .form-item select,
+.page-node-type-institution .node-institution-edit-form .form-item input,
+.page-node-type-institution .node-institution-edit-form .form-item select,
+.page-node-type-congregation .node-congregation-edit-form .form-item input,
+.page-node-type-congregation .node-congregation-edit-form .form-item select {max-width: inherit!important;}
+
+.page-node-add-congregation .view-home-public,
+.page-node-add-institution .view-home-public,
+.page-node-add-freelance .view-home-public,
+.page-node-type-freelance .view-home-public,
+.page-node-type-institution .view-home-public,
+.page-node-type-congregation .view-home-public {position: relative;}
+
+
+.page-node-add-institution .node-institution-form fieldset#edit-group-institution-main-contact, 
+.page-node-add-congregation  .node-congregation-form fieldset#edit-group-congregation-main-contact {border-top: 2px dotted #e7e7e7;}
+.page-node-add-institution .node-institution-form fieldset#edit-group-institution-main-contact legend, .page-node-add-congregation  .node-congregation-form fieldset#edit-group-congregation-main-contact legend {border:0 none; float: left; width: auto;}
+.page-node-add-institution .node-institution-form fieldset#edit-group-institution-main-contact legend span:first-of-type,
+.page-node-add-congregation  .node-congregation-form fieldset#edit-group-congregation-main-contact legend span:first-of-type {margin: 0;}
+.page-node-add-institution .node-institution-form fieldset#edit-group-institution-main-contact span:first-of-type,
+.page-node-add-congregation  .node-congregation-form fieldset#edit-group-congregation-main-contact span:first-of-type {display: inline-block; margin-top: 26px;}
+
+
+
+.page-node-add-institution .view-home-public #block-ra-public-page-title,
+.page-node-add-institution .view-home-public #block-ra-member-page-title {z-index: 1; background: #7d92ba; box-sizing: border-box; color: #fff; display: inline-block; font-family: 'Trebuchet MS'; font-size: 14px; font-weight: normal; padding: 0.9em 10px; width: 100%; left: 0; word-wrap: break-word; }
+
+
+.page-node-add-freelance .view-home-public #block-ra-public-page-title,
+.page-node-add-freelance .view-home-public #block-ra-member-page-title, 
+.page-node-add-congregation .view-home-public #block-ra-public-page-title,
+.page-node-add-congregation .view-home-public #block-ra-member-page-title,
+.page-node-type-institution .view-home-public #block-ra-public-page-title,
+.page-node-type-institution .view-home-public #block-ra-member-page-title,
+.page-node-type-congregation .view-home-public #block-ra-public-page-title,
+.page-node-type-congregation .view-home-public #block-ra-member-page-title,
+.page-node-type-freelance .view-home-public #block-ra-public-page-title,
+.page-node-type-freelance .view-home-public #block-ra-member-page-title {z-index: 1; background: #7d92ba; box-sizing: border-box; color: #fff; display: inline-block; font-family: 'Trebuchet MS'; font-size: 14px; font-weight: normal; padding: 0.9em 10px; width: 100%; word-wrap: break-word;}
+
+.page-node-type-congregation .view-home-public,
+.page-node-type-institution  .view-home-public,
+.page-node-type-freelance  .view-home-public {display: flex; flex-direction: column;}
+
+.page-node-type-congregation  .view-home-public #block-ra-public-breadcrumbs,
+.page-node-type-congregation .view-home-public #block-ra-member-breadcrumbs,
+.page-node-type-institution  .view-home-public #block-ra-public-breadcrumbs,
+.page-node-type-institution .view-home-public #block-ra-member-breadcrumbs,
+.page-node-type-freelance  .view-home-public #block-ra-public-breadcrumbs,
+.page-node-type-freelance .view-home-public #block-ra-member-breadcrumbs {order:1;}
+
+.page-node-type-congregation  .view-home-public #block-ra-public-local-tasks,
+.page-node-type-congregation  .view-home-public #block-ra-member-local-tasks,
+.page-node-type-institution  .view-home-public #block-ra-public-local-tasks,
+.page-node-type-institution  .view-home-public #block-ra-member-local-tasks,
+.page-node-type-freelance  .view-home-public #block-ra-public-local-tasks,
+.page-node-type-freelance  .view-home-public #block-ra-member-local-tasks {order:2;}
+
+.page-node-type-congregation  .view-home-public #block-ra-public-page-title,
+.page-node-type-congregation  .view-home-public #block-ra-member-page-title,
+.page-node-type-institution  .view-home-public #block-ra-public-page-title,
+.page-node-type-institution  .view-home-public #block-ra-member-page-title,
+.page-node-type-freelance  .view-home-public #block-ra-public-page-title,
+.page-node-type-freelance  .view-home-public #block-ra-member-page-title {order:3;}
+
+.page-node-type-congregation  .view-home-public #block-ra-public-system-main,
+.page-node-type-congregation  .view-home-public #block-ra-member-system-main,
+.page-node-type-institution  .view-home-public #block-ra-public-system-main,
+.page-node-type-institution  .view-home-public #block-ra-member-system-main,
+.page-node-type-freelance  .view-home-public #block-ra-public-system-main,
+.page-node-type-freelance  .view-home-public #block-ra-member-system-main {order:4;}
+
+.page-node-add-congregation .view-home-public #block-ra-public-page-title h1,
+.page-node-add-congregation .view-home-public #block-ra-member-page-title h1,
+.page-node-add-institution .view-home-public #block-ra-public-page-title h1,
+.page-node-add-institution .view-home-public #block-ra-member-page-title h1,
+.page-node-add-freelance .view-home-public #block-ra-public-page-title h1,
+.page-node-add-freelance .view-home-public #block-ra-member-page-title h1,
+.page-node-type-freelance .view-home-public #block-ra-public-page-title h1,
+.page-node-type-freelance .view-home-public #block-ra-member-page-title h1,
+.page-node-type-institution .view-home-public #block-ra-public-page-title h1,
+.page-node-type-institution .view-home-public #block-ra-member-page-title h1,
+.page-node-type-congregation .view-home-public #block-ra-public-page-title h1,
+.page-node-type-congregation .view-home-public #block-ra-member-page-title h1 {padding: 0; color: #fff; font-size: 14px;}
+
+.page-node-add-congregation .node-congregation-form fieldset:first-child legend,
+.page-node-add-congregation .node-congregation-form fieldset#edit-group-account-information legend,
+.page-node-add-institution .node-institution-form fieldset:first-child legend,
+.page-node-add-institution .node-institution-form fieldset#edit-group-account-information legend,
+.page-node-add-freelance .node-freelance-form fieldset:first-child legend,
+.page-node-add-freelance .node-freelance-form fieldset#edit-group-account-information legend,
+.page-node-add-freelance .node-freelance-form fieldset:first-child legend,
+.page-node-type-freelance .node-freelance-edit-form fieldset#edit-group-account-information legend,
+.page-node-type-freelance .node-freelance-edit-form fieldset:first-child legend,
+.page-node-type-institution .node-institution-edit-form fieldset#edit-group-account-information legend,
+.page-node-type-institution .node-institution-edit-form fieldset:first-child legend,
+.page-node-type-congregation .node-congregation-edit-form fieldset#edit-group-account-information legend,
+.page-node-type-congregation .node-congregation-edit-form fieldset:first-child legend {border: 0 none; padding-top: 0;}
+
+.page-node-type-institution .node-institution-edit-form fieldset#edit-group-account-information {margin: 0;}
+.page-node-type-institution .node-institution-edit-form .layout--onecol .layout__region {margin: 0; border:0 none;}
+
+.page-node-add-congregation .node-congregation-form fieldset .fieldset-wrapper > .form-wrapper.field--name-field-cong-address,
+.page-node-add-freelance .node-freelance-form fieldset .fieldset-wrapper > .form-wrapper.field--name-field-freela-address,
+.page-node-add-institution .node-institution-form fieldset .fieldset-wrapper > .form-wrapper.field--name-field-instit-address,
+.page-node-type-freelance .node-freelance-edit-form fieldset .fieldset-wrapper > .form-wrapper.field--name-field-freela-address,
+.page-node-type-institution .node-institution-edit-form fieldset .fieldset-wrapper > .form-wrapper.field--name-field-instit-address,
+.page-node-type-congregation .node-congregation-edit-form fieldset .fieldset-wrapper > .form-wrapper.field--name-field-cong-address {width:100%!important; margin-bottom: 0 !important; padding: 0 !important;}
+
+.page-node-add-congregation .node-congregation-form fieldset .fieldset-wrapper > .form-wrapper.field--name-field-cong-address summary,
+.page-node-add-institution .node-institution-form fieldset .fieldset-wrapper > .form-wrapper.field--name-field-instit-address summary,
+.page-node-add-freelance .node-freelance-form fieldset .fieldset-wrapper > .form-wrapper.field--name-field-freela-address summary ,
+.page-node-type-freelance .node-freelance-edit-form .fieldset-wrapper > .field--name-field-freela-address summary,
+.page-node-type-institution .node-institution-edit-form .fieldset-wrapper > .field--name-field-instit-address summary,
+.page-node-type-congregation .node-congregation-edit-form .fieldset-wrapper > .field--name-field-cong-address summary {text-transform: capitalize; border-top: 2px dotted #e7e7e7; color: #4b4b4b; font-family: 'Trebuchet MS';
+font-size: 16px; font-weight: bold; padding: 1.5em 0 1em; clear: both; display: inline-block; width: 100%;
+margin: 0.7em 0 0;}
+
+.page-node-add-congregation .node-congregation-form .field--name-field-cong-address .form-wrapper,
+.page-node-add-institution .node-institution-form .field--name-field-instit-address .form-wrapper,
+.page-node-add-freelance .node-freelance-form .field--name-field-freela-address .form-wrapper,
+.page-node-type-freelance .node-freelance-edit-form .field--name-field-freela-address .form-wrapper,
+.page-node-type-institution .node-institution-edit-form .field--name-field-instit-address .form-wrapper,
+.page-node-type-congregation .node-congregation-edit-form .field--name-field-cong-address .form-wrapper {display: flex;
+justify-content: space-between; flex-wrap: wrap; align-items: flex-end;}
+
+.page-node-type-freelance .node-freelance-edit-form .field--name-field-freela-address .form-wrapper > .form-wrapper,
+.page-node-type-freelance .node-freelance-edit-form fieldset .fieldset-wrapper .field--name-field-freela-address > .form-wrapper .form-item,
+.page-node-add-congregation .node-congregation-form .field--name-field-cong-address .form-wrapper > .form-wrapper,
+.page-node-add-congregation .node-congregation-form .field--name-field-cong-address .form-wrapper > .form-item,
+.page-node-add-freelance .node-freelance-form .field--name-field-freela-address .form-wrapper > .form-wrapper,
+.page-node-add-freelance .node-freelance-form .field--name-field-freela-address .form-wrapper > .form-item,
+.page-node-add-institution .node-institution-form .field--name-field-instit-address .form-wrapper > .form-wrapper,
+.page-node-add-institution .node-institution-form .field--name-field-instit-address .form-wrapper > .form-item,
+.page-node-type-institution .node-institution-edit-form .field--name-field-instit-address .form-wrapper > .form-wrapper,
+.page-node-type-institution .node-institution-edit-form .field--name-field-instit-address .form-wrapper > .form-item,
+.page-node-type-congregation .node-congregation-edit-form .field--name-field-cong-address .form-wrapper > .form-wrapper,
+.page-node-type-congregation .node-congregation-edit-form .field--name-field-cong-address .form-wrapper > .form-item
+{width: 31%; margin-bottom: 1.5em !important; padding: 3px 0 4px 0;}
+
+.page-node-add-congregation .node-congregation-form .field--name-field-cong-address .form-wrapper > .form-wrapper .form-item,
+.page-node-add-institution .node-institution-form .field--name-field-instit-address .form-wrapper > .form-wrapper .form-item,
+.page-node-add-freelance .node-freelance-form .field--name-field-freela-address .form-wrapper > .form-wrapper .form-item,
+.page-node-type-freelance .node-freelance-edit-form .field--name-field-freela-address .form-wrapper > .form-wrapper .form-item,
+.page-node-type-freelance .node-freelance-edit-form .field--name-field-freela-address .form-wrapper > .form-wrapper > .form-item.js-form-type-select,
+.page-node-type-institution .node-institution-edit-form .field--name-field-instit-address .form-wrapper > .form-wrapper .form-item,
+.page-node-type-congregation .node-congregation-edit-form .field--name-field-cong-address .form-wrapper > .form-wrapper .form-item {width: 100%!important; margin: 0 !important; padding: 0;}
+
+.page-node-add-congregation .node-congregation-form .field--name-field-cong-address .form-wrapper .address-container-inline,
+.page-node-add-institution .node-institution-form .field--name-field-instit-address .form-wrapper .address-container-inline,
+.page-node-add-freelance .node-freelance-form .field--name-field-freela-address .form-wrapper .address-container-inline,
+.page-node-type-freelance .node-freelance-edit-form .field--name-field-freela-address .form-wrapper .address-container-inline,
+.page-node-type-institution .node-institution-edit-form .field--name-field-instit-address .form-wrapper .address-container-inline,
+.page-node-type-congregation .node-congregation-edit-form .field--name-field-cong-address .form-wrapper .address-container-inline
+{width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap; margin: 0 !important; padding: 0;}
+
+.page-node-add-congregation .node-congregation-form .field--name-field-cong-address .form-wrapper .address-container-inline .form-item,
+.page-node-add-freelance .node-freelance-form .field--name-field-freela-address .form-wrapper .address-container-inline .form-item,
+.page-node-add-institution .node-institution-form .field--name-field-instit-address .form-wrapper .address-container-inline .form-item,
+.page-node-type-freelance .node-freelance-edit-form .field--name-field-freela-address .form-wrapper .address-container-inline.js-form-wrapper.form-wrapper > .form-item,
+.page-node-type-institution .node-institution-edit-form .field--name-field-instit-address .form-wrapper .address-container-inline.js-form-wrapper.form-wrapper > .form-item,
+.page-node-type-congregation .node-congregation-edit-form .field--name-field-cong-address .form-wrapper .address-container-inline.js-form-wrapper.form-wrapper > .form-item {width: 48%!important; margin-bottom: 1.5em !important; padding: 3px 0 4px 0;}
+
+
+#captcha {padding: 3px 0; margin: 0 !important; border: 0 none !important;}
+#captcha summary {color: #4b4b4b; font-family: 'Trebuchet MS'; font-size: 16px; font-weight: bold; margin: 0; padding: 1em 0 0;
+clear: both; display: inline-block; width: 100%;}
+#captcha .form-item {padding: 3px 0 4px 0; margin-top: 1.5em; margin-bottom: 0;}
+#captcha .form-item label {display: inline-block; font-weight: bold;}
+#captcha .form-item label span {display: inline-block; margin-right: 5px;}
+#captcha .form-item input {display: inline-block; width: 100%; max-width: 457px!important;}
+#captcha .form-item .description {margin: 3px 0 0 58px;}
+
+
+.page-node-add-freelance .node-freelance-form details,
+.page-node-type-freelance .node-freelance-edit-form details,
+.page-node-type-institution .node-institution-edit-form details,
+.page-node-type-congregation .node-congregation-edit-form details {margin-top: 0; border: 0 none;}
+
+.page-node-add-freelance .node-freelance-form details .details-wrapper,
+.page-node-type-freelance .node-freelance-edit-form details .details-wrapper,
+.page-node-type-institution .node-institution-edit-form details .details-wrapper,
+.page-node-type-congregation .node-congregation-edit-form details .details-wrapper {padding: 0;}
+
+.page-node-add-freelance .node-freelance-form #edit-submit {display: block!important;}
+.page-node-type-freelance .node-freelance-edit-form #edit-actions,
+.page-node-type-institution .node-institution-edit-form #edit-actions,
+.page-node-type-congregation .node-congregation-edit-form #edit-actions {float: left; width: 100%; margin-bottom: 2.4em;}
+
+
+.page-404 .node--view-mode-full .node__content, .page-403 .node--view-mode-full .node__content {border: 0 none; padding: 0; -webkit-box-shadow: none; -moz-box-shadow: none; -ms-box-shadow: none; -o-box-shadow: none; box-shadow: none; margin:0!important; box-sizing: border-box;}
+.page-404 .node--view-mode-full .node__content .field:nth-child(2n+1), .page-403 .node--view-mode-full .node__content .field:nth-child(2n+1) {background: transparent;}
+.page-404 .node--view-mode-full .node__content .field, .page-403 .node--view-mode-full .node__content .field {display: inherit;}
+.page-404 .node--view-mode-full .node__content .field div, .page-403 .node--view-mode-full .node__content .field div {display: inherit; width:100%;}
+.page-404 .node--view-mode-full .node__content .field .messages--status, .page-403 .node--view-mode-full .node__content .field .messages--status {padding: 0; margin: 0; border: 0 none; background-color: transparent;}
+.page-404.not-front .l-main .l-content h1, .page-403.not-front .l-main .l-content h1 {font-size: 100px; font-weight: bold; margin-bottom: 20px; color: #2e5295;}
+.page-404.not-front .l-main .l-content h1::before, .page-403.not-front .l-main .l-content h1::before {content: " :( "; color: #2e5295;}
+.page-404.not-front .l-main .l-content .node__content h2 a, .page-403.not-front .l-main .l-content .node__content h2 a{text-decoration: underline;}
+.page-404.not-front .l-main .l-content .node__content h2 a, .page-404.not-front .l-main .l-content .node__content h2 span, .page-403.not-front .l-main .l-content .node__content h2 a, .page-403.not-front .l-main .l-content .node__content h2 span {font-size: 18px!important;}
+
+.block-system-main-block .ajax-progress.ajax-progress-throbber{display:block;}
+
+
+.additional-filters {float: none; display: flex; flex-direction: column; justify-content: center; margin-top: 15px; cursor: pointer; margin-right: 6px; text-align: right; z-index: 1; width: auto; order: 9;}
+.search-filter-cong {display: flex; flex-wrap: wrap;}
+.search-filter-cong #edit-actions {margin-left: 0;}
+
+.l-main aside.l-region--sidebar-first .views-row p {margin: 20px 0!important; line-height: 18px;}
+.l-main .l-content .view-home-public .view-content .ui-accordion-header a p {margin: 20px 0!important; line-height: 18px;}
+
+/* Date Picker 
+.ui-datepicker {max-height:inherit!important; min-height:inherit!important; padding:0!important; overflow:hidden; border:1px solid #d3d3d3!important; border-radius: 3px;}
+.ui-datepicker .ui-datepicker-title select {height:inherit; padding:0;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {top:4px!important}
+.ui-datepicker a {color:#555!important}
+.ui-datepicker a.ui-state-active {color:#fff!important; background:#7d92ba!important;}
+.ui-datepicker table {margin:0!important}
+ .ui-datepicker-header {display:flex; justify-content: space-between; align-items: center; border-bottom-left-radius: 0; border-bottom-right-radius: 0; padding: 10px; box-sizing: border-box; background: #e9e9e9; color: #333333; border-top-right-radius: 3px; border-top-left-radius: 3px; font-weight: bold;}
+.ui-datepicker-header .ui-datepicker-next {order:3; margin-left: auto;}
+.ui-datepicker-header .ui-datepicker-next .ui-icon {background-image: url("../images/ui-icons_444444_256x240.png"); background-position: -48px -192px; width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-top: -.25em;
+position: relative; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat;}
+.ui-datepicker-header .ui-datepicker-prev .ui-icon {background-image: url("../images/ui-icons_444444_256x240.png"); background-position: -80px -192px; width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-top: -.25em;
+position: relative; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat;}
+.ui-datepicker-header .ui-datepicker-next.ui-state-hover, .ui-datepicker-header .ui-datepicker-prev.ui-state-hover {background-color: transparent!important;}
+
+.ui-datepicker table {table-layout: fixed;}
+.ui-datepicker .ui-datepicker-calendar a {width: 18px; display: block; padding: 5px;}
+.ui-datepicker .ui-datepicker-calendar a.ui-state-default {border: 1px solid #d3d3d3; background: #e6e6e6;}
+.ui-datepicker table tbody tr td {padding:0.5em 0.5em;}
+.ui-datepicker {max-width: 290px !important;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {border: 1px solid transparent;}
+.ui-datepicker .ui-datepicker-prev {margin-right: auto;}
+.ui-datepicker a.ui-state-hover {color: #fff !important; background: #7d92ba !important;}
+*/
+
+.views-view-table tbody tr.odd, .views-view-table  tbody tr:nth-child(2n+1) {background: #f4f4f4;}
+.views-view-table tbody tr.even, .views-view-table tbody tr:nth-child(2n) {background: #ddd;}
+.views-view-table tbody tr td .field--type-list-string .form-item {margin: 0;}
+
+.page-careers .views-exposed-form .form--inline {display: flex; flex-wrap: wrap; margin: 0 0 30px 0;}
+.page-careers .views-exposed-form .form--inline .form-item {width:49%; margin:1em 1em 1em 0; padding: 0;}
+.page-careers .views-exposed-form .form--inline .form-item:nth-child(2n) {margin-right: 0;}
+.page-careers .views-exposed-form .form--inline .form-item input {width:100%;}
+.page-careers .views-exposed-form .form--inline .form-actions input[type="submit"] {padding:11px 14px; margin:18px 0 0 0;}
+.page-careers .views-exposed-form .form--inline .form-wrapper {width:49%; margin-right: 1em;}
+.page-careers .views-exposed-form .form--inline .form-wrapper .form-item {width:47.7%; float: left;}
+.page-careers .views-exposed-form .form--inline .form-wrapper .form-item:nth-child(2) {margin-right: 0; float: right;} 
+.page-careers .views-exposed-form .form--inline .form-wrapper#edit-actions {width: 100%; margin-top: 0; margin-left: 0;}
+.page-careers .views-exposed-form .form--inline #edit-created {width:100%; margin-right: 0;}	
+.page-careers .views-exposed-form .form--inline #edit-created .form-item {width: 49.3%;}
+.page-careers .views-exposed-form .form--inline #edit-changed {width:100%; margin-right: 0;}
+.page-careers .views-exposed-form .form--inline #edit-changed .form-item {width: 49.3%;}
+.page-careers .views-exposed-form .form--inline #edit-field-position-applied {width:100%;}
+.page-careers-admin-search-institution #edit-field-instit-start-date-value {margin-right: 0;}
+
+.page-careers-pulpit-positions .views-exposed-form .form--inline .form-wrapper#edit-actions {margin-left: inherit;
+margin-right: auto; width: 49%;}
+
+#placement-email-config-form .form-item {width: 49%; float: left; margin: 1em 1em 1em 0;}
+#placement-email-config-form .form-item input {width: 100%;}
+#placement-email-config-form .form-item:nth-child(2n) {float: right; margin: 1em 0 1em 0}
+#placement-email-config-form #edit-actions {clear: both;}
+
+#views-exposed-form-career-rabbi-page-1 #edit-changed {width:49%;}
+#views-exposed-form-career-rabbi-page-1 #edit-changed .form-item {width: 48%;}
+
+/*.view-header {float: right;}*/
+
+.button-previous-tab, .button-next-tab {min-width: 100px; font-weight:bold; border:0 none; background:#dee5f5; border-radius: 6px; display:inline-block; padding:7px 14px; color:#2e5295; cursor:pointer;font-size:12px; font-size:0.75rem; margin:0.8em 0 0 5px; text-decoration:none}
+.button-previous-tab:hover, .button-next-tab:hover {background:#2E5295; color: #fff;}
+.button-previous-tab {border-bottom-right-radius: 0; border-top-right-radius: 0;}
+.button-next-tab {border-top-left-radius: 0; border-bottom-left-radius: 0;}
+
+.tab-button-nav {float: right; width: 100%; margin-bottom: 30px; text-align: right;}
+
+input[type=number] {max-width: 457px; height: 40px !important; width: 100%; box-sizing: border-box;
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eee), color-stop(15%, #fff));
+background-image: -webkit-linear-gradient(top, #eee 1%, #fff 15%); background-image: -moz-linear-gradient(top, #eee 1%, #fff 15%); background-image: linear-gradient(top, #eee 1%, #fff 15%); border-radius: 4px !important; border: 1px solid #dfe5ed;
+	padding: 12px 5px !important;}
+
+.node-position-institution-form  .layout__region--content .form-wrapper {float: left; width: 100%;}
+.node-position-institution-form  .layout__region--content .form-wrapper label, .node-position-institution-form  .layout__region--content .form-wrapper h4 {font-weight: bold;}
+.node-position-institution-form  .layout__region--content .field--type-datetime {float: left; width: 100%; margin:1em 0;}
+.node-position-institution-form  .field--type-file details {border: 0 none;}
+.node-position-institution-form  .field--type-file details summary {padding: 0; font-weight: bold;}
+.node-position-institution-form  .field--type-file details > .details-wrapper {padding: 0;} 
+
+#edit-field-cong-accept-acknowledge-wrapper label, #edit-field-instit-accept-acknowledge-wrapper label, #edit-field-freela-accep-acknowledge-wrapper label {width:90%; vertical-align: top; text-transform: none; margin-top: 1px !important;}
+
+#compensation-group-freelance {width: 49%; display: flex; justify-content: space-between;}
+#edit-field-free-compensation-wrapper {width:115px;}
+#edit-field-free-compensation-types-wrapper {width:70%; margin-left: auto;}
+#edit-field-free-compensation-types-wrapper #edit-field-free-compensation-types {display: flex; flex-wrap: wrap; width: 100%;}
+#edit-field-free-compensation-types-wrapper #edit-field-free-compensation-types .form-item {width: 50%; margin-bottom: 0;}
+#edit-field-free-compensation-types-wrapper #edit-field-free-compensation-types .form-item label {margin: 0 2em 0 0 !important;}
+
+#edit-field-free-areas-of-focus-wrapper {width: 100%;}
+#edit-field-free-areas-of-focus-wrapper legend {padding: 0 0 0.4em}
+#edit-field-free-areas-of-focus {display: flex; flex-wrap: wrap;}
+#edit-field-free-areas-of-focus .form-item {width:33.3%;}
+#edit-field-free-areas-of-focus .form-item label {font-weight: normal; display: inline;}
+#edit-field-free-areas-of-focus .form-item input[type="checkbox"], #edit-field-free-areas-of-focus .form-item input[type="radio"] {vertical-align: top}
+
+.page-node-type-position-freelance .field--name-field-free-compensation-types {position: relative;}
+.page-node-type-position-freelance .field--name-field-free-compensation-types .field__label {font-size: 0; border: 0 none; padding: 0 !important;} 
+.page-node-type-position-freelance .field--name-field-free-compensation-types .field__item {position: absolute;
+border: 0 none; left:0; padding: 0; background: transparent;  z-index: 1; width: 100%!important; max-width: 100%!important; display: block !important; box-sizing: border-box; padding-left: 62% !important; bottom: 2px;}
+.page-careers-applicants #edit-applied-date, .page-careers-position-applied #edit-applied-date {margin-right: 0;} 
+.view-placement-admin-dashboard .views-entity-form .views-field-form-field-field-position-status {min-width: 112px;}
+.view-placement-admin-dashboard .views-entity-form .form-actions {float: right;}
+/*
+.page-node-add-position-institution #node-position-institution-form .layout--onecol .layout__region {display: flex;
+flex-wrap: wrap; margin-bottom: 30px;}
+.page-node-add-position-institution #node-position-institution-form .layout--onecol .layout__region .form-wrapper {width: 49%;
+margin: 1em 1em 1em 0; padding: 0;}
+.admin-user.page-node-add-position-institution #node-position-institution-form .layout--onecol .layout__region .form-wrapper:nth-child(2n+1) {margin-right: 0;}
+page-node-add-position-institution #node-position-institution-form .layout--onecol .layout__region .form-wrapper:nth-child(2n) {margin-right: 0;}
+.page-node-add-position-institution #node-position-institution-form .layout--onecol .layout__region .form-wrapper .form-wrapper {margin: 0; width: 100%;}
+.page-node-add-position-institution #node-position-institution-form .layout--onecol .layout__region .form-wrapper .form-item {margin:0;}
+.page-node-add-position-institution #edit-path-wrapper {display: none;}*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #uc-cart-checkout-form.uc-cart-checkout-form fieldset .form-type-select select {
+        width: 21.9em
+    }
+    #uc-cart-checkout-form .ajax-progress {
+        vertical-align: middle;
+        margin-top: 6px;
+    }
+
+    .user-login .form-item-remember-me div.checker { display: inline-block}
+    .user-login .form-item-remember-me #edit-remember-me {opacity: 1}
+}
+
+@media only screen and (max-width:1200px) {
+	#edit-field-free-compensation-types-wrapper #edit-field-free-compensation-types .form-item {width: 100%;}
+	#edit-field-free-compensation-types-wrapper {width: 55%;}
+	
+}
+
+@media only screen and (max-width:960px) {
+    .view-display-id-page,
+    #field-ui-display-overview-form,
+    #field-ui-field-overview-form, #views-form-control-users-page-1, #views-form-control-comments-page, .view-display-id-page_1, #views-form-control-terms-page-1, .view-clone-of-calendar, body.page-taxonomy-term-480.section-jewish-law .field--type-text-with-summary .field__item even
+    {
+        overflow-x: auto
+    }
+}
+
+@media only screen and (max-width:535px) {
+    .user-profile span#user-page-contact,
+    .user-profile span#user-page-profile-Mem {
+        margin-top: 0
+    }
+}
+
+@media only screen and (max-width:530px) {
+    .uc-cart-checkout-form #payment-details .form-item {
+        clear: none!important;
+    }
+    #uc-cart-checkout-form.uc-cart-checkout-form fieldset .payment-details-credit .form-type-select select#edit-panes-payment-details-cc-exp-year {
+        margin-left: 10px !important;
+        width: 20%!important;
+    }
+    #uc-cart-checkout-form.uc-cart-checkout-form fieldset .payment-details-credit .form-type-select select#edit-panes-payment-details-cc-exp-month {
+        width: 33% !important;
+    }
+    #uc-cart-checkout-form.uc-cart-checkout-form fieldset div.payment-details-credit input {
+        width: 56%!important;
+    }
+    fieldset.collapsible,
+    .fieldset-wrapper fieldset {
+        overflow-x: auto;
+        display: table-cell
+    }
+    .view-id-uc_orders_user {
+        overflow-x: auto;
+    }
+}
+
+@media only screen and (max-width:420px) {
+    body.section-about-us .not-front .l-main .l-content .node__content .field__items table tr td img { width:100%; height: auto}
+    .audioplayer2 {width: 100%!important}
+}
+@media only screen and (max-width:767px) {
+	/*.page-node-add-position-institution #node-position-institution-form .layout--onecol .layout__region .form-wrapper {width: 100%!important; margin-right: 0!important}*/
+    #cboxLoadedContent .embedded-video .player iframe { width: 100%;}
+	details > .details-wrapper {padding: 0;}
+	.node-position-congregation-form .address-container-inline, .page-node-type-position-congregation .address-container-inline {display: block;}
+	.node-position-congregation-form .address-container-inline > .form-item, .page-node-type-position-congregation .address-container-inline > .form-item {width:100%; margin-right: 0;}
+	.view-career-new-rabbi-search .form--inline .form-item {width: 100%; margin-right: 0;}
+	.view-career-new-rabbi-search .form--inline .form-actions {margin-left: 0;}
+	
+	.page-careers .views-exposed-form .form--inline .form-item, 
+	.page-careers .views-exposed-form .form--inline .form-wrapper {width: 100%; margin-right: 0;}
+	.page-careers .views-exposed-form .form--inline .form-wrapper .form-item {width: 100%;}
+	.page-careers .views-exposed-form .form--inline .form-wrapper.fieldgroup .form-item {width: 100%; margin: 0 1em 1em 0 !important;}
+	.page-careers .views-exposed-form .form--inline #edit-created .form-item, .page-careers .views-exposed-form .form--inline #edit-changed .form-item {width: 100%;}
+	.page-careers-pulpit-positions .views-exposed-form .form--inline .form-wrapper#edit-actions {margin-top: 0;}
+	.additional-filters {width: 100%; text-align: left;}
+	.page-careers .views-exposed-form .form--inline .form-wrapper.fieldgroup {margin-bottom: 0;}
+	
+	#placement-email-config-form .form-item {width: 100%;}
+	#views-exposed-form-career-rabbi-page-1 #edit-changed {width:100%; max-width: 500px;}
+	
+	#edit-field-free-areas-of-focus .form-item {width: 100%;}
+	#edit-field-free-compensation-types-wrapper #edit-field-free-compensation-types .form-item {width: 100%;}
+	
+
+}
+@media only screen and (max-width:413px) {
+    .uc-credit-cctype {
+        margin-left: -3px
+    }
+    #uc-cart-checkout-form.uc-cart-checkout-form fieldset .payment-details-credit label,
+    #uc-cart-checkout-form.uc-cart-checkout-form fieldset .form-type-select label {
+        width: 100%
+    }
+    #uc-cart-checkout-form.uc-cart-checkout-form fieldset div.payment-details-credit input {
+        width: 100%!important
+    }
+    #uc-cart-checkout-form.uc-cart-checkout-form fieldset .payment-details-credit .form-type-select select#edit-panes-payment-details-cc-exp-month {
+        width: 72%!important
+    }
+    #uc-cart-checkout-form.uc-cart-checkout-form fieldset .payment-details-credit .form-type-select select#edit-panes-payment-details-cc-exp-year {
+        margin-left: 10px !important;
+        width: 24% !important;
+    }
+}
+.address-book .default-addresses li.address-item .list-address-wrapper,
+.view-uc-addresses-address-book td.address-item .list-address-wrapper {
+    display: table;
+    width: 100%;
+}
+
+body.section-civicrm #crm-container.crm-container form .crm-section.other_amount-section {
+    /*margin: -60px 0 0 242px !important;*/
+}
+
+#edit-field-letters-und .div.checker {
+    display: inline-block;
+    float: none;
+    vertical-align: top
+}
+.not-front.page-taxonomy-term-32 table tr td { vertical-align: top}
+/* Creaetd by sumetha and added by manoj */
+
+
+/** Home **/
+
+#home-right-content-block .views-row-first .field-content h2 {
+    text-align: center;
+}
+
+
+/** Staff **/
+
+body.not-front.page-taxonomy-term-483 .l-main .l-content .node__content .field__items p img {
+    margin: 5px 15px 15px 0!important;
+    padding: 0;
+    float: left
+}
+
+body.not-front.page-taxonomy-term-483 .l-main .l-content .node__content .field__items p {
+    float: left
+}
+
+
+/** Committee On Jewish **/
+
+a.backtotop {
+    float: right
+}
+
+
+/** Calendar **/
+
+.calendar-calendar .month-view .full td.single-day div.monthview,
+.calendar-calendar .week-view .full td.single-day div.weekview,
+.calendar-calendar .day-view .full td.single-day div.dayview {
+    background: #fff;
+    padding: 0 2px;
+}
+
+.calendar-calendar .month-view .full td.single-day .inner div,
+.calendar-calendar .month-view .full td.single-day .inner div a,
+.calendar-calendar .month-view .full td.multi-day .inner div,
+.calendar-calendar .month-view .full td.multi-day .inner div a,
+.calendar-calendar .month-view .full td .inner div.calendar.monthview div,
+.calendar-calendar .month-view .full td .inner div.calendar.monthview div a,
+.calendar-calendar .week-view .full td.single-day .inner div,
+.calendar-calendar .week-view .full td.single-day .inner div a,
+.calendar-calendar .week-view .full td.multi-day .inner div,
+.calendar-calendar .week-view .full td.multi-day .inner div a,
+.calendar-calendar .week-view .full td .inner div.calendar.weekview div,
+.calendar-calendar .week-view .full td .inner div.calendar.weekview div a,
+.calendar-calendar .day-view .full td .inner div.view-item,
+.calendar-calendar .day-view .full td .inner div.calendar div,
+.calendar-calendar .day-view .full td .inner div.calendar div a {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #24488e;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 19px;
+}
+
+.calendar-calendar .month-view .full td.single-day .inner div,
+.calendar-calendar .month-view .full td.single-day .inner div a:hover,
+.calendar-calendar .month-view .full td.multi-day .inner div,
+.calendar-calendar .month-view .full td.multi-day .inner div a:hover,
+.calendar-calendar .month-view .full td .inner div.calendar.monthview div,
+.calendar-calendar .month-view .full td .inner div.calendar.monthview div a:hover,
+.calendar-calendar .week-view .full td.single-day .inner div,
+.calendar-calendar .week-view .full td.single-day .inner div a:hover,
+.calendar-calendar .week-view .full td.multi-day .inner div,
+.calendar-calendar .week-view .full td.multi-day .inner div a:hover,
+.calendar-calendar .week-view .full td .inner div.calendar.weekview div,
+.calendar-calendar .week-view .full td .inner div.calendar.weekview div a:hover,
+.calendar-calendar .day-view .full td .inner div.view-item,
+.calendar-calendar .day-view .full td .inner div.calendar div,
+.calendar-calendar .day-view .full td .inner div.calendar div a:hover {
+    color: #c22602
+}
+
+.page-calendar .l-main .l-content .view-clone-of-calendar .calendar-calendar table tbody tr td a:hover {
+    text-decoration: underline!important
+}
+
+body.section-calendar #colorbox #cboxLoadedContent {
+    line-height: 18px
+}
+
+
+/** Contact Us **/
+
+.not-front.page-taxonomy-term-32 table tr td img {
+    padding: 0 !important
+}
+
+
+/** Audio **/
+
+.not-front .l-main .l-content .field--name-field-audio {
+    margin: 0 0 0.2em!important;
+}
+
+.audio-download {
+    display: inline-block;
+    float: right;
+    vertical-align: top;
+}
+
+/**************************************************************************/
+
+.crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content,
+.crm-contribution-page-id-6 #billing-payment-block .crm-section .content {
+    width: 29%;
+}
+
+.crm-contribution-page-id-6 .custom_pre_profile-group .crm-section.form-item label {
+    font-size: 13px
+}
+
+#crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section {
+    margin-bottom: 1em
+}
+#crm-container.crm-container form .crm-contribution-page-id-6 .crm-section.other_amount-section{
+    position: absolute !important;
+    right: 25!important;
+    bottom: 16px !important;
+}
+#crm-container.crm-container form .crm-section.contribution_amount-section .price-set-row{
+vertical-align:top;
+}
+#crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input [type="text"],
+#crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input[type="password"],
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input,
+#crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input[type="email"],
+#crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content select,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content select,
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input {
+    width:100%!important;
+}
+
+.crm-contribution-page-id-6 #billing-payment-block fieldset legend {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.crm-contribution-page-id-6 #billing-payment-block #payment_information input#_qf_Main_upload_express {
+    width: auto;
+}
+
+.crm-contribution-page-id-6 #billing-payment-block #payment_information .crm-section.cvv2-section .content input {
+    width: 14%!important;
+}
+
+.crm-contribution-page-id-6 #billing-payment-block #payment_information .credit_card_info-section .credit_card_exp_date-section .content select {
+    width: 48.9%!important;
+}
+
+.crm-contribution-page-id-6 .payment_options-group .payment_processor-section > .content {
+    padding-top: 6px;
+}
+
+.crm-contribution-page-id-6 .payment_options-group div.radio {
+    vertical-align: middle;
+    display: inline-block;
+    float: none;
+    margin-right: 5px;
+}
+
+.crm-contribution-page-id-6 .payment_options-group label {
+    vertical-align: middle;
+}
+
+#crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .select2-container, #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .select2-results, #crm-container.crm-public .crm-contribution-page-id-6 .select2-container .select2-choice {width: 97.9%!important}
+
+/* FrontEnd with section-civicrm body class*/
+
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input,
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input [type="text"],
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input,
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input[type="password"],
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input,
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content input[type="email"],
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 .custom_pre_profile-group .crm-section .content select,
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content select,
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .crm-section .content input {
+    width: 100%;
+}
+
+body.section-civicrm  #crm-container.crm-public form .crm-section.billing_mode-section .crm-section.cvv2-section .cvv2-icon {
+    left: 6.5em;
+}
+
+body.section-civicrm  #crm-container.crm-public form .crm-section.billing_mode-section .crm-section.credit_card_exp_date-section select {
+    margin: 0;
+    width: 48.6%!important;
+}
+
+body.section-civicrm  #crm-container.crm-public form .crm-section.billing_mode-section .crm-section.credit_card_exp_date-section select#credit_card_exp_date_M {
+    margin-right: 10px;
+    width: 49% !important;
+    float: left;
+}
+body.section-civicrm  #crm-container.crm-public form .crm-section.billing_mode-section .crm-section.credit_card_exp_date-section select#credit_card_exp_date_Y {
+    width: 48% !important;
+    margin-right: 0;
+}
+body.section-civicrm  #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block #payment_information .crm-section.cvv2-section .content input {
+    width: 14%!important;
+}
+
+body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 #billing-payment-block .select2-container, body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 body.section-civicrm #billing-payment-block .select2-results, body.section-civicrm #crm-container.crm-public .crm-contribution-page-id-6 .select2-container .select2-choice {max-width:485px!important; width:100%!important}
+
+body.section-civicrm #crm-container.crm-container form .crm-section.other_amount-section { margin: -60px 0 0 124px}
+/* body.section-civicrm #crm-container.crm-container form .crm-section.other_amount-section::before { left: -8px} */
+
+.cboxTitle{
+    display: none !important;
+}
+
+.tao.navbar-administration #block-menu-menu-footer-menu ul li{
+display:table-cell;
+}
+
+.l-header .l-region--branding{
+width:500px !important;
+}
+
+/** ORDER PAGE ***/
+
+.page-admin-store .order-pane{
+    width:47%;
+}
+
+.page-admin-store .form-type-uc-addresses-address-select select{
+    max-width:100%;
+}
+.page-admin-store #order-pane-line_items #edit-add-line-item #edit-submit{margin-top: 12px;}
+.page-admin-store #order-pane-products,
+.page-admin-store #order-pane-line_items,
+.page-admin-store #order-pane-quotes,
+.page-admin-store #order-pane-admin_comments{width:100%;}
+
+.maintenance-page .l-header{padding-bottom: 41px;}
+.maintenance-page .l-content{min-height: 500px;padding: 40px;}
+div.selector, div.selector span, div.checker span, div.radio span, div.uploader, div.uploader span.action {
+    background-image: url("/sites/all/libraries/uniform/images/sprite.png");
+    background-repeat: no-repeat;
+}
+._qf_Register_upload_express-section, ._qf_Main_upload_express-section { display:none !important; }
+.uc-cart-checkout-form #tax_exempt_link1 span {color: #4b4b4b!important; margin-left: 28px;}
+.add-to-cart { float: left; text-align: left; clear: both; }
+.field--name-field-audio-posted-on .field__label { font-weight:normal; }
+.view-home-right-content .field-content { text-align: center; }
+.uc-order-create-form .form-type-radio,.uc-order-create-form .uc-order-customer,.uc-order-create-form .form-actions { float: left;width:100% }
+.crm-container .credit_card_type-section .crm-credit_card_type-icons a { background: url(/sites/default/ra_civicrm/custom_images/creditcard-icons.png) no-repeat 0 0 transparent; }
+
+
+/** Quick view design issue fix **/
+#quick_view_form {
+	color: #4b4b4b;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+#quick_view_form .quick-qty label {
+	float: left;
+	width: auto;
+}
+
+#quick_view_form .quick-qty input#edit-qty {
+	padding: 0;
+	text-align: center;
+	width: 30px;
+	height: 26px;
+}
+
+#quick_view_form .quick-qty .form-item-qty {
+	float: left;
+}
+
+#quick_view_form .quick-qty input#edit-submit--2 {
+   color: #d8d0b1 !important;
+   display: block;
+   font-family: Verdana,Geneva,sans-serif;
+   font-size: 12px;
+   font-style: normal;
+   font-weight: normal;
+   height: 27px;
+   line-height: 20px;
+   padding: 0 16px;
+   text-align: left;
+   text-decoration: none !important;
+   white-space: nowrap;
+   background: #254a8e;
+   margin-left: 75px;
+}
+ html.js .node-type-webform fieldset.collapsed .fieldset-wrapper{
+display:block !important;
+}
+
+html.js .node-type-webform fieldset.collapsed {
+    height: auto;
+}
+/* Add to cart issue in product taxonomy pages*/
+.field--type-text-with-summary .field__item.even { float:left; width:100%;}
+.node--product { float:left; width:100%;}
+.node-teaser{margin-bottom:30px;  float:left; width:100%;}
+.node-teaser .field--name-uc-product-image { float:left; min-width:14%}
+.node-teaser .field--name-uc-product-image img {max-height: 400px; max-width:150px; padding:0 10px 5px 0;}
+.node-teaser .field--name-body { float:left; width:86%}
+.node-teaser .field--name-body p img {padding:0 0 5px 0!important; margin-right:18px;}
+.node--story--teaser .field--name-body {width:100%;}
+.not-front .l-main .l-content .node--promoted .node__content { margin-bottom:0!important; display:inline-block; width:100%}
+/* front end header issue fix */
+.l-region--branding nav.block--menu-menu-top-menu-user ul.menu li a {
+    padding: 0 9px!important;
+}
+.block--search-form {
+    margin: 1.5em 0 0 7em!important
+}
+/* Mobile issue fixes */
+@media screen and (min-width: 901px) and (max-width: 1039px) {
+.l-branding a.site-logo {
+    width: 39.5%!important
+}
+}
+
+@media only screen and (max-width:900px) {
+.l-branding a.site-logo {
+    margin: 3em 0 1em!important
+}
+#uc-cart-checkout-form.uc-cart-checkout-form fieldset .payment-details-credit input {width: 213px!important;}
+#uc-cart-checkout-form.uc-cart-checkout-form fieldset .payment-details-credit .form-item-panes-payment-details-cc-cvv input { width:48px!important}
+	.view-career-new-rabbi-search .form--inline .form-actions {margin-left: 0.5em;}
+}
+
+@media only screen and (max-width:609px) {
+#navbar-administration.navbar-oriented .navbar-bar {
+    z-index: 100001
+}
+#navbar-administration.navbar-oriented .navbar-tray-vertical.navbar-active {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    left: 0;
+    z-index: 10000;
+}
+}
+@media only screen and (max-width:530px) {
+#uc-cart-checkout-form.uc-cart-checkout-form fieldset .payment-details-credit input { width:99% !important}
+}
+
+@media screen and (min-width: 450px) and (max-width: 900px) {
+.l-header .l-region--branding {
+    width: 423px !important;
+    float: right!important;
+}
+.block--search-form {
+    margin: 10px 0 0 !important
+}
+}
+
+@media only screen and (max-width:449px) {
+.l-header .l-region--branding {
+    width: 100% !important;
+}
+.block--search-form {
+    margin: 10px 0 0 !important
+}
+fieldset { display:table-cell; width:100%}
+#uc-cart-checkout-form select { width:100%!important}
+}
+/* Popup unique close button */
+#modalContent .modal-forms-modal-content span.popups-close {
+background: rgba(0, 0, 0, 0) url("/sites/all/modules/colorbox/styles/default/images/controls.png") no-repeat scroll -25px 0 !important;
+height: 27px !important;
+position: absolute;
+right: 14px!important;
+text-indent: -99999px !important;
+top: 5px !important;
+width: 25px !important;
+}
+
+#cboxClose {
+    top: 0!important
+}
+
+/* Admin payment add section */
+#edit-payments-new-comment { width: 170px; }
+.rteindent1 { margin-left: 40px !important; }
+#views-form-uc-orders-admin-page .views-field-actions{ width: 18% }
+table img { max-width: none !important; }
+/* Admin civicrm profile settings button hidden */
+body.page-civicrm-admin #crm-main-content-wrapper, body.page-civicrm-admin .crm-content-block {
+    overflow-x: auto;
+}
+/* Quick contact create left side bar */
+#crm-quick-create input[type="text"], input[type="password"], input[type="email"] { height:30px !important }
+#crm-quick-create { margin-right:10px; }
+.block-civicrm { margin: 10px 0 10px 0; }
+#block-civicrm-4 .crm_blocktitle { margin: 10px 0 6px; }
+#crm-recently-viewed .crm-recently-viewed {width: 93%; }
+#crm-quick-create form { float: left}
+#block-civicrm-4 h2 span {float: left; width: 100%; }
+/* Loading icon style for checkout page */
+.ui-loader-background{
+    background-color: #fff;
+    background-image: url("images/loader.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    width: 100%;
+   }
+/* Dues design starts from here */
+
+.dues_left_side {
+    float: left;
+    width: 69%;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 #priceset-div {
+    margin: 0;
+    padding: 22px 0 0;
+    border-top: 2px dotted #e7e7e7
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .crm-option-edit-link {
+    display: none;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .custom_pre_profile-group .dues_left_side .crm-section .content {
+    width: 68%;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side #editrow-custom_386.crm-section .content label {
+    display: block;
+	float: left;
+	margin: 0 0 10px;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side #editrow-custom_386.crm-section .content div.checker {
+    clear: both;
+	float: left;
+	position: relative;
+	vertical-align: top;
+}
+
+#editrow-custom_386 .close-icon {
+    display: none;
+}
+
+.crm-contribution-page-id-11 fieldset.crm-profile-id-91 legend, .crm-contribution-page-id-6 .pay_later_receipt-section {
+    display: none;
+}
+
+.dues_calculator {
+    text-align: center;
+}
+
+.dues_right_side {
+    background-color: #e8eef8;
+    padding: 14px 20px;
+    width: auto;
+    border: 1px solid #c0c0c0;
+    margin-bottom: 10px;
+}
+
+.dues_right_side .content {
+    width: 100%!important;
+}
+
+div.dues_right_side label {
+    font-weight: bold
+}
+
+.recur-installment-content{
+	width: 120%;
+}
+
+.dues_right_side #dues_calculate {
+    text-align: center;
+    cursor: pointer
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.other_amount-section .other_amount-content:before {
+    content: "$";
+    font-size: 12px;
+    left: -15px;
+    top: 11px;
+    position: absolute
+}
+
+.dues_main::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+body.page-civicrm-contribute .not-front .l-main .l-region--sidebar-first {
+    box-sizing: border-box;
+    padding: 0 0 0 20px;
+}
+
+body.page-civicrm-contribute .not-front .l-main .l-region--sidebar-first::after {
+    left: 200px
+}
+
+body.page-civicrm-contribute .not-front .l-main .l-region--sidebar-first {
+    padding: 10px 0 0 20px;
+}
+
+.crm-container .crm-contribution-page-id-11 a.button span {
+    display: block;
+    line-height: 20px;
+    padding: 2px 20px;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 #crm-submit-buttons span.crm-button input {
+    background: #70716b url("/sites/default/ra_civicrm/custom_images/crm-button-bg.gif") repeat-x scroll left top;
+    border: 1px solid #3e3e3e;
+    border-radius: 4px;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 7px 15px !important;
+    text-shadow: 0 1px 0 black;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.billing_mode-section .crm-section.cvv2-section .cvv2-icon {
+    left: 0 !important;
+    position: relative;
+    top: 5px;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 #crm-submit-buttons span.crm-button input:hover {
+    background: #70716b url("/sites/default/ra_civicrm/custom_images/crm-button-bg.gif") repeat-x scroll 0 -25px;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .crm-section .label {
+    color: #4a4a4a;
+    display: block;
+    font-size: 0.75rem;
+    padding: 0;
+    text-align: left;
+    width: 22%;
+    float: left;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side .crm-section .label {
+    width: 32%
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side .crm-section#editrow-custom_421 .content {
+    margin-left: 32%;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .dues_right_side .crm-section .label {
+    width: 100%
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .crm-section .content {
+    float: left;
+    width: 445px;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.payment_processor-section .content label {
+    float: none;
+    margin: 0;
+    min-width: 20%;
+    width: auto;
+}
+
+body.section-civicrm #crm-container.crm-public form .crm-contribution-page-id-11 .crm-section.billing_mode-section .crm-section.credit_card_exp_date-section select#credit_card_exp_date_M {
+    margin-right: 9px
+}
+
+.crm-contribution-page-id-11 .crm-section.is_pledge-section .crm-form-select {
+    display: inline-block;
+    margin: 0 0 12px;
+    width: 29%;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.is_pledge-section .content > label {
+    width: auto;
+    margin-bottom: 10px;
+    vertical-align: middle
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.is_pledge-section .content > div.radio {
+    vertical-align: text-bottom
+}
+
+body.page-civicrm-contribute-transact .crm-contribution-page-id-11 #priceset-div .crm-section.price_set-section .other_amount-section {
+    margin: 0!important;
+}
+
+.dues_right_side-inner {
+    background: #e8eef8 none repeat scroll 0 0;
+    padding: 5px 10px;
+}
+
+.crm-section.is_pledge-section #billing-payment-block #payment_information .credit_card_exp_date-section #credit_card_exp_date_M {
+    margin-right: 7px;
+}
+
+.crm-section.is_pledge-section .content label {
+    display: inline;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.billing_mode-section .crm-section.cvv2-section input {
+    width: 62px!important
+}
+.crm-container input#custom_271[readonly],.crm-container input#custom_401[readonly] {
+    background-image : none !important;
+    border: 1px solid #fff !important;
+}
+.crm-container form .crm-contribution-page-id-11 .editrow_custom_271-section, .crm-container form .crm-contribution-page-id-11 .editrow_custom_401-section{
+    height: 10px;
+}
+.crm-container form .crm-contribution-page-id-11 .editrow_custom_271-section input#custom_271, .crm-container form .crm-contribution-page-id-11 .editrow_custom_401-section input#custom_401{
+    height: 25px!important;
+}
+.ra_dues_help {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 3.6em;
+    color: #4b4b4b;
+}
+.crm-container form .crm-contribution-page-id-11 .dues_pay_section{
+	border-radius: initial;
+    border-top: 2px dotted #e7e7e7;
+    padding-top: 20px;
+    clear: both;
+}
+@media only screen and (max-width:640px) {
+	.page-node-type-position-freelance .field--name-field-free-compensation-types .field__item {padding-left: 75% !important;}
+	#compensation-group-freelance {width: 100%; max-width: 457px;}
+	#edit-field-free-compensation-wrapper {width:50%;}
+	#edit-field-free-compensation-types-wrapper {width:45%;}
+	
+    .dues_left_side {
+        float: none;
+        width: 100%;
+    }
+    #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section .content,
+    #crm-container.crm-container form .crm-contribution-page-id-11 .custom_pre_profile-group .dues_left_side .crm-section .content,
+    #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section .label,
+    #crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side .crm-section .label {
+        width: 100%;
+    }
+    #crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side #editrow-custom_421.crm-section .content {
+        margin-left: 0
+    }
+    .dues_right_side {
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    body.section-civicrm #crm-container.crm-public form .crm-contribution-page-id-11 .crm-section.billing_mode-section .crm-section.credit_card_exp_date-section select#credit_card_exp_date_M {
+        width: 50%!important;
+        margin-right: 0
+    }
+    #crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side #editrow-custom_386.crm-section .content label {
+        width: 90%
+    }
+    .dues_calculation {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.is_pledge-section .content > label {
+        width: 41%;
+    }
+    #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.is_pledge-section .content > div.radio {
+        vertical-align: top
+    }
+
+	.page-node-add-congregation .node-congregation-form fieldset .fieldset-wrapper > .form-wrapper,
+	.page-node-add-institution .node-institution-form fieldset .fieldset-wrapper > .form-wrapper,
+	.page-node-add-freelance .node-freelance-form fieldset .fieldset-wrapper > .form-wrapper,
+	.page-node-type-freelance .node-freelance-edit-form fieldset .fieldset-wrapper > .form-wrapper,
+	.page-node-type-institution .node-institution-edit-form fieldset .fieldset-wrapper > .form-wrapper,
+	.page-node-type-congregation .node-congregation-edit-form fieldset .fieldset-wrapper > .form-wrapper
+	{width:100%;}
+
+	.page-node-add-congregation .node-congregation-form .field--name-field-cong-address .form-wrapper > .form-wrapper,
+	.page-node-add-congregation .node-congregation-form .field--name-field-cong-address .form-wrapper > .form-item,
+	.page-node-add-institution .node-institution-form .field--name-field-instit-address .form-wrapper > .form-wrapper,
+	.page-node-add-institution .node-institution-form .field--name-field-instit-address .form-wrapper > .form-item,
+	.page-node-add-freelance .node-freelance-form .field--name-field-freela-address .form-wrapper > .form-wrapper,
+	.page-node-add-freelance .node-freelance-form .field--name-field-freela-address .form-wrapper > .form-item,
+	.page-node-type-freelance .node-freelance-edit-form .field--name-field-freela-address .form-wrapper > .form-wrapper,
+	.page-node-type-freelance .node-freelance-edit-form .field--name-field-freela-address .form-wrapper > .form-item,
+	.page-node-type-institution .node-institution-edit-form .field--name-field-instit-address .form-wrapper > .form-wrapper,
+	.page-node-type-institution .node-institution-edit-form .field--name-field-instit-address .form-wrapper > .form-item,
+	.page-node-type-congregation .node-congregation-edit-form .field--name-field-cong-address .form-wrapper > .form-wrapper,
+	.page-node-type-congregation .node-congregation-edit-form .field--name-field-cong-address .form-wrapper > .form-item,
+	.page-node-type-freelance .node-freelance-edit-form fieldset .fieldset-wrapper .field--name-field-freela-address > .form-wrapper .form-item {width:100%;}
+
+	.page-node-add-congregation .node-congregation-form .field--name-field-cong-address .form-wrapper .address-container-inline .form-item,
+	.page-node-add-institution .node-institution-form .field--name-field-instit-address .form-wrapper .address-container-inline .form-item,
+	.page-node-add-freelance .node-freelance-form .field--name-field-freela-address .form-wrapper .address-container-inline .form-item,
+	.page-node-type-freelance .node-freelance-edit-form .field--name-field-freela-address .form-wrapper .address-container-inline.js-form-wrapper.form-wrapper > .form-item,
+	.page-node-type-institution .node-institution-edit-form .field--name-field-instit-address .form-wrapper .address-container-inline.js-form-wrapper.form-wrapper > .form-item,
+	.page-node-type-congregation .node-congregation-edit-form .field--name-field-cong-address .form-wrapper .address-container-inline.js-form-wrapper.form-wrapper > .form-item{width:100%!important;}
+
+	#captcha .form-item .description {margin: 3px 0 0 0;}
+}
+
+@media screen and (max-width:480px) {
+    #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.is_pledge-section .content > label {
+        width: 88%;
+    }
+    #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.payment_processor-section .content label {
+        float: none;
+        margin: 0;
+        min-width: 90%;
+        width: auto;
+    }
+    #crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side #editrow-custom_386.crm-section .content label {
+        width: 86%
+    }
+}
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+   // IE9+ CSS
+   .page-civicrm-contribute .l-region--sidebar-first{width:20%}
+}
+
+/* Rabbsuperuser */
+
+body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section .content {
+    margin-left: 0;
+    width: 522px;
+}
+
+body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section .description {
+    color: #78797c;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+body.tao #crm-container.crm-container form .crm-contribution-page-id-11 #priceset-div {
+    border-top: 1px solid #cfcec3
+}
+
+body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .dues_right_side .crm-section .label {
+    width: 100%
+}
+
+body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section .label,
+body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section label {
+    font-size: 0.9rem;
+    width: 25.8%;
+}
+body.tao #crm-container.crm-container form .crm-contribution-page-id-11 #crm-submit-buttons input#_qf_Main_upload-bottom {
+    font-size: 1em !important;
+    padding: 3px 10px!important;
+}
+#crm-container.crm-container form .crm-contribution-page-id-11 .crm-section .content input[type="text"],
+#crm-container.crm-container form .crm-contribution-page-id-11 .crm-section .content input[type="password"] {
+    box-sizing: border-box;
+    font-size: 0.75rem;
+    height: 39px;
+    width: 100%;
+}
+
+#crm-container.crm-container form .crm-contribution-page-id-11 .crm-section {
+    clear: both;
+    display: block;
+    margin: 0 0 12px;
+    vertical-align: top;
+}
+
+body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side {
+    width: 100%
+}
+
+body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side .crm-section .label {
+    width: 25.8%;
+}
+
+body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .custom_pre_profile-group .dues_left_side .crm-section .content {
+    width: 522px
+}
+
+body.tao .crm-container form .crm-contribution-page-id-11 .select2-container .select2-choice {
+    width: 100%;
+    height: 39px;
+    box-sizing: border-box;
+}
+
+body.tao .crm-container form .crm-contribution-page-id-11 .select2-container {
+    width: 100%!important
+}
+
+body.tao #crm-container form .crm-contribution-page-id-11 .crm-section.billing_mode-section .crm-section.credit_card_exp_date-section select#credit_card_exp_date_M {
+    float: left;
+    margin-right: 10px;
+    width: 47.5% !important;
+}
+
+body.tao #crm-container form .crm-contribution-page-id-11 .crm-section.billing_mode-section .crm-section.credit_card_exp_date-section select#credit_card_exp_date_Y {
+    float: left;
+    width: 47.5% !important;
+}
+
+body.tao .crm-contribution-page-id-11 .crm-section.is_pledge-section .crm-form-select {
+    width: 28%
+}
+
+body.tao #crm-container.crm-container form .crm-section .content div.radio {
+    display: inline-block;
+    float: none;
+    margin: 0px 3px 0 0;
+    vertical-align: top;
+}
+
+body.tao #crm-container.crm-container form .crm-profile .content label {
+    display: inline-block;
+    line-height: normal;
+    margin: 0 10px 0 0;
+    vertical-align: top;
+    width: auto;
+}
+
+body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side #editrow-custom_421.crm-section .content {
+    margin-left: 37.5%
+}
+/* custom recur options starts here */
+body.tao #crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options div.radio{clear: both;
+    float: left;
+    position: relative;
+    margin: 0 3px 0 0}
+
+body.tao #crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options label{display: inline;
+float: left;
+margin: 0 0 10px; width: auto;}
+
+body.tao #crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options.content {
+    width: 522px;
+}
+
+body.tao #crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options .recur-installment-content,
+body.tao #crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options .recur-other-content {
+    float: left;
+    margin-left: 10px;
+}
+.page-content .form-item #helprow-custom_406 .description{display: block;
+position: relative;
+    bottom: inherit;
+    right: inherit;
+    z-index: inherit;
+    color: inherit;
+    background: none;
+    border:none;
+    width:auto;
+    margin: auto;
+    padding: auto;
+    display: block;
+}
+body.tao #crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options .recur-installment-content {
+    float: right; left: 0; position: relative; top: -39px;
+}
+
+#crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options .recur-installment-content input#recur_installment {
+    width: 62px;
+}
+
+body.tao #crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .recur-other {
+    clear: both;
+}
+body.tao .crm-container form .crm-contribution-page-id-11 .dues_pay_section{
+    border-top: 1px solid #CFCEC3 !important;
+}
+body.tao .recur-installment-content{
+    width:initial !important;
+}
+#crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options .recur-other-content input#recur_other {
+    width: 90px;
+    margin-bottom:10px;
+}
+
+#crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options div.radio {
+    clear: both;
+    float: left;
+    position: relative;
+    margin: 0 3px 0 0
+}
+
+#crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options label {
+    display: inline;
+    float: left;
+    margin: 0 0 10px;
+    width: auto;
+}
+
+@media screen and (max-width:440px) {
+    body.tao #crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options .recur-installment-content {
+        float: left;
+        left: 0;
+        position: relative;
+        top: -75px;
+        clear: both
+    }
+    body.tao #crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options #uniform-CIVICRM_QFID_2_7 {
+        margin-bottom: 54px;
+    }
+    body.tao #crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options .recur-other-content {
+        clear: both;
+        left: 0;
+        position: relative;
+        top: -44px;
+    }
+}
+/* custom recur options ends here */
+@media only screen and (max-width:960px) {
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section .content {
+        width: 416px;
+    }
+    body.tao .crm-contribution-page-id-11 .crm-section.is_pledge-section .crm-form-select {
+        width: 23%;
+    }
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side #editrow-custom_386.crm-section .content label {
+        width: 83%
+    }
+}
+
+@media only screen and (max-width:640px) {
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side {
+        float: none;
+        width: 100%;
+    }
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section .content,
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .custom_pre_profile-group .dues_left_side .crm-section .content,
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section .label,
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side .crm-section .label {
+        width: 100%;
+    }
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side #editrow-custom_421.crm-section .content {
+        margin-left: 0
+    }
+    .dues_right_side {
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    body.tao #crm-container form .crm-contribution-page-id-11 .crm-section.billing_mode-section .crm-section.credit_card_exp_date-section select#credit_card_exp_date_Y {
+        width: 46%!important;
+        margin-right: 0
+    }
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side #editrow-custom_386.crm-section .content label {
+        width: 90%;
+    }
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .dues_calculation {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.is_pledge-section .content > label {
+        width: 41%;
+    }
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.is_pledge-section .content > div.radio {
+        vertical-align: top
+    }
+    body.tao .crm-contribution-page-id-11 .crm-section.is_pledge-section .crm-form-select {
+        width: 26%;
+    }
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.payment_processor-section .content label {
+        display: inline-block;
+        min-width: 92%
+    }
+
+	details:not([open]) {background: #dee5f5; border: 0 none;}
+	details, details:hover {border:0 none!important; background-color: #2E5295; border-radius: 10px;}
+	details:not([open]) summary {color: #2e5295;}
+	details > summary, details:hover > summary {padding: 15px 30px 15px 20px; color: #fff; font-size: 12px;}
+	details > .details-wrapper {background: #fff; border: 2px solid #dee5f5; border-radius: 10px;  border-top-left-radius: 0; border-top-right-radius: 0; border-top: 0 none; padding: 1.5em!important;}
+	details > .details-wrapper .details-wrapper {padding: 0 !important; border: 0 none;}
+	details > .details-wrapper details {background: transparent;}
+	details > .details-wrapper details summary, details > .details-wrapper details:hover summary  {color: #000; padding: 0;}
+
+	.page-node-type-position-congregation article .field-group-tabs-wrapper > div > details > .details-wrapper {background: #fff; border: 2px solid #dee5f5; border-radius: 10px;  border-top-left-radius: 0; border-top-right-radius: 0; border-top: 0 none; padding: 1.5em;}
+
+	.not-front.page-node-add-position-freelance .node-position-freelance-form div.form-wrapper {width:100%;}
+	.page-node-add-position-freelance .node-position-freelance-form .field-group-html-element .field--name-field-free-length-of-position {width: 50% !important;}
+	.page-node-add-position-freelance .node-position-freelance-form .field-group-html-element .field--name-field-free-length-position-day {width: 45% !important;}
+	.not-front.page-node-add-position-freelance .node-position-freelance-form .field-group-html-element {width:100%;}
+	.view-career-new-rabbi-search .form--inline .form-actions {margin-left: 0!important;}
+
+	.page-careers .views-exposed-form .form--inline .form-item {width:100%;}
+	.page-careers .views-exposed-form .form--inline .form-actions input[type="submit"] {margin: 0;}
+	
+	.field--type-address details { background: transparent;}
+	.field--type-address details .details-wrapper {border: 0 none; padding: 0 !important;}
+}
+
+@media only screen and (max-width:480px) {
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .dues_left_side #editrow-custom_386.crm-section .content label {
+        width: 84%
+    }
+    body.tao #crm-container.crm-container form .crm-contribution-page-id-11 .crm-section.payment_processor-section .content label {
+        min-width: 89%
+    }
+}
+body.tao #crm-container.crm-container form .crm-section .content .recur-installment-content span.crm-error {left: 0; position: absolute; top: 42px; width: 100%;}
+
+ #crm-container.crm-container form .crm-section .content .recur-installment-content span.crm-error { position: absolute; width:auto!important; right: 0;}
+
+body.tao #crm-container.crm-container .crm-contribution-page-id-11 .custom_dues_section .custom-recur-options .recur-installment-content #pledge_installments_suffix {display: inline-block; vertical-align: middle; width: 233px; word-break: break-all;}
+
+.page-civicrm-contribute .l-region--sidebar-first{width:20%}
+/* Dues design ends from here */
+
+#uc-payment-by-order-form,.view-custom-sales-report .view-content, .view .view-content{overflow-x: auto;}
+
+.page-civicrm .crm-container.ui-dialog{z-index: 9999 !important;}
+
+.not-front .l-main .l-content #crm-main-content-wrapper ul{list-style:inherit;}
+
+.not-front .l-main .l-content .node__content .field--type-datetime{clear:both;}
+
+.webform-component-checkboxes div.checker, .webform-component-radios div.radio{clear: both;}
+
+.crm-profile-id-126 legend{display: none !important;}
+.crm-profile-id-126 .messages.help{max-height: 200px;overflow-y: auto;}
+.crm-profile-id-126 #editrow-custom_486{position: relative;}
+.crm-profile-id-126 #editrow-custom_486 .label{padding-left: 25px !important; width: auto !important;}
+.crm-profile-id-126 #editrow-custom_486 .content label{display: none !important;}
+.crm-profile-id-126 #editrow-custom_486 #uniform-custom_486_1{position: absolute; left: 0px; top: 2px;}
+/*Manoj*/
+#crm-container.crm-container form .crm-contribution-page-id-6 .crm-section .content div.radio{
+        display: inline-block !important;
+    margin: 0 2px 0 0 !important;
+}
+body.section-civicrm #crm-container.crm-container form .crm-section.other_amount-section {
+    margin: 0px !important;
+}
+
+#crm-container.crm-container form .crm-section.payment_processor-section .content label{
+display:inline !important;
+}
+@media only screen and (min-width:1601px) {
+.not-front .l-main .l-region--sidebar-first {max-width: 300px;}
+
+}.crm-container .dataTables_wrapper { overflow-x: scroll;}
+.crm-submit-buttons { width: auto !important; height: auto !important; overflow: unset !important;}
+
+
+/* Calendar - Year view */
+.calendar-calendar .year-view table.mini td.empty{color: #fff;}
+
+
+body.page-cj .ui-dialog .ui-dialog-titlebar{background: #fff;border: none;}
+body.page-cj .ui-dialog .ui-dialog-titlebar span.ui-dialog-title{display: none;}
+body.page-cj .ui-dialog .ui-dialog-titlebar-close{top: 20px;right: 20px; z-index: 999;}
+.page-user #crm-container.crm-container .messages.crm-error {display:none !important;}
+
+.l-region--sidebar-first .navigation ul.menu li { position:relative;}
+.l-region--sidebar-first .navigation ul.menu > li.menu-item--expanded ul {position: relative; width: 100%; transition: none;    display:none;}
+.l-region--sidebar-first .navigation ul.menu > li.menu-item--expanded.menu-item--active-trail ul {display:block;}
+.l-region--sidebar-first .navigation ul.menu > li.menu-item--expanded > a:after, .l-region--sidebar-first .navigation ul.menu > li.menu-item--expanded.menu-item--active-trail.li-parent > a:after {right:10px; content:"+"; display:inline-block; position:absolute; top:0; bottom:0; margin:auto auto; color:#C22602; font-size:20px; }
+.l-region--sidebar-first .navigation ul.menu > li.menu-item--expanded.li-parent > a:after, .l-region--sidebar-first .navigation ul.menu > li.menu-item--expanded.menu-item--active-trail > a:after {-webkit-transform: rotate(180deg);
+    transform: rotate(180deg); content:"-"; font-size: 28px; line-height: 24px; right: 12px;}
+table#ra-custom-commerce-invoice-page tr{
+background:none !important;
+}
+table#ra-custom-commerce-invoice-page p{
+font-size:13px;  margin-bottom: 5px; line-height: 18px; color:#000000;}
+.discount_applied { text-align: right; margin-right: 10px;}
+#edit-moderation-state-wrapper{display:none;}
+
+#block-racustomcommerceaddress {border-bottom: 1px solid #c0c0c0; margin: 20px 0; padding-bottom: 20px;}
+[data-history-node-id="45443"],
+[data-history-node-id="45442"],
+.nid-45443,.nid-45442
+{display:none}
+.view-taxonomy-term .view-content .views-row .field--type-datetime  {
+display:none !important;
+}
+.l-main .l-content ul li.comment-comments{
+ display:none !important;
+}
+/* Popup box BEGIN */
+.hover_bkgr_fricc{
+background:rgba(0,0,0,.4);
+cursor:pointer;
+display:none;
+height:100%;
+position:fixed;
+text-align:center;
+top:0;
+width:100%;
+z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+display:inline-block;
+height:100%;
+vertical-align:middle;
+}
+.hover_bkgr_fricc > div {
+background-color: #fff;
+box-shadow: 10px 10px 60px #555;
+display: inline-block;
+height: auto;
+max-width: 300px;
+min-height: 100px;
+vertical-align: middle;
+width: 60%;
+position: relative;
+border-radius: 8px;
+padding: 15px 5%;
+}
+.popupCloseButton {
+background-color: #fff;
+border: 3px solid #999;
+border-radius: 50px;
+cursor: pointer;
+display: inline-block;
+font-family: arial;
+font-weight: bold;
+position: absolute;
+top: -20px;
+right: -20px;
+font-size: 25px;
+line-height: 30px;
+width: 30px;
+height: 30px;
+text-align: center;
+}
+.popupCloseButton:hover {
+background-color: #ccc;
+}
+.trigger_popup_fricc {
+cursor: pointer;
+font-size: 20px;
+margin: 20px;
+display: inline-block;
+font-weight: bold;
+}
+/* Popup box BEGIN */
+.page-user-usersearch .messages.messages--error{
+	display:none !important;
+}
+.ui-dialog.ui-widget .ui-dialog-buttonset button {border:1px solid #a5c5fe; background:#23488e; display:inline-block; padding:5px 23px; color:#d8d0b1!important; cursor:pointer; -webkit-box-shadow:1px 1px 1px 1px #d6d6d6; -moz-box-shadow:1px 1px 1px 1px #d6d6d6; -ms-box-shadow:1px 1px 1px 1px #d6d6d6; -o-box-shadow:1px 1px 1px 1px #d6d6d6; box-shadow:1px 1px 1px 1px #d6d6d6; font-size:12px; font-size:0.75rem; text-decoration:none; margin:0 1em 0 0; border-radius:0; font-family:Verdana, Arial, Helvetica, sans-serif!important;margin-top: 1%;}
+.ui-dialog.ui-widget .ui-dialog-buttonset button:hover {background:#8e988b; border-color:#707a6c; color:#000000!important;}
+.page-civicrm-event-register #crm-container.crm-container form .crm-section .editrow_custom_646-section .content label {width: 94%; margin: 0 0 5px 0; vertical-align: middle; display: inline-block !important}
+.page-civicrm-event-register #crm-container.crm-container form .crm-section .editrow_custom_646-section .content input[type="checkbox"] {margin: 0 4px 5px 2px}
+@media only screen and (moax-width:475px) {
+	.user-logged-in .vertical-tabs .vertical-tabs__panes details {padding: 0.35em 0.625em 0.75em;}
+	.vertical-tabs .vertical-tabs__panes .container-inline div {width: 100%!important;}
+}
+.l-main .l-content form #edit-field-base-salary-state-question-wrapper label {display: inline;}
+
+#edit-field-total-compensation-0 .field-suffix{padding-bottom: 15px; display: block;}
+.crm-section.sponsorship_fee_per_series-section,#crm-container.crm-container form .crm-section .content.sponsorship_fee_per_series-content {width:100% !important; clear:both;}
+.crm-section.sponsorship_fee_per_series-section .left-box{float:left;width:50%;}
+.crm-section.sponsorship_fee_per_series-section .right-box{float:left;width:50%;}
+div.crm-export-field-selector-outer {
+    position: relative;
+    overflow-x: inherit !important;
+}
+.page-civicrm .crm-container div.crm-submit-buttons {
+display: inline-block !important;
+    float: none !important; 
+}
+.js-form-item-field-teshu-sa-category-target-id .shs-widget-container label{
+    position: absolute;
+    margin-top: -19px;
+    font-weight: bold;
+}
+.view-id-teshuvot .views-view-table .views-field-title{
+width:250px !important;
+}
+.view-id-teshuvot .select2-container--default .select2-selection--single .select2-selection__arrow{
+height: 38px;
+}
+.view-id-teshuvot .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 38px;
+		width: 120px;
+}
+.view-id-teshuvot .select2-container--default .select2-selection--single .select2-selection__clear {
+    height: 40px;
+}
+.view-id-teshuvot .select2-container .select2-selection--single {
+     height: 39px;
+}
+.view-id-teshuvot .shs-widget-container:nth-of-type(2) {
+    margin-left: 5px;
+}
+.view-id-teshuvot .select2-container--open .select2-dropdown--above{
+width:150px !important;
+}
+.view-teshuvot table #view-edit-node-table-column,
+.view-teshuvot table .views-field-edit-node,
+#payment_information .paypal_button_info-section,
+#payment_information ._qf_Payment_upload_express-section
+{
+    display: none;
+}
+.administrator.ra_member .view-teshuvot table #view-edit-node-table-column,
+.administrator.ra_member .view-teshuvot table .views-field-edit-node {
+    display: table-cell;
+}
+.print__wrapper--pdf.job_applicant{float: right;margin-top: -67px;}
+.page-gittin-profile-list .feed-icons{display:block !important;}
+.page-home-member #block-racustombanner-2 img.adminbanner {
+    margin-bottom: 0px;
+}
+
+.form-item .form-item-select-your-webinar-sessions-here--1 label.option{font-weight:bold !important;}
+.form-item .form-item-select-your-webinar-sessions-here--2 label.option{font-weight:bold !important;}
+.form-item .form-item-select-your-webinar-sessions-here--3 label.option{font-weight:bold !important;}
+.form-item .form-item-select-your-webinar-sessions-here--4 label.option{font-weight:bold !important;}
+.form-item .form-item-select-your-webinar-sessions-here--5 label.option{font-weight:bold !important;}
+.form-item .form-item-select-your-webinar-sessions-here--6 label.option{font-weight:bold !important;}
+.form-item .form-item-select-your-webinar-sessions-here--7 label.option{font-weight:bold !important;}
+.form-item .form-item-select-your-webinar-sessions-here--8 label.option{font-weight:bold !important;}
+.form-item .form-item-select-your-webinar-sessions-here--9 label.option{font-weight:bold !important;}
