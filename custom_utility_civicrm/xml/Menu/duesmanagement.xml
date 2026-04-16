@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/contact/dues-management</path>
+    <page_callback>CRM_CustomUtility_Page_DuesOverrideTab</page_callback>
+    <title>Dues Management</title>
+    <access_arguments>administer CiviCRM</access_arguments>
+    <type>1</type>
+    <weight>0</weight>
+  </item>
+  <item>
+    <path>civicrm/contact/dues-management/override</path>
+    <page_callback>CRM_CustomUtility_Form_DuesOverride</page_callback>
+    <title>Set Dues Override</title>
+    <access_arguments>administer CiviCRM</access_arguments>
+    <type>1</type>
+    <weight>0</weight>
+  </item>
+</menu>
