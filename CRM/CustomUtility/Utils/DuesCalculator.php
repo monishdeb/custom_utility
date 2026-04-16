@@ -115,15 +115,16 @@ class CRM_CustomUtility_Utils_DuesCalculator {
       return TRUE;
     }
 
-    // 5-year rule.
+    // 5-year rule: compare timestamps to get total elapsed years accurately.
     $lastDate = $latest['declaration_date'] ?? NULL;
     if (!$lastDate) {
       return TRUE;
     }
-    $yearsSince = (int) date_diff(
-      new DateTime($lastDate),
-      new DateTime()
-    )->y;
+    $lastTimestamp = strtotime($lastDate);
+    if ($lastTimestamp === FALSE) {
+      return TRUE;
+    }
+    $yearsSince = (int) floor((time() - $lastTimestamp) / (365.25 * 24 * 3600));
     if ($yearsSince >= 5) {
       return TRUE;
     }
@@ -222,14 +223,23 @@ class CRM_CustomUtility_Utils_DuesCalculator {
       return [];
     }
 
-    // Rekey by field name.
+    // Rekey by field name, handling both single and multi-record values.
     $declarations = [];
     $idToName     = array_flip($fields);
     foreach ($result as $key => $value) {
       if (strpos($key, 'custom_') === 0) {
         $fieldId   = (int) substr($key, 7);
         $fieldName = $idToName[$fieldId] ?? NULL;
-        if ($fieldName) {
+        if ($fieldName === NULL) {
+          continue;
+        }
+        // Multi-record fields return arrays; single-value fields return scalar.
+        if (is_array($value)) {
+          foreach ($value as $idx => $v) {
+            $declarations[$idx][$fieldName] = $v;
+          }
+        }
+        else {
           $declarations[0][$fieldName] = $value;
         }
       }

@@ -13,6 +13,11 @@
 use CRM_CustomUtility_Utils_DuesCalculator as DuesCalculator;
 
 /**
+ * CiviCRM contribution form ID for member dues payment.
+ */
+define('CUSTOM_UTILITY_MEMBER_DUES_FORM_ID', 11);
+
+/**
  * Implements hook_civicrm_config().
  */
 function custom_utility_civicrm_config(&$config) {
@@ -224,7 +229,6 @@ function _custom_utility_create_custom_groups() {
         'label'     => 'Date Set',
         'data_type' => 'Date',
         'html_type' => 'Select Date',
-        'default_value' => date('Y-m-d'),
       ],
       [
         'name'          => 'is_permanent',
@@ -283,7 +287,7 @@ function custom_utility_civicrm_buildForm($formName, &$form) {
   // -------------------------------------------------------------------------
   // Member Dues form (id=11).
   // -------------------------------------------------------------------------
-  if ($formName !== 'CRM_Contribute_Form_Contribution_Main' || $form->_id != 11) {
+  if ($formName !== 'CRM_Contribute_Form_Contribution_Main' || $form->_id != CUSTOM_UTILITY_MEMBER_DUES_FORM_ID) {
     return;
   }
 

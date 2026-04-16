@@ -148,6 +148,24 @@ class CRM_CustomUtility_Page_DuesOverrideTab extends CRM_Core_Page {
         $record['reason_label']     = $reasonLabels[$record['override_reason'] ?? ''] ?? $record['override_reason'] ?? '';
         $record['is_permanent_label'] = !empty($record['is_permanent']) ? ts('Permanent') : ts('Year-specific');
         $record['override_amount_formatted'] = CRM_Utils_Money::format($record['override_amount'] ?? 0);
+
+        // Resolve the staff member's display name for the UI.
+        $staffId = $record['staff_member_id'] ?? NULL;
+        if ($staffId) {
+          try {
+            $record['staff_member_name'] = civicrm_api3('Contact', 'getvalue', [
+              'id'     => $staffId,
+              'return' => 'display_name',
+            ]);
+          }
+          catch (CiviCRM_API3_Exception $e) {
+            $record['staff_member_name'] = ts('(Unknown)');
+          }
+        }
+        else {
+          $record['staff_member_name'] = '';
+        }
+
         $record['edit_url']         = CRM_Utils_System::url(
           'civicrm/dues/override/edit',
           "reset=1&cid={$contactId}&id={$idx}"

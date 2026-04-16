@@ -117,8 +117,8 @@
               <td>{$override.reason_label|escape}</td>
               <td>{$override.reason_notes|escape|nl2br}</td>
               <td>
-                {if $override.staff_member_id}
-                  {$override.staff_member_id|escape}
+                {if $override.staff_member_name}
+                  {$override.staff_member_name|escape}
                 {else}
                   &mdash;
                 {/if}

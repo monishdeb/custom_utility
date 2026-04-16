@@ -27,6 +27,11 @@ use Drupal\Core\Url;
 class DuesDeclarationForm extends FormBase {
 
   /**
+   * CiviCRM contribution form ID for member dues payment.
+   */
+  const MEMBER_DUES_FORM_ID = 11;
+
+  /**
    * {@inheritdoc}
    */
   public function getFormId() {
@@ -64,7 +69,7 @@ class DuesDeclarationForm extends FormBase {
     // Check whether declaration is required.
     if (!$this->declarationRequired($contactId, $duesYear)) {
       // Member already has a valid current-year declaration → skip to payment.
-      $paymentUrl = Url::fromUri('internal:/civicrm/contribute/transact', ['query' => ['id' => 11, 'reset' => 1]]);
+      $paymentUrl = Url::fromUri('internal:/civicrm/contribute/transact', ['query' => ['id' => self::MEMBER_DUES_FORM_ID, 'reset' => 1]]);
       $form_state->setRedirectUrl($paymentUrl);
       return $form;
     }
@@ -178,7 +183,7 @@ class DuesDeclarationForm extends FormBase {
     }
 
     // Redirect to contribution form id=11 (payment page).
-    $form_state->setRedirectUrl(Url::fromUri('internal:/civicrm/contribute/transact', ['query' => ['id' => 11, 'reset' => 1]]));
+    $form_state->setRedirectUrl(Url::fromUri('internal:/civicrm/contribute/transact', ['query' => ['id' => self::MEMBER_DUES_FORM_ID, 'reset' => 1]]));
   }
 
   // ---------------------------------------------------------------------------
