@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<extension key="custom_utility_civicrm" type="module">
+  <file>custom_utility</file>
+  <name>Custom Utility - Dues Management</name>
+  <description>Manages the dues architecture, custom fields, calculator logic, and override system for member dues.</description>
+  <license>AGPL-3.0</license>
+  <author>Rabbinical Assembly</author>
+  <email>webmaster@rabbinicalassembly.org</email>
+  <url>https://www.rabbinicalassembly.org</url>
+  <releaseDate>2026-01-01</releaseDate>
+  <version>1.0.0</version>
+  <develStage>stable</develStage>
+  <compatibility>
+    <ver>5.0</ver>
+  </compatibility>
+  <civix>
+    <namespace>CRM/CustomUtility</namespace>
+  </civix>
+</extension>

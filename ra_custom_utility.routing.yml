@@ -1,3 +1,11 @@
+ra_utility.member_dues_declaration:
+  path: '/member-dues-declaration'
+  defaults:
+    _form: '\Drupal\ra_custom_utility\Form\DuesDeclarationForm'
+    _title: 'Salary Declaration'
+  requirements:
+    _role: 'ra_member'
+
 ra_utility.getstates:
   path: '/states/list'
   defaults:

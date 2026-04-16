@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!--
+  Custom field group definitions for the Dues Management extension.
+
+  These groups are created programmatically via _custom_utility_create_custom_field_groups()
+  in custom_utility.php during extension install/enable. This XML file is kept
+  for documentation and reference purposes.
+-->
+<CustomData>
+
+  <!-- ================================================================
+       salary_declarations – one row per fiscal year per contact
+       ================================================================ -->
+  <CustomGroup>
+    <name>salary_declarations</name>
+    <title>Salary Declarations</title>
+    <extends>Individual</extends>
+    <style>Tab with table</style>
+    <is_multiple>1</is_multiple>
+    <is_active>1</is_active>
+    <table_name>civicrm_value_salary_declarations</table_name>
+
+    <CustomField>
+      <name>declaration_year</name>
+      <label>Declaration Year</label>
+      <data_type>String</data_type>
+      <html_type>Text</html_type>
+      <is_required>1</is_required>
+      <!-- e.g. "2026-2027" -->
+    </CustomField>
+
+    <CustomField>
+      <name>declaration_date</name>
+      <label>Declaration Date</label>
+      <data_type>Date</data_type>
+      <html_type>Select Date</html_type>
+      <is_required>1</is_required>
+    </CustomField>
+
+    <CustomField>
+      <name>salary_declared</name>
+      <label>Salary Declared</label>
+      <data_type>Money</data_type>
+      <html_type>Text</html_type>
+      <is_required>1</is_required>
+    </CustomField>
+
+    <CustomField>
+      <name>status_category</name>
+      <label>Status Category</label>
+      <data_type>String</data_type>
+      <html_type>Select</html_type>
+      <is_required>1</is_required>
+      <!-- Option values: member, widow_widower, other -->
+    </CustomField>
+
+    <CustomField>
+      <name>calculated_dues</name>
+      <label>Calculated Dues</label>
+      <data_type>Money</data_type>
+      <html_type>Text</html_type>
+      <is_view>1</is_view>
+      <!-- Read-only; computed by DuesCalculator -->
+    </CustomField>
+
+    <CustomField>
+      <name>job_change_flag</name>
+      <label>Job Change</label>
+      <data_type>Boolean</data_type>
+      <html_type>Radio</html_type>
+      <!-- Set to 1 if member reports a job change this year -->
+    </CustomField>
+
+  </CustomGroup>
+
+  <!-- ================================================================
+       dues_overrides – admin-managed overrides, one row per override
+       ================================================================ -->
+  <CustomGroup>
+    <name>dues_overrides</name>
+    <title>Dues Overrides</title>
+    <extends>Individual</extends>
+    <style>Tab with table</style>
+    <is_multiple>1</is_multiple>
+    <is_active>1</is_active>
+    <table_name>civicrm_value_dues_overrides</table_name>
+
+    <CustomField>
+      <name>override_year</name>
+      <label>Override Year</label>
+      <data_type>String</data_type>
+      <html_type>Text</html_type>
+      <!-- Empty for permanent overrides; "2026-2027" for year-specific -->
+    </CustomField>
+
+    <CustomField>
+      <name>override_amount</name>
+      <label>Override Amount</label>
+      <data_type>Money</data_type>
+      <html_type>Text</html_type>
+      <is_required>1</is_required>
+    </CustomField>
+
+    <CustomField>
+      <name>override_reason</name>
+      <label>Override Reason</label>
+      <data_type>String</data_type>
+      <html_type>Select</html_type>
+      <is_required>1</is_required>
+      <!-- Options: extenuating_circumstances, hardship, board_decision, other -->
+    </CustomField>
+
+    <CustomField>
+      <name>reason_notes</name>
+      <label>Reason Notes</label>
+      <data_type>Memo</data_type>
+      <html_type>TextArea</html_type>
+    </CustomField>
+
+    <CustomField>
+      <name>staff_member_id</name>
+      <label>Staff Member</label>
+      <data_type>ContactReference</data_type>
+      <html_type>Autocomplete-Select</html_type>
+    </CustomField>
+
+    <CustomField>
+      <name>date_set</name>
+      <label>Date Set</label>
+      <data_type>Date</data_type>
+      <html_type>Select Date</html_type>
+      <is_required>1</is_required>
+    </CustomField>
+
+    <CustomField>
+      <name>is_permanent</name>
+      <label>Is Permanent</label>
+      <data_type>Boolean</data_type>
+      <html_type>Radio</html_type>
+      <!-- If 1, override applies to all years regardless of override_year -->
+    </CustomField>
+
+  </CustomGroup>
+
+</CustomData>
