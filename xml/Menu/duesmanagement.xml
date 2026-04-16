@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!--
+  CiviCRM Menu routes for RA Custom Utility – Dues Management
+-->
+<menu>
+
+  <!-- Contact record tab: Dues Management overview -->
+  <item>
+    <path>civicrm/contact/dues-management</path>
+    <page_callback>CRM_CustomUtility_Page_DuesOverrideTab</page_callback>
+    <title>Dues Management</title>
+    <desc>View and manage salary declarations and dues overrides for a contact.</desc>
+    <access_arguments>administer CiviCRM</access_arguments>
+    <is_public>0</is_public>
+  </item>
+
+  <!-- Add a new dues override for a contact -->
+  <item>
+    <path>civicrm/dues/override/add</path>
+    <page_callback>CRM_CustomUtility_Form_DuesOverride</page_callback>
+    <title>Add Dues Override</title>
+    <desc>Add a new dues override (permanent or year-specific) for a contact.</desc>
+    <access_arguments>administer CiviCRM</access_arguments>
+    <is_public>0</is_public>
+  </item>
+
+  <!-- Edit an existing dues override record -->
+  <item>
+    <path>civicrm/dues/override/edit</path>
+    <page_callback>CRM_CustomUtility_Form_DuesOverride</page_callback>
+    <title>Edit Dues Override</title>
+    <desc>Edit an existing dues override record for a contact.</desc>
+    <access_arguments>administer CiviCRM</access_arguments>
+    <is_public>0</is_public>
+  </item>
+
+  <!-- Top-level admin listing of all active overrides -->
+  <item>
+    <path>civicrm/dues/override</path>
+    <page_callback>CRM_CustomUtility_Page_DuesOverrideTab</page_callback>
+    <title>Dues Override Management</title>
+    <desc>Administrative listing of dues overrides across all contacts.</desc>
+    <access_arguments>administer CiviCRM</access_arguments>
+    <is_public>0</is_public>
+  </item>
+
+</menu>

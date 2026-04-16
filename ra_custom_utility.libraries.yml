@@ -10,3 +10,14 @@ utility_common:
     js/jquery.mousewheel.min.js: {}
   dependencies:
     - core/jquery
+
+ra_dues:
+  version: 1.x
+  css:
+    theme:
+      css/ra_dues.css: {}
+  js:
+    js/ra_dues.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
