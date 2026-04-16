@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Custom Field Group Definitions – RA Custom Utility
+  ====================================================
+  This file documents the two multi-record custom field groups created by the
+  extension install hook (custom_utility_civicrm_install / _enable).
+
+  These definitions are INFORMATIONAL only and serve as the authoritative
+  reference for the field structures.  The actual fields are created
+  programmatically via the CiviCRM API in custom_utility.php.
+
+  To regenerate field IDs after reinstalling, query:
+    SELECT id, name FROM civicrm_custom_field WHERE custom_group_id = ?;
+-->
+
+<CustomData>
+
+  <!-- =======================================================================
+       Group 1: salary_declarations
+       Extends: Individual (Contact)
+       Style:   Tab with table (multi-record)
+       ======================================================================= -->
+  <CustomGroups>
+    <CustomGroup>
+      <name>salary_declarations</name>
+      <title>Salary Declarations</title>
+      <extends>Individual</extends>
+      <style>Tab with table</style>
+      <is_multiple>1</is_multiple>
+      <is_active>1</is_active>
+      <CustomFields>
+
+        <!-- Dues year identifier, e.g. "2026-2027" -->
+        <CustomField>
+          <name>declaration_year</name>
+          <label>Declaration Year</label>
+          <data_type>String</data_type>
+          <html_type>Text</html_type>
+          <is_required>1</is_required>
+        </CustomField>
+
+        <!-- Date member submitted the declaration -->
+        <CustomField>
+          <name>declaration_date</name>
+          <label>Declaration Date</label>
+          <data_type>Date</data_type>
+          <html_type>Select Date</html_type>
+        </CustomField>
+
+        <!-- Gross annual salary entered by the member -->
+        <CustomField>
+          <name>salary_declared</name>
+          <label>Salary Declared</label>
+          <data_type>Money</data_type>
+          <html_type>Text</html_type>
+          <is_required>1</is_required>
+        </CustomField>
+
+        <!-- Status category drives the dues rate applied -->
+        <CustomField>
+          <name>status_category</name>
+          <label>Status Category</label>
+          <data_type>String</data_type>
+          <html_type>Select</html_type>
+          <!-- Option values: member, widow_widower, other -->
+        </CustomField>
+
+        <!-- Read-only calculated dues (salary × rate, rounded to $5) -->
+        <CustomField>
+          <name>calculated_dues</name>
+          <label>Calculated Dues</label>
+          <data_type>Money</data_type>
+          <html_type>Text</html_type>
+          <is_view>1</is_view>
+        </CustomField>
+
+        <!-- Set by member when their employment situation has changed -->
+        <CustomField>
+          <name>job_change_flag</name>
+          <label>Job Change</label>
+          <data_type>Boolean</data_type>
+          <html_type>CheckBox</html_type>
+          <default_value>0</default_value>
+        </CustomField>
+
+      </CustomFields>
+    </CustomGroup>
+  </CustomGroups>
+
+  <!-- =======================================================================
+       Group 2: dues_overrides
+       Extends: Individual (Contact)
+       Style:   Tab with table (multi-record)
+       ======================================================================= -->
+  <CustomGroups>
+    <CustomGroup>
+      <name>dues_overrides</name>
+      <title>Dues Overrides</title>
+      <extends>Individual</extends>
+      <style>Tab with table</style>
+      <is_multiple>1</is_multiple>
+      <is_active>1</is_active>
+      <CustomFields>
+
+        <!-- Dues year this override applies to; empty = permanent -->
+        <CustomField>
+          <name>override_year</name>
+          <label>Override Year</label>
+          <data_type>String</data_type>
+          <html_type>Text</html_type>
+        </CustomField>
+
+        <!-- The overridden dues amount -->
+        <CustomField>
+          <name>override_amount</name>
+          <label>Override Amount</label>
+          <data_type>Money</data_type>
+          <html_type>Text</html_type>
+          <is_required>1</is_required>
+        </CustomField>
+
+        <!-- Reason for the override (links to OptionGroup dues_override_reason) -->
+        <CustomField>
+          <name>override_reason</name>
+          <label>Override Reason</label>
+          <data_type>String</data_type>
+          <html_type>Select</html_type>
+          <!-- Option values: extenuating_circumstances, hardship, board_decision, other -->
+        </CustomField>
+
+        <!-- Free-text notes from the staff member who set the override -->
+        <CustomField>
+          <name>reason_notes</name>
+          <label>Reason Notes</label>
+          <data_type>Memo</data_type>
+          <html_type>TextArea</html_type>
+        </CustomField>
+
+        <!-- CiviCRM contact reference to the staff member who created the override -->
+        <CustomField>
+          <name>staff_member_id</name>
+          <label>Set By (Staff)</label>
+          <data_type>ContactReference</data_type>
+          <html_type>Autocomplete-Select</html_type>
+        </CustomField>
+
+        <!-- Date the override was created / applied -->
+        <CustomField>
+          <name>date_set</name>
+          <label>Date Set</label>
+          <data_type>Date</data_type>
+          <html_type>Select Date</html_type>
+        </CustomField>
+
+        <!-- When TRUE the override applies to all years (override_year ignored) -->
+        <CustomField>
+          <name>is_permanent</name>
+          <label>Permanent Override</label>
+          <data_type>Boolean</data_type>
+          <html_type>CheckBox</html_type>
+          <default_value>0</default_value>
+        </CustomField>
+
+      </CustomFields>
+    </CustomGroup>
+  </CustomGroups>
+
+</CustomData>

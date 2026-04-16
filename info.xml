@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<extension key="custom_utility" type="module">
+  <file>custom_utility</file>
+  <name>RA Custom Utility</name>
+  <description>Rabbinical Assembly custom utility extension providing dues management, salary declaration tracking, and administrative override capabilities for CiviCRM.</description>
+  <license>AGPL-3.0</license>
+  <author>Rabbinical Assembly</author>
+  <email>tech@rabbinicalassembly.org</email>
+  <url>https://www.rabbinicalassembly.org</url>
+  <releaseDate>2026-04-01</releaseDate>
+  <version>1.0.0</version>
+  <develStage>stable</develStage>
+  <compatibility>
+    <ver>5.0</ver>
+  </compatibility>
+  <requires>
+    <ext>org.civicrm.shoreditch</ext>
+  </requires>
+</extension>
